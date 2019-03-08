@@ -10,10 +10,8 @@ import {
   minWidth,
   space,
 } from 'styled-system'
-import { t } from '.'
 
 const Container = styled.div`
-  max-width: ${t('maxContainerWidth')};
   ${alignItems}
   ${display}
   ${flex}

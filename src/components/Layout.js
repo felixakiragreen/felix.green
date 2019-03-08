@@ -1,6 +1,7 @@
 import React from 'react'
 import { ThemeProvider, createGlobalStyle } from 'styled-components'
 
+import Head from './Head'
 import theme from '../common/theme'
 
 const GlobalStyle = createGlobalStyle`
@@ -22,6 +23,7 @@ export default ({ children }) => {
     <ThemeProvider theme={theme}>
       <>
         <GlobalStyle />
+        <Head />
         {children}
       </>
     </ThemeProvider>
