@@ -32,6 +32,8 @@ const PosedDiv = posed.div({
 })
 
 const Fade = styled(PosedDiv)`
+  opacity: 0;
+
   ${alignSelf}
   ${color}
   ${flex}
