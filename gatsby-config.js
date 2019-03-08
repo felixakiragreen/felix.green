@@ -1,4 +1,4 @@
-const siteConfig = require('./site-config');
+const siteConfig = require('./site-config')
 
 module.exports = {
   siteMetadata: {
@@ -6,20 +6,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-sitemap`,
-    `gatsby-plugin-offline`,
-    `gatsby-transformer-json`,
-    `gatsby-transformer-remark`,
-    `gatsby-plugin-eslint`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `content`,
-        path: `${__dirname}/content`,
-      },
-    },
-    `gatsby-plugin-sharp`,
-    `gatsby-transformer-sharp`,
+    `gatsby-plugin-styled-components`,
     `gatsby-plugin-webpack-size`,
     {
       resolve: `gatsby-plugin-react-svg`,
@@ -29,5 +16,8 @@ module.exports = {
         },
       },
     },
+    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-offline`,
+    `gatsby-plugin-netlify`,
   ],
-};
+}
