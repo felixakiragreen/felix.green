@@ -3,7 +3,7 @@
   "license": "MIT",
   "author": "Felix Green <work@felix.green>",
   "scripts": {
-    "develop": "gatsby develop",
+    "dev": "gatsby develop",
     "serve": "gatsby serve",
     "ssr": "npm run build && npm run serve",
     "build:dir": "mkdirp ./public/icons/",
