@@ -17,6 +17,8 @@ const Text = styled(Box)`
   ${textAlign}
   ${lineHeight}
   ${letterSpacing}
+
+  display: ${props => (props.inline ? 'initial' : 'inherit')};
 `
 
 export default props => (
