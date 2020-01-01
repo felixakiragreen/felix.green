@@ -3,7 +3,7 @@ import React from 'react'
 // import { Router } from '@reach/router'
 /* <Router /> */
 
-import { Layout, Countdown } from 'components'
+import { Layout, Countdown, Footer } from 'components'
 import { Container, Paragraph, Text, Fade } from 'common'
 
 import Crest from './images/crest.svg'
@@ -87,16 +87,17 @@ export default props => (
             </Text>
           </Paragraph> */}
         </Fade>
-        {/* <Fade delay={delays.d}>
-          <Paragraph color='body'>
+        <Fade delay={delays.d}>
+          <Footer />
+          {/* <Paragraph color='body'>
             <Text>
               I love creating and building{' '}
               <HexagonalLink to='#things'>things</HexagonalLink> but I'm still
               learning how to <HexagonalLink to='#finish'>finish</HexagonalLink>{' '}
               them.
             </Text>
-          </Paragraph>
-        </Fade> */}
+          </Paragraph> */}
+        </Fade>
         {/* <Fade delay={delays.e}>
           <Paragraph color='body'>
             <Text>

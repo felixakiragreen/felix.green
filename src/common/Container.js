@@ -8,6 +8,7 @@ import {
   justifyContent,
   maxWidth,
   minWidth,
+  width,
   space,
 } from 'styled-system'
 
@@ -19,6 +20,7 @@ const Container = styled.div`
   ${justifyContent}
   ${maxWidth}
   ${minWidth}
+  ${width}
   ${space}
 `
 
