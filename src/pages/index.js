@@ -4,7 +4,7 @@ import React from 'react'
 /* <Router /> */
 
 import { Layout, Countdown } from 'components'
-import { Container, Paragraph, Text, HexagonalLink, Fade } from 'common'
+import { Container, Paragraph, Text, Fade } from 'common'
 
 import Crest from './images/crest.svg'
 
@@ -42,7 +42,7 @@ export default props => (
           fontSize={[5, 7, 8]}
           my={[4, 5, 6]}
         >
-          <Fade delay={100} duration={500}>
+          <Fade delay={delays.a}>
             {/* <Text>What do you live for?</Text> */}
             <Text inline color='grey7'>
               12020
@@ -59,33 +59,34 @@ export default props => (
             <Text inline color='grey7'>
               09
             </Text>
-            <Text py={5}>the story begins</Text>
-            <Countdown />
           </Fade>
-          {/* <Fade delay={delays.a}>
-            <Text>
+
+          <Fade delay={100} duration={500}>
+            <Text py={5}>the story begins</Text>
+            {/* <Text>
               I live for the <HexagonalLink to='#future'>future</HexagonalLink>.
-            </Text>
-          </Fade> */}
+            </Text> */}
+          </Fade>
         </Paragraph>
-        {/* <Paragraph color='body'>
-          <Fade delay={delays.b}>
-            <Text>
+        {/* <Paragraph color='body'> */}
+        {/* <Fade delay={delays.b}> */}
+        {/* <Text>
               A future that is <HexagonalLink to='#open'>open</HexagonalLink>,{' '}
               <HexagonalLink to='#sustainable'>sustainable</HexagonalLink>, and{' '}
               <HexagonalLink to='#egalitarian'>egalitarian</HexagonalLink>.
-            </Text>
-          </Fade>
-        </Paragraph> */}
-        {/* <Fade delay={delays.c}>
-          <Paragraph color='body'>
+            </Text> */}
+        {/* </Fade> */}
+        {/* </Paragraph> */}
+        <Fade delay={delays.b}>
+          <Countdown />
+          {/* <Paragraph color='body'>
             <Text>
               I'm a child of the{' '}
               <HexagonalLink to='#world'>world</HexagonalLink> and a{' '}
               <HexagonalLink to='#xenophile'>xenophile</HexagonalLink>.
             </Text>
-          </Paragraph>
-        </Fade> */}
+          </Paragraph> */}
+        </Fade>
         {/* <Fade delay={delays.d}>
           <Paragraph color='body'>
             <Text>
