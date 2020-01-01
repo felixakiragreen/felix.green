@@ -9,6 +9,15 @@ module.exports = {
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-webpack-size`,
     {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        custom: {
+          families: ['Akira'],
+          urls: ['/fonts/fonts.css'],
+        },
+      },
+    },
+    {
       resolve: `gatsby-plugin-react-svg`,
       options: {
         rule: {
