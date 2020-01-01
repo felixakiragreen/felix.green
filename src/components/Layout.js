@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
   * {
-    font-family: "Barlow", system-ui, sans;
+    font-family: Akira, "Barlow", system-ui, sans;
   }
 `
 

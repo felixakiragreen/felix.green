@@ -3,7 +3,7 @@ import React from 'react'
 // import { Router } from '@reach/router'
 /* <Router /> */
 
-import { Layout } from 'components'
+import { Layout, Countdown } from 'components'
 import { Container, Paragraph, Text, HexagonalLink, Fade } from 'common'
 
 import Crest from './images/crest.svg'
@@ -43,15 +43,32 @@ export default props => (
           my={[4, 5, 6]}
         >
           <Fade delay={100} duration={500}>
-            <Text>What do you live for?</Text>
+            {/* <Text>What do you live for?</Text> */}
+            <Text inline color='grey7'>
+              12020
+            </Text>
+            <Text inline color='grey4'>
+              .
+            </Text>
+            <Text inline color='grey7'>
+              03
+            </Text>
+            <Text inline color='grey4'>
+              .
+            </Text>
+            <Text inline color='grey7'>
+              09
+            </Text>
+            <Text py={5}>the story begins</Text>
+            <Countdown />
           </Fade>
-          <Fade delay={delays.a}>
+          {/* <Fade delay={delays.a}>
             <Text>
               I live for the <HexagonalLink to='#future'>future</HexagonalLink>.
             </Text>
-          </Fade>
+          </Fade> */}
         </Paragraph>
-        <Paragraph color='body'>
+        {/* <Paragraph color='body'>
           <Fade delay={delays.b}>
             <Text>
               A future that is <HexagonalLink to='#open'>open</HexagonalLink>,{' '}
@@ -59,8 +76,8 @@ export default props => (
               <HexagonalLink to='#egalitarian'>egalitarian</HexagonalLink>.
             </Text>
           </Fade>
-        </Paragraph>
-        <Fade delay={delays.c}>
+        </Paragraph> */}
+        {/* <Fade delay={delays.c}>
           <Paragraph color='body'>
             <Text>
               I'm a child of the{' '}
@@ -68,8 +85,8 @@ export default props => (
               <HexagonalLink to='#xenophile'>xenophile</HexagonalLink>.
             </Text>
           </Paragraph>
-        </Fade>
-        <Fade delay={delays.d}>
+        </Fade> */}
+        {/* <Fade delay={delays.d}>
           <Paragraph color='body'>
             <Text>
               I love creating and building{' '}
@@ -78,15 +95,15 @@ export default props => (
               them.
             </Text>
           </Paragraph>
-        </Fade>
-        <Fade delay={delays.e}>
+        </Fade> */}
+        {/* <Fade delay={delays.e}>
           <Paragraph color='body'>
             <Text>
               I'm on a <HexagonalLink to='#team'>team</HexagonalLink> working to
               remove single use plastics from the Indianapolis waste stream.
             </Text>
           </Paragraph>
-        </Fade>
+        </Fade> */}
       </Container>
     </Container>
   </Layout>
