@@ -47,8 +47,10 @@ export default props => {
         justifyContent='center'
         alignItems='center'
       >
+        <HexagonalIcon key={'kb'} social={socials['keybase']} />
         <HexagonalIcon key={'tw'} social={socials['twitter']} />
         <HexagonalIcon key={'in'} social={socials['instagram']} />
+        <HexagonalIcon />
       </Container>
       <Container
         my={'-10px'}

@@ -41,5 +41,10 @@ module.exports = {
       url: 'https://www.tiktok.com/@felixakiragreen',
       username: '@felixakiragreen',
     },
+    {
+      type: 'keybase',
+      url: 'https://keybase.io/felixakiragreen',
+      username: 'felixakiragreen',
+    },
   ],
 }

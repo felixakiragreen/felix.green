@@ -6,13 +6,20 @@ import Container from './Container'
 const WIDTH = 48
 const OFFSET = 12
 
-export default ({ social, ...props }) => {
+export default ({ social = {}, ...props }) => {
   const { type, url, username } = social
 
-  const icon = SimpleIcons.get(type)
+  let icon
+
+  if (type) {
+    icon = SimpleIcons.get(type)
+  }
 
   if (!social || !icon) {
-    return null
+    icon = {
+      hex: 'fff',
+      path: '',
+    }
   }
 
   return (
@@ -20,7 +27,7 @@ export default ({ social, ...props }) => {
       <Container width={`${WIDTH}px`}>
         <SvgHex fill={`#${icon.hex}`}>
           <g transform={`translate(${OFFSET},${OFFSET}) scale(0.5)`}>
-            <path d={icon.path} fill='white' />
+            {icon && icon.path && <path d={icon.path} fill='white' />}
           </g>
         </SvgHex>
       </Container>
