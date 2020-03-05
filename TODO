@@ -1,5 +1,69 @@
-Website TODOS:
-  - update codebase to TypeScript
-  - update packages
-  - auto dark mode (& with switch)
-  - theme-ui ? (I prefer the styled-system props)
+Dev TODOs:
+  + Add padding to main that’s the height of the nav
+  + Increase / maximize click areas
+  - PurgeCSS to reduce tailwind size
+  - move Svelte:window binds and resize to store
+  - Big fumonicon is the page's fumonicon
+  - Add click on "Fag" fumonicon to go to "/"
+  + Add countdown component
+  - Add footer hexagon
+  - Add social links
+  - consider adding a global SVG for common symbols
+  - Make active NAV
+
+LAUNCH:
+  Index:
+    - WHY (future)
+    - HOW (technology)
+    - WHAT (projects)
+
+  Akira:
+    - uppercase
+    - lowercase
+    - numbers
+    - a few symbols
+    - evolution 
+    - future direction
+
+  Fumonicons:
+    - Principles
+    - Seeking Collaboration
+    List:
+      + fag
+      + portrait 
+      + solarpunk
+      + projects
+      + dof
+      - sverige 🇸🇪
+      - nordic union
+
+  A solarpunk story:
+    - chapter 1
+    - outline
+
+  More projects coming eventually:
+    - Doorway
+    - Designing Our Future
+    - Wardrobe
+      - Collaborators:
+
+  Nice-to-haves:
+    + Entry animation
+    + Add <use> shape for projects city block
+    - UNcopyright (with TODO)
+
+  Ideas:
+    - Collaborators (current, or looking for)
+    - Add MONO for hover fumonicon
+    - All the pages inside wikis are essentially going to be markdown
+
+  FIX:
+    + whitespace between spans & , (not formatting on Save)
+
+FUTURE:
+  Packages:
+    - when MDsveX hits 0.5
+
+
+  Projects:
+    
