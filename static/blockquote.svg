@@ -1,0 +1,102 @@
+<svg
+  x="0%"
+  y="0%"
+  width="100%"
+  height="100%"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+
+  <style>
+    :root {
+      --bg: #53544c;
+      --quotes: #0a0a0980;
+    }
+  </style>
+
+  <symbol id="tip" viewBox="0 0 69.3 240" preserveAspectRatio="xMinYMid">
+    <path d="M69.282,0l2.718,0l0,240l-2.718,0l-69.282,-120l69.282,-120Z" />
+  </symbol>
+  <symbol id="tip-rect" viewBox="0 0 69.3 240" preserveAspectRatio="xMinYMid">
+    <rect x="0%" y="0%" width="100%" height="240" />
+  </symbol>
+
+  <symbol id="quotes" viewBox="0 0 109.3 240" preserveAspectRatio="xMinYMax">
+    <g>
+      <path
+        d="M29.282,123.701l0,-26.881l46.559,-26.881l-11.64,20.161l11.64,6.72l0,26.881l-23.28,13.44l-23.279,-13.44Z"
+      />
+      <path
+        d="M62.723,143.008l0,-26.881l46.559,-26.881l-11.64,20.161l11.64,6.72l0,26.881l-23.279,13.44l-23.28,-13.44Z"
+      />
+    </g>
+  </symbol>
+
+  <mask id="mask" viewBox="0 0 240 240">
+    <rect x="0%" y="0%" width="100%" height="100%" fill="white" />
+
+    <use
+      xlink:href="#tip-rect"
+      x="0%"
+      y="0%"
+      height="100%"
+      width="50%"
+      fill="black"
+    />
+    <use
+      xlink:href="#tip-rect"
+      x="-100%"
+      y="0%"
+      height="100%"
+      width="50%"
+      fill="black"
+      transform="scale(-1,1)"
+    />
+  </mask>
+
+  <rect
+    mask="url(#mask)"
+    x="0%"
+    y="0%"
+    width="100%"
+    height="100%"
+    fill="var(--bg, #808080)"
+  />
+
+  <use
+    xlink:href="#tip"
+    x="0%"
+    y="0%"
+    height="100%"
+    width="50%"
+    fill="var(--bg, #808080)"
+  />
+  <use
+    xlink:href="#tip"
+    x="-100%"
+    y="0%"
+    height="100%"
+    width="50%"
+    fill="var(--bg, #808080)"
+    transform="scale(-1,1)"
+  />
+
+  <use
+    xlink:href="#quotes"
+    x="0%"
+    y="0%"
+    height="100%"
+    width="50%"
+    fill="var(--quotes, #fff)"
+  />
+  <use
+    xlink:href="#quotes"
+    x="-100%"
+    y="-100%"
+    height="100%"
+    width="50%"
+    fill="var(--quotes, #fff)"
+    transform="scale(-1, -1)"
+  />
+
+</svg>

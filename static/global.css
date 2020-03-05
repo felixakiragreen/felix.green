@@ -1,0 +1,28 @@
+body {
+  font-family: Akira !important;
+}
+body {
+  font-family: -apple-system, Helvetica Neue, sans-serif;
+}
+
+@font-face {
+  font-family: 'Akira';
+  font-weight: 400;
+  font-style: normal;
+  src: url('Akira-Regular-2.2.5.ttf');
+  font-display: swap;
+}
+
+#sapper {
+  position: relative;
+}
+
+/* Colors */
+
+:root {
+  --felix: #adff2f;
+  --oops: --red-400;
+  --alpha: transparent;
+  --white: #fff;
+  --black: #000;
+}

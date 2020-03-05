@@ -1,0 +1,31 @@
+<svg
+  x="0%"
+  y="0%"
+  width="100%"
+  height="100%"
+  xmlns="http://www.w3.org/2000/svg"
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+>
+
+  <style>
+    :root {
+      --bg: #141411;
+    }
+  </style>
+
+  <symbol id="hex" viewBox="0 0 240 240" preserveAspectRatio="xMidYMid">
+    <path
+      d="M120,0l103.923,60l0,120l-103.923,60l-103.923,-60l0,-120l103.923,-60Z"
+    />
+  </symbol>
+
+  <use
+    xlink:href="#hex"
+    x="0%"
+    y="0%"
+    height="100%"
+    width="100%"
+    fill="var(--bg, #808080)"
+  />
+
+</svg>
