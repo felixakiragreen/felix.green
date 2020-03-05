@@ -25,9 +25,6 @@
     "trailingComma": "es5"
   },
   "dependencies": {
-    "@fag/felix": "portal:../felix",
-    "@fag/fumonicon": "portal:../fumonicon",
-    "@fag/hexagonal": "portal:../hexagonal",
     "compression": "^1.7.1",
     "polka": "next",
     "sirv": "^0.4.2"
