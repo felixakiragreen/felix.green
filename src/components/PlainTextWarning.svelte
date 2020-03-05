@@ -24,7 +24,7 @@
   ⬢
   <p class="text-orange-300">
     <span class="plain">
-      Welcome 👋
+      Welcome 🖖
       <br />
       Why does the text look like
     </span>
