@@ -40,6 +40,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/plugin-transform-runtime", "virtual:b35d1146d86a8c822cba2918e6539250386bbeb18f27f88695259b61b035db5ede808ef9265dcf4c9d041e18eb153e40649a60c85b479c8b47aa737bb999948d#npm:7.8.3"],
             ["@babel/preset-env", "virtual:b35d1146d86a8c822cba2918e6539250386bbeb18f27f88695259b61b035db5ede808ef9265dcf4c9d041e18eb153e40649a60c85b479c8b47aa737bb999948d#npm:7.8.7"],
             ["@babel/runtime", "npm:7.8.7"],
+            ["@f*g/felix", "npm:0.1.0"],
+            ["@f*g/fumonicon", "npm:0.1.0"],
+            ["@f*g/hexagonal", "npm:0.1.0"],
             ["@fullhuman/postcss-purgecss", "npm:2.1.0"],
             ["@rollup/plugin-alias", "virtual:b35d1146d86a8c822cba2918e6539250386bbeb18f27f88695259b61b035db5ede808ef9265dcf4c9d041e18eb153e40649a60c85b479c8b47aa737bb999948d#npm:3.0.1"],
             ["@rollup/plugin-commonjs", "virtual:b35d1146d86a8c822cba2918e6539250386bbeb18f27f88695259b61b035db5ede808ef9265dcf4c9d041e18eb153e40649a60c85b479c8b47aa737bb999948d#npm:11.0.2"],
@@ -1239,6 +1242,33 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@f*g/felix", [
+        ["npm:0.1.0", {
+          "packageLocation": "./.yarn/cache/@f*g-felix-npm-0.1.0-8ae206540f-2.zip/node_modules/@f*g/felix/",
+          "packageDependencies": [
+            ["@f*g/felix", "npm:0.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@f*g/fumonicon", [
+        ["npm:0.1.0", {
+          "packageLocation": "./.yarn/cache/@f*g-fumonicon-npm-0.1.0-c23df0bf93-2.zip/node_modules/@f*g/fumonicon/",
+          "packageDependencies": [
+            ["@f*g/fumonicon", "npm:0.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@f*g/hexagonal", [
+        ["npm:0.1.0", {
+          "packageLocation": "./.yarn/cache/@f*g-hexagonal-npm-0.1.0-dd120f75c6-2.zip/node_modules/@f*g/hexagonal/",
+          "packageDependencies": [
+            ["@f*g/hexagonal", "npm:0.1.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@fullhuman/postcss-purgecss", [
         ["npm:2.1.0", {
           "packageLocation": "./.yarn/cache/@fullhuman-postcss-purgecss-npm-2.1.0-6d2c196edc-2.zip/node_modules/@fullhuman/postcss-purgecss/",
@@ -1996,6 +2026,9 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@babel/plugin-transform-runtime", "virtual:b35d1146d86a8c822cba2918e6539250386bbeb18f27f88695259b61b035db5ede808ef9265dcf4c9d041e18eb153e40649a60c85b479c8b47aa737bb999948d#npm:7.8.3"],
             ["@babel/preset-env", "virtual:b35d1146d86a8c822cba2918e6539250386bbeb18f27f88695259b61b035db5ede808ef9265dcf4c9d041e18eb153e40649a60c85b479c8b47aa737bb999948d#npm:7.8.7"],
             ["@babel/runtime", "npm:7.8.7"],
+            ["@f*g/felix", "npm:0.1.0"],
+            ["@f*g/fumonicon", "npm:0.1.0"],
+            ["@f*g/hexagonal", "npm:0.1.0"],
             ["@fullhuman/postcss-purgecss", "npm:2.1.0"],
             ["@rollup/plugin-alias", "virtual:b35d1146d86a8c822cba2918e6539250386bbeb18f27f88695259b61b035db5ede808ef9265dcf4c9d041e18eb153e40649a60c85b479c8b47aa737bb999948d#npm:3.0.1"],
             ["@rollup/plugin-commonjs", "virtual:b35d1146d86a8c822cba2918e6539250386bbeb18f27f88695259b61b035db5ede808ef9265dcf4c9d041e18eb153e40649a60c85b479c8b47aa737bb999948d#npm:11.0.2"],

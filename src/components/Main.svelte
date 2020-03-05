@@ -7,7 +7,7 @@
     hexPropsFromWidth,
     createPath_hexATip,
     createPath_hexBTip,
-  } from '../fag/hexagonal'
+  } from '@f*g/hexagonal'
 
   import { getBreakpoint } from './_breakpoint.js'
 
@@ -29,11 +29,12 @@
   $: hexOffsetYOuter = 0
 
   onMount(async () => {
+    // This is to prevent flashing
     mounted = true
 
     createShit()
 
-    console.log("sup nerds.")
+    console.log("sup nerds.") // sup next-level nerds.
   })
 
   const createShit = () => {

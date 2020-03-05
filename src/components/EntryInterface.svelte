@@ -6,7 +6,7 @@
     hexPropsFromWidth,
     createPath_hexATip,
     createPath_hexBTip,
-  } from '../fag/hexagonal'
+  } from '@f*g/hexagonal'
 
   import { widthInner, widthOuter } from '../stores'
 

@@ -3,21 +3,21 @@
   import { fade, fly } from 'svelte/transition'
   import { quintOut } from 'svelte/easing'
   
-  import { fag, portraitfag, solarpunk, dof, projects } from '../fag/fumonicon'
+  import { fag, portrait_fag, solarpunk, dof, projects } from '@f*g/fumonicon'
 
   import {
     hexPropsFromWidth,
     hexPropsFromInside,
     createPath_hexFull,
-  } from '../fag/hexagonal'
+  } from '@f*g/hexagonal'
 
   import navSegments from './_nav'
 
   // import { heightNav } from '../stores'
-  import Bar from './Bar.svelte'
-  import Hexagon from './Hexagon.svelte'
+  // import Bar from './Bar.svelte'
+  // import Hexagon from './Hexagon.svelte'
+  // import EntryPortrait from './EntryPortrait.svelte'
   import FelixAkiraGreen from './FelixAkiraGreen.svelte'
-  import EntryPortrait from './EntryPortrait.svelte'
   import HexagonHorizontalScaling from './HexagonHorizontalScaling.svelte'
 
   export let segment
@@ -114,6 +114,14 @@
   a:hover .nav-item-bg {
     @apply opacity-50;
   }
+
+  a.selected .nav-item-bg {
+    @apply opacity-100;
+  }
+  .selected {
+    @apply text-gray-800;
+  }
+
   .header {
     grid-column: 2 / span 3;
     grid-row: 1 / span 3;
@@ -249,10 +257,19 @@
       <FelixAkiraGreen />
     </div>
 
-    <div class="fag nav-scale-in">
+    <a
+      href="/#top"
+      class="fag nav scale-in"
+      class:selected={segment === undefined}
+    >
       {@html fag.svg}
-    </div>
-    <a href="about" class="about" transition:fade="{{delay: delay + staggerHex}}">
+    </a>
+    <a
+      href="about"
+      class="about"
+      class:selected={segment === 'about'}
+      transition:fade="{{delay: delay + staggerHex}}"
+    >
       <div class="nav-item-bg">
         <HexagonHorizontalScaling leftTip={false} />
       </div>
@@ -260,10 +277,15 @@
         <h3 class="title" transition:fade="{{delay: delay + staggerText}}">about</h3>
       </div>
       <div class="smaller-hex item-scale-in" style="transform-origin: 100% 100%;">
-        {@html portraitfag.svg}
+        {@html portrait_fag.svg}
       </div>
     </a>
-    <a href="solarpunk" class="solarpunk" transition:fade="{{delay: delay + staggerHex}}">
+    <a
+      href="solarpunk"
+      class="solarpunk"
+      class:selected={segment === 'solarpunk'}
+      transition:fade="{{delay: delay + staggerHex}}"
+    >
       <div class="nav-item-bg">
         <HexagonHorizontalScaling rightTip={false} />
       </div>
@@ -274,7 +296,12 @@
         <h3 class="title" transition:fade="{{delay: delay + staggerText}}">solarpunk</h3>
       </div>
     </a>
-    <a href="projects" class="projects" transition:fade="{{delay: delay + staggerHex}}">
+    <a
+      href="projects"
+      class="projects"
+      class:selected={segment === 'projects'}
+      transition:fade="{{delay: delay + staggerHex}}"
+    >
       <div class="nav-item-bg">
         <HexagonHorizontalScaling leftTip={false} />
       </div>
@@ -285,7 +312,12 @@
         {@html projects.svg}
       </div>
     </a>
-    <a href="dof" class="flex dof" transition:fade="{{delay: delay + staggerHex}}">
+    <a
+      href="dof"
+      class="flex dof"
+      class:selected={segment === 'dof'}
+      transition:fade="{{delay: delay + staggerHex}}"
+    >
       <div class="nav-item-bg">
         <HexagonHorizontalScaling rightTip={false} />
       </div>

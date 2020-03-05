@@ -2,7 +2,7 @@
   import { fade } from 'svelte/transition'
   import { calculateTimeLeft, onInterval } from './_countdown.js'
 
-  import { fag } from '../fag/fumonicon'
+  import { fag } from '@f*g/fumonicon'
 
   import Countdown from './Countdown.svelte'
 

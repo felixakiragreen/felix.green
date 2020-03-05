@@ -6,13 +6,15 @@ Dev TODOs:
   + Add social links
   + Finally got yarn v2 working on Netlify
   + make footer social media links
+  + Add click on "Fag" fumonicon to go to "/"
+  + Make visually active NAV
+  + publish to `@f*g/`
   - move Svelte:window binds and resize to store
   - Big fumonicon is the page's fumonicon
-  - Add click on "Fag" fumonicon to go to "/"
-  - consider adding a global SVG for common symbols
-  - Make visually active NAV
-  - publish to `@f*g/`
 
+Postlaunch:
+  - Nav.svelte needs to be broken down into smaller components like I did for Social
+  - consider adding a global SVG for common symbols
 
 LAUNCH:
   Index:
@@ -31,6 +33,7 @@ LAUNCH:
   Fumonicons:
     - Principles
     - Seeking Collaboration
+    - only import 1 way
     List:
       + fag
       + portrait 
@@ -39,6 +42,8 @@ LAUNCH:
       + dof
       - sverige 🇸🇪
       - nordic union
+      - golden_circle
+      - past_present_future
 
   A solarpunk story:
     - chapter 1

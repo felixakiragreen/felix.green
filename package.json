@@ -1,33 +1,33 @@
 {
   "name": "felix.green",
-  "description": "a website",
   "version": "1.0.0",
+  "description": "a website",
   "license": "Unlicense",
   "scripts": {
-    "dev": "sapper dev",
     "build": "sapper build --legacy",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "dev": "sapper dev",
     "export": "sapper export --legacy",
     "start": "node __sapper__/build",
-    "cy:run": "cypress run",
-    "cy:open": "cypress open",
     "test": "run-p --race dev cy:run"
   },
   "prettier": {
-    "printWidth": 80,
-    "endOfLine": "auto",
     "bracketSpacing": true,
+    "endOfLine": "auto",
     "htmlWhitespaceSensitivity": "css",
     "jsxBracketSameLine": false,
     "jsxSingleQuote": true,
+    "printWidth": 80,
     "quoteProps": "consistent",
     "semi": false,
     "singleQuote": true,
     "trailingComma": "es5"
   },
   "dependencies": {
-    "@fag/felix": "portal:../felix",
-    "@fag/fumonicon": "portal:../fumonicon",
-    "@fag/hexagonal": "portal:../hexagonal",
+    "@f*g/felix": "^0.1.0",
+    "@f*g/fumonicon": "^0.1.0",
+    "@f*g/hexagonal": "^0.1.0",
     "compression": "^1.7.1",
     "polka": "next",
     "sirv": "^0.4.2"

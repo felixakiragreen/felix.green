@@ -995,6 +995,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@f*g/felix@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@f*g/felix@npm:0.1.0"
+  checksum: 2/dce927f28e4be2e643a38fce5d83ccddb431f815661e58114fad9042d4ec52c2294131188af1293777abf0c5f6b3f511a669b49ef87540cc161550ac87c1a66d
+  languageName: node
+  linkType: hard
+
+"@f*g/fumonicon@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@f*g/fumonicon@npm:0.1.0"
+  checksum: 2/8a0ed183c99882bf2d2e429ad46006f2f1676314b80554609ac3a817fdc59cb040cfbb1e9bd332efe1536219e011a2b60bb615cca0b5b8737da2c0e31cfe182e
+  languageName: node
+  linkType: hard
+
+"@f*g/hexagonal@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "@f*g/hexagonal@npm:0.1.0"
+  checksum: 2/45cf459f67f5b85fba3bdc4f7eeb94c19dd1236829d54e4bb0cfd00bd2e95658839a5aea4434d60e56381a1bd2d50c0525fd6d016da1a058f4cc1a63e11ba9ce
+  languageName: node
+  linkType: hard
+
 "@fullhuman/postcss-purgecss@npm:^2.0.6":
   version: 2.1.0
   resolution: "@fullhuman/postcss-purgecss@npm:2.1.0"
@@ -1661,6 +1682,9 @@ __metadata:
     "@babel/plugin-transform-runtime": ^7.0.0
     "@babel/preset-env": ^7.0.0
     "@babel/runtime": ^7.0.0
+    "@f*g/felix": ^0.1.0
+    "@f*g/fumonicon": ^0.1.0
+    "@f*g/hexagonal": ^0.1.0
     "@fullhuman/postcss-purgecss": ^2.0.6
     "@rollup/plugin-alias": ^3.0.1
     "@rollup/plugin-commonjs": ^11.0.0
