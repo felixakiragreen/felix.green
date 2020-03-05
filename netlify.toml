@@ -1,0 +1,6 @@
+
+[build]
+  publish = "__sapper__/build"
+  command = "yarn run build && yarn run start"
+[build.environment]
+  NODE_VERSION = "12"
