@@ -27,6 +27,10 @@
   }
 </style>
 
+<svelte:head>
+  <title>12020.03.09 – the story begins</title>
+</svelte:head>
+
 {#if timeLeft.done}
   <div transition:fade>
     <slot></slot>
