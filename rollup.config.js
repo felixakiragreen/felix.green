@@ -23,6 +23,15 @@ const preprocess = sveltePreprocess({
   postcss: true,
 })
 
+const fagModules = dev
+  ? []
+  : [
+      {
+        find: `@fag`,
+        replacement: `${__dirname}/src/node_modules/@fag`,
+      },
+    ]
+
 export default {
   client: {
     input: config.client.input(),
@@ -44,6 +53,7 @@ export default {
             find: `@sapper`,
             replacement: `${__dirname}/src/node_modules/@sapper`,
           },
+          ...fagModules,
         ],
       }),
       resolve({
@@ -108,6 +118,7 @@ export default {
             find: `@sapper`,
             replacement: `${__dirname}/src/node_modules/@sapper`,
           },
+          ...fagModules,
         ],
       }),
       resolve({
@@ -139,6 +150,7 @@ export default {
             find: `@sapper`,
             replacement: `${__dirname}/src/node_modules/@sapper`,
           },
+          ...fagModules,
         ],
       }),
       commonjs(),
