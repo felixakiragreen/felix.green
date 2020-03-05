@@ -11,8 +11,9 @@
 
   let bday = new Date('2020-03-09')  
 
-  let test = new Date('2020-03-04T17:24Z')
+  let dev = new Date('2020-03-04T17:24Z')
   let date = bday
+  // let date = dev
 </script>
 
 <style>
@@ -36,6 +37,6 @@
     <Main>
       <slot />
     </Main>
-    <Footer />
   </ConditionalCountdown>
+  <Footer />
 </div>

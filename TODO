@@ -1,17 +1,18 @@
 Dev TODOs:
   + Add padding to main that’s the height of the nav
   + Increase / maximize click areas
-  - PurgeCSS to reduce tailwind size
+  + PurgeCSS to reduce tailwind size
+  + Add countdown component
+  + Add social links
+  + Finally got yarn v2 working on Netlify
+  + make footer social media links
   - move Svelte:window binds and resize to store
   - Big fumonicon is the page's fumonicon
   - Add click on "Fag" fumonicon to go to "/"
-  + Add countdown component
-  - Add footer hexagon
-  - Add social links
   - consider adding a global SVG for common symbols
-  - Make active NAV
+  - Make visually active NAV
+  - publish to `@f*g/`
 
-  - Screw it - yarn v2 isn't work on Netlify?
 
 LAUNCH:
   Index:
@@ -64,8 +65,11 @@ LAUNCH:
 
 FUTURE:
   Packages:
-    - when MDsveX hits 0.5
+    - V
 
-
-  Projects:
+  Tech Debt:
+    - fag / @fag repo
     
+  Awaiting Development from others:
+    - MDsveX hits 0.5 (it's broken now)
+    - Svelte/Sapper HMR (https://github.com/rixo/sapper-template-hot/tree/rollup)

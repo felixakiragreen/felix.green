@@ -5,7 +5,6 @@
   import { fag } from '../fag/fumonicon'
 
   import Countdown from './Countdown.svelte'
-  import Socials from './Social/index.svelte'
 
   export let date = new Date()
   export let showCountdown = true
@@ -49,5 +48,4 @@
       </Countdown>
     </div>
   </div>
-  <Socials />
 {/if}

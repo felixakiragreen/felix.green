@@ -1,23 +1,25 @@
 <script>
   import { onMount } from 'svelte'
-  // import { fade, fly } from 'svelte/transition'
-  // import { quintOut } from 'svelte/easing'
-
-  // import {
-  //   hexPropsFromWidth,
-  //   createPath_hexATip,
-  //   createPath_hexBTip,
-  // } from '@fag/hexagonal'
+  import Socials from './Social/index.svelte'
 
   let mounted = false
 
   onMount(async () => {
+    // This is to prevent flashing
     mounted = true
   })
 </script>
 
+<style>
+  footer {
+    @apply grid;
+    @apply z-30;
+    grid-area: footer;
+  }
+</style>
+
 {#if mounted}
-  <footer class="bg-red-200" style="grid-area: footer;">
-    TODO: make this a hexagon
+  <footer>
+    <Socials />
   </footer>
 {/if}

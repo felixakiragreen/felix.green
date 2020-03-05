@@ -6,7 +6,6 @@
 
 <style>
   .socials {
-    grid-area: footer;
     justify-self: center;
     @apply max-w-md;
     @apply my-8;
