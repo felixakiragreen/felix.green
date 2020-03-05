@@ -4,4 +4,7 @@
 yarn-error.log
 /cypress/screenshots/
 /__sapper__/
-/.yarn/
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*
