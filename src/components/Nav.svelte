@@ -2,13 +2,14 @@
   import { onMount } from 'svelte'
   import { fade, fly } from 'svelte/transition'
   import { quintOut } from 'svelte/easing'
-  import { fag, portrait_fag, solarpunk, dof, projects } from '@fag/fumonicon'
+  
+  import { fag, portraitfag, solarpunk, dof, projects } from '../fag/fumonicon'
 
   import {
     hexPropsFromWidth,
     hexPropsFromInside,
     createPath_hexFull,
-  } from '@fag/hexagonal'
+  } from '../fag/hexagonal'
 
   import navSegments from './_nav'
 
@@ -259,7 +260,7 @@
         <h3 class="title" transition:fade="{{delay: delay + staggerText}}">about</h3>
       </div>
       <div class="smaller-hex item-scale-in" style="transform-origin: 100% 100%;">
-        {@html portrait_fag.svg}
+        {@html portraitfag.svg}
       </div>
     </a>
     <a href="solarpunk" class="solarpunk" transition:fade="{{delay: delay + staggerHex}}">

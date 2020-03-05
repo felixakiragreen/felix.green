@@ -11,6 +11,8 @@ Dev TODOs:
   - consider adding a global SVG for common symbols
   - Make active NAV
 
+  - Screw it - yarn v2 isn't work on Netlify?
+
 LAUNCH:
   Index:
     - WHY (future)

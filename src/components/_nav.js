@@ -1,10 +1,10 @@
-import { fag, portrait_fag, solarpunk, dof, projects } from '@fag/fumonicon'
+import { fag, portraitfag, solarpunk, dof, projects } from '../fag/fumonicon'
 
 const navSegments = [
   {
     slug: 'about',
     segment: 'about',
-    svg: portrait_fag.svg,
+    svg: portraitfag.svg,
     title: 'about\n',
   },
   {

@@ -1,5 +1,5 @@
 import { writable, derived } from 'svelte/store'
-import { hexPropsFromWidth } from '@fag/hexagonal'
+import { hexPropsFromWidth } from './src/fag/hexagonal'
 
 export const widthInner = writable(0)
 export const widthOuter = writable(0)

@@ -7,7 +7,7 @@
     hexPropsFromWidth,
     createPath_hexATip,
     createPath_hexBTip,
-  } from '@fag/hexagonal'
+  } from '../fag/hexagonal'
 
   import { getBreakpoint } from './_breakpoint.js'
 
