@@ -23,6 +23,29 @@ const preprocess = sveltePreprocess({
   postcss: true,
 })
 
+const entries = [
+  {
+    find: `@sapper`,
+    replacement: `${__dirname}/src/node_modules/@sapper`,
+  },
+  {
+    find: `components`,
+    replacement: `${__dirname}/src/components`,
+  },
+  {
+    find: `wiki`,
+    replacement: `${__dirname}/src/routes/wiki`,
+  },
+  {
+    find: `txt`,
+    replacement: `${__dirname}/src/components/txt`,
+  },
+  {
+    find: `style`,
+    replacement: `${__dirname}/src/components/style`,
+  },
+]
+
 export default {
   client: {
     input: config.client.input(),
@@ -39,12 +62,7 @@ export default {
         emitCss: true,
       }),
       alias({
-        entries: [
-          {
-            find: `@sapper`,
-            replacement: `${__dirname}/src/node_modules/@sapper`,
-          },
-        ],
+        entries,
       }),
       resolve({
         browser: true,
@@ -103,12 +121,7 @@ export default {
         dev,
       }),
       alias({
-        entries: [
-          {
-            find: `@sapper`,
-            replacement: `${__dirname}/src/node_modules/@sapper`,
-          },
-        ],
+        entries,
       }),
       resolve({
         dedupe: ['svelte'],
@@ -134,12 +147,7 @@ export default {
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
       alias({
-        entries: [
-          {
-            find: `@sapper`,
-            replacement: `${__dirname}/src/node_modules/@sapper`,
-          },
-        ],
+        entries,
       }),
       commonjs(),
       url(),
