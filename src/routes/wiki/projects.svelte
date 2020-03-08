@@ -1,5 +1,5 @@
 <script>
-  import { projects, fag, dof } from '@f*g/fumonicon'
+  import { projects, fag, dof, doorway, uniform, ha_tsume, union_nordic, yin_yang } from '@f*g/fumonicon'
 
   import Aside from 'components/Aside.svelte'
   import Red from 'style/Red.svelte'
@@ -13,13 +13,17 @@
 </script>
 
 <style>
-  section {
+  section, article {
     @apply grid;
     @apply gap-4;
   }
 
-  p {
+  section > p, article > p {
     @apply px-8;
+  }
+
+  blockquote {
+    @apply mx-auto;
   }
 
   abbr {
@@ -47,10 +51,17 @@
 
 <section>
   <p>
-    I have far more ideas than I could ever accomplish in one or even a dozen lifetimes.
-    At first I thought it was a blessing and then I thought it was a curse.
-    Now I've just accepted that it's my 🧠brain.
-    The 🧠 be what it do.
+    I have more
+    💡 ideas than I could ever
+    accomplish in one or even a dozen lifetimes.
+    At first I thought it was a
+    blessing and then I thought it was a
+    curse.
+    Now I've just accepted that it's my 🧠
+    brain.
+    The 🧠
+    be what it 
+    do.
   </p>
   <p>
     I have found success in collaboration.
@@ -69,7 +80,7 @@
   <article id="akira">
 
     <h2>Akira</h2>
-    <blockquote class="mx-auto my-4 py-6 px-12">
+    <blockquote class="mx-auto -mt-8 mb-4 px-12">
       A font based on my own handwriting.
     </blockquote>
 
@@ -92,7 +103,7 @@
             (began <abbr title="2004">12004</abbr>)
           </Grey>
         </h3>
-        <p class="-px-16">
+        <p class="-ml-8">
           I started modifying how I wrote all the letters
           so it only used a single stroke,
           but still be quite legible to others.
@@ -106,7 +117,7 @@
             (began <abbr title="2013">12013</abbr>)
           </Grey>
         </h3>
-        <p class="-px-16">
+        <p class="-ml-8">
           Once I was the only person reading it,
           I experimented aesthetically with many different forms.
           I doubled the number of letters that are mirror versions of each other.
@@ -120,10 +131,11 @@
             (began <abbr title="2018">12018</abbr>)
           </Grey>
         </h3>
-        <p class="-px-16">
+        <p class="-ml-8">
           Then I wanted to turn it into a font.
           It's currently on v2.2.6-
-          as you can see it's got
+          <br />
+          as you can see it's got:
           lowercase, uppercase, numbers, & essential punctuation.
         </p>
       </li>
@@ -140,13 +152,17 @@
 
   <article id="fumonicons">
     
-    <h2>Fumonicons</h2> (title of step 1)
-    <blockquote class="mx-auto my-4 py-6 px-12">
+    <h2>
+      Fumonicons
+      <Grey cls="-text-1">(name of step 1)</Grey>
+    </h2> 
+    <blockquote class="mx-auto -mt-8 mb-4 px-12">
       ⬣ Hexagons ⬢ Hexagons everywhere ⬣
     </blockquote>
     
     <p>
       This project is still in its infancy.
+      <br />
       And it's a story for another time.
     </p>
 
@@ -167,7 +183,9 @@
     <Aside>
       <Orange>Seeking</Orange>
       <p>
-        designers & developers with a fanatical affinity for hexagons
+        designers & developers with
+        <br />
+        a fanatical affinity for hexagons
       </p>
     </Aside>
 
@@ -176,13 +194,15 @@
   <article id="story">
 
     <h2>A Story About Shapes</h2>
-    <blockquote class="m-4 py-6 px-12">
-      Yeah, I need a title
+    <blockquote class="mx-auto -mt-8 mb-4 px-12">
+      Yeah... I need a title
     </blockquote>
 
     <p>
-      A science fiction set in base reality, which is kind of two dimensional,
-      and follows the hero's journey, and poorly attempts to be insightfully amusing.
+      A collaborative science-fiction story set in base reality,
+      which is kind of two dimensional.
+      <br>
+      It follows the hero's journey and attempts to be insightfully amusing.
     </p>
     <p>
       I know I'm selling this really well.
@@ -191,7 +211,7 @@
     <Aside>
       <Orange>Seeking</Orange>
       <p>
-        people that have a gift with words.
+        people that have a gift with words
       </p>
     </Aside>
 
@@ -200,12 +220,12 @@
 
   <article id="fag">
 
-    <div class="h-64">
+    <div class="h-20 mt-8 -mb-8" style="--fumonicon-fag-primary: var(--grey-500);">
       {@html fag.svg}
     </div>
 
     <h2>Felix Akira Green</h2>
-    <blockquote class="m-4 px-12">
+    <blockquote class="mx-auto -mt-8 mb-4 px-12">
       Inventing myself
     </blockquote>
 
@@ -214,7 +234,10 @@
       eager to become something, someone else.
     </p>
     <p>
-      It wasn't until university (2009-2013) that I embraced my birth name--
+      It wasn't until university (<abbr title="2009 - 2013">12009-13</abbr>)
+      that I embraced my birth name.
+    </p>
+    <p>
       I couldn't choose a name for myself until I knew who I wanted to become.
     </p>
     <p>
@@ -257,33 +280,75 @@
 
 </section>
 
+<!--
 <section>
 
   <h2>Active</h2>
   
-  <article>
-    Uniform
-      Collaborators:
-      - Phil Dragash
-      - Jess West
+  <article class="grid grid-cols-2">
+    <div class="h-64 mt-8 -mb-8" style="--fumonicon-fag-primary: var(--grey-500);">
+      {@html uniform.svg}
+    </div>
+    <ul>
+      <Grey>Collaborators:</Grey>
+      <li>
+        - Jess West
+      </li>
+      <li>
+        - Phil Dragash
+      </li>
+    </ul>
+
   </article>
 
   <article>
-  Doorway
-    Collaborators
-    - Jake Rupp
-    </article>
-  <article>
-  Designing Our Future
-    Collaborators:
-    - Kurt Schroeder
-    - Meg McNames
-    </article>
+    <div class="h-64 mt-8 -mb-8" style="--fumonicon-fag-primary: var(--grey-500);">
+      {@html doorway.svg}
+    </div>
+    <ul>
+      <Grey>Collaborators:</Grey>
+      <li>
+        - Jake Rupp
+      </li>
+    </ul>
+  </article>
 
   <article>
-  Bleep Bloop:
-    Collaborators:
-    - Trenton McBeth
+    <div class="h-64 mt-8 -mb-8" style="--fumonicon-fag-primary: var(--grey-500);">
+      {@html dof.svg}
+    </div>
+    <ul>
+      <Grey>Collaborators:</Grey>
+      <li>
+        - Kurt Schroeder
+      </li>
+      <li>
+        - Meg McNames
+      </li>
+    </ul>
   </article>
 
 </section>
+-->
+
+<!-- 
+<section>
+
+  <h2>Eventually</h2>
+
+  <article>
+    Bleep Bloop:
+      Collaborators:
+      - Trenton McBeth
+  </article>
+  
+  <article>
+    Ha Tsume
+  </article>
+  
+  <article>
+    Nordic Union
+  </article>
+
+</section>
+-->
