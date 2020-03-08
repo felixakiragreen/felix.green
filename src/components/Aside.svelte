@@ -1,7 +1,7 @@
 <script>
   import Hexagon from './Hexagon.svelte'
 
-  export let cx = null;
+  export let cls = null;
 </script>
 
 <style>
@@ -18,7 +18,7 @@
   }
 </style>
 
-<aside class={cx}>
+<aside class={cls}>
   <Hexagon style="z-index: -1;" />
   ⬢
   <br />
