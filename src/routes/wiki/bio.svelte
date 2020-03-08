@@ -193,7 +193,7 @@
 
   <p>
     On the
-    <span class="»y">bright</span>
+    <span class="»o">bright</span>
     side, I did achieve my first
     <span class="text-green-600">«</span><span class="»g">life ambition</span><span class="text-green-600">»</span>,
     <details>
@@ -228,7 +228,7 @@
 
   <p>
     But I have a
-    <span class="»y">bright</span>
+    <span class="»o">bright</span>
     <span class="»g">future</span> ahead of me.
   </p>
 
@@ -300,7 +300,9 @@
     I
     <span class="»p">truly</span>
     <span class="»b">believe</span> that I am a
-    <span class="»g">better</span> person because of it.
+    <span class="»o">better</span>
+    <span class="»g">person</span>
+    because of it.
   </p>
 
 </section>
