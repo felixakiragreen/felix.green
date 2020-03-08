@@ -10,68 +10,44 @@
   p, li {
     @apply text-lg;
   }
-  h1 {
-    @apply text-3xl !important;
-  }
-  h2 {
-    @apply text-2xl !important;
-  }
-  h3 {
-    @apply text-xl !important;
-  }
-  h4 {
-    @apply text-xl !important;
-  }
+  .-text-1 { @apply text-base; }
+  .-text-2 { @apply text-sm; }
+  h1 { @apply text-3xl !important; }
+  h2 { @apply text-2xl !important; }
+  h3 { @apply text-xl !important; }
+  h4 { @apply text-xl !important; }
   @screen sm {
     p, li {
       @apply text-xl;
     }
-    h1 {
-      @apply text-4xl !important;
-    }
-    h2 {
-      @apply text-3xl !important;
-    }
-    h3 {
-      @apply text-2xl !important;
-    }
-    h4 {
-      @apply text-xl !important;
-    }
+    .-text-1 { @apply text-lg; }
+    .-text-2 { @apply text-base; }
+    h1 { @apply text-4xl !important; }
+    h2 { @apply text-3xl !important; }
+    h3 { @apply text-2xl !important; }
+    h4 { @apply text-xl !important; }
   }
   @screen md {
     p, li {
       @apply text-xl;
     }
-    h1 {
-      @apply text-5xl !important;
-    }
-    h2 {
-      @apply text-4xl !important;
-    }
-    h3 {
-      @apply text-3xl !important;
-    }
-    h4 {
-      @apply text-2xl !important;
-    }
+    .-text-1 { @apply text-lg; }
+    .-text-2 { @apply text-base; }
+    h1 { @apply text-5xl !important; }
+    h2 { @apply text-4xl !important; }
+    h3 { @apply text-3xl !important; }
+    h4 { @apply text-2xl !important; }
   }
   @screen lg {
     p, li {
       @apply text-2xl;
     }
-    h1 {
-      @apply text-6xl !important;
-    }
-    h2 {
-      @apply text-5xl !important;
-    }
-    h3 {
-      @apply text-4xl !important;
-    }
-    h4 {
-      @apply text-3xl !important;
-    }
+    .-text-1 { @apply text-xl; }
+    .-text-2 { @apply text-lg; }
+    h1 { @apply text-6xl !important; }
+    h2 { @apply text-5xl !important; }
+    h3 { @apply text-4xl !important; }
+    h4 { @apply text-3xl !important; }
   }
 
   abbr {
