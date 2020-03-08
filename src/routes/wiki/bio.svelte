@@ -38,7 +38,7 @@
 </div>
 
 <section>
-  <h2>I'm a 🚸 child of the 🌍 world.</h2>
+  <h2>I'm a 🚸 child of the 🌍 world</h2>
 
   <p>
     I am an 🇺🇸 <span class="»grey">American</span> citizen
@@ -94,43 +94,54 @@
 <section>
 
   <h2>
-    I don't deserve this.
+    I don't deserve this
   </h2>
   <p>
-    I feel like I hit some 🌠 cosmic 🎰 lottery:
+    I feel like I hit some 🌠
+    <span class="»i">cosmic</span>
+    🎰 lottery:
   </p>
-  <ul>
+  <ul class="mr-8">
     <li>
       I grew up with one of the
       <span class="»g">best</span>
-      <span class="»g">childhoods</span> anyone could hope for.
+      <span class="»r">childhoods</span> I could
+      <span class="»p">hope</span>
+      for.
     </li>
     <li>
       I got everything I needed from the most
-      <span class="»g">loving</span>
-      <span class="»g">family</span>.
+      <span class="»p">loving</span>
+      <span class="»b">family</span>.
     </li>
     <li>
-      Growing up in developing countries gave me a front row seat to the extremity of my
-      <span class="»g">privilege</span>.
+      Growing up in
+      <span class="»o">developing</span>
+      countries gave me a front row seat to the
+      <span class="»r">extremity</span> of my
+      <span class="»p">privilege</span>.
     </li>
     <li>
-      I am one of the lucky few humans that has the freedom to pursue
+      I am one of the
+      <span class="»b">lucky</span>
+      few humans that has the freedom to pursue
       <span class="»i">self</span><span class="»g">actualization</span>.
     </li>
   </ul>
   <p>
     And I just have this
-    <span class="»g">feeling</span>, that if
-    <span class="»g">everyone</span> could, it would
+    <span class="»r">feeling</span>, that if
+    <span class="»b">everyone</span> could, it would
     <span class="»g">solve</span> all the
-    <span class="»g">world</span>'s
-    <span class="»g">problems</span>.
-    (Or just create
-    <span class="»g">different</span> ones. But they'd be the
-    <span class="»g">problems</span> we
-    <span class="»g">wanted</span> to
-    <span class="»g">solve</span>.)
+    <span class="»n">world</span>'s
+    <span class="»o">problems</span>.
+  </p>
+  <p class='»grey -text-1'>
+    (Or create
+    <span class="»r">different</span> ones. But they'd be the
+    <span class="»o">problems</span> we
+    <span class="»p">wanted</span> to
+    <span class="»b">solve</span>.)
   </p>
 
   <div class={`
@@ -143,29 +154,23 @@
       <p>
         I currently live in
         🇺🇸 <span class="»grey">Indianapolis</span> with my
-        partner & our 3 🐈 cats.
+        <span class="»p">partner</span> & our 3 🐈 cats.
       </p>
       <p>
         I split my time between:
       </p>
       <ul>
         <li>
-          - being a 👨🏻‍💻 Front-end Developer with an awesome team at
+          . being a 👨🏻‍💻 Front-end Developer with an awesome team at
             <SpiffyLink href="https://www.trabian.com/" target="_blank" color="red">
               Trabian<span class="»grey">&#123;</span>
             </SpiffyLink>
         </li>
         <li>
-          - and working on any of my
-            <SpiffyLink href="projects#top" color="blue">projects</SpiffyLink>.
+          . and working on any of my
+            <SpiffyLink href="projects#top" color="blue">projects</SpiffyLink>
         </li>
       </ul>
-      <p>
-        I love 
-        <span class="»g">creating</span> and 
-        <span class="»b">building</span> things but I move on to the next thing before I can
-        <span class="»p">master</span> it.
-      </p>
     </div>
 
     <div class="h-64 mr-8">
@@ -173,6 +178,12 @@
     </div>
 
   </div>
+  <p>
+    I love 
+    <span class="»g">creating</span> and 
+    <span class="»b">building</span> things but I move on to the next thing before I can
+    <span class="»p">master</span> it.
+  </p>
 
   <p>
     Maybe I just need to
@@ -181,10 +192,12 @@
   </p>  
 
   <p>
-    On the bright side, I did achieve my first
-    <span class="text-green-600">«</span><span class="»g">life ambition</span><span class="text-green-600">»</span>
+    On the
+    <span class="»y">bright</span>
+    side, I did achieve my first
+    <span class="text-green-600">«</span><span class="»g">life ambition</span><span class="text-green-600">»</span>,
     <details>
-      <summary>buying a 🚗 <span class="»r">Tesla</span></summary>
+      <summary>buying a 🚗 <span class="»r">Tesla</span>.</summary>
 
       <p>I got it <abbr title="August 2020 AD/CE">12018.08</abbr>
         my license plate is: <span class="»i">model 3</span>.
@@ -211,46 +224,63 @@
 
 <section>
 
-  <h2>I am not special.</h2>
+  <h2>I am not special</h2>
 
   <p>
     But I have a
-    <span class="»p">bright</span>
-    <span class="»g">future</span> ahead of me. My
+    <span class="»y">bright</span>
+    <span class="»g">future</span> ahead of me.
+  </p>
+
+  <p>
+    My
     <span class="»g">future</span> is
     <span class="»b">humanity</span>'s
     <span class="»g">future</span>.
   </p>
 
   <p>
-    I deserve no credit for anything I accomplish in life.
+    I deserve
+    <span class="»i">no</span>
+    credit for anything I
+    <span class="»b">accomplish</span> in
+    <span class="»g">life</span>.
   </p>
 
   <p>
     I am a ⛓ slave to my 🧠
     <span class="»p">brain</span>.
     Most of the time, I
-    <span class="»p">barely</span> feel in
-    <span class="»p">control</span> of myself.
-    It does what it does and I’m along for the 🎢 ride.
+    <span class="»o">barely</span>
+    <span class="»r">feel</span> in
+    <span class="»b">control</span> of myself.
+    It
+    <span class="»b">does</span>
+    things and I’m along for the 🎢 ride.
   </p>
 
   <p>
-    I can’t explain why I do the things I do. I
-    <span class="»p">be</span> what it
-    <span class="»p">do</span>.
+    I can’t explain
+    <span class="»g">why</span> I
+    <span class="»b">do</span> the things I
+    <span class="»b">do</span>: I
+    <span class="»p">be</span> what it 🧠 
+    <span class="»b">do</span>.
   </p>
 
   <p>
     My partner likes to call me
     <span class="»g">«</span><span class="»grey"
-      >an 👽 alien from another planet.</span><span class="»g"
-    >»</span>
-    Many days, I feel like one. But that doesn’t explain why I have such a
+      >an 👽 alien from another planet</span><span class="»g"
+    >»</span>.
+    Many days, I
+    <span class="»r">feel</span> like one. But that doesn’t
+    <span class="»b">explain</span>
+    <span class="»g">why</span> I have such a
     <span class="»p">deep</span>
     <span class="»r">love</span> for the
-    <span class="»b">human  species</span>.
-    Far more than any individual, even myself.
+    <span class="»b">human</span> 🧬 species.
+    Far more than any 👤 individual, even myself.
   </p>
 
   <p>
@@ -258,14 +288,15 @@
     <span class="»b">rational</span> explanation is that I am
     <span class="»p">neurodivergent</span>.
     Though this does make it
-    difficult for me to understand the
+    <span class="»o">difficult</span>
+    for me to understand the
     <span class="»g">«</span><span class="»grey"
       >intents of others</span><span class="»g"
     >»</span>
     in addition to
     <span class="»g">«</span><span class="»grey"
       >communicating my own</span><span class="»g"
-    >»</span>
+    >»</span>;
     I
     <span class="»p">truly</span>
     <span class="»b">believe</span> that I am a
