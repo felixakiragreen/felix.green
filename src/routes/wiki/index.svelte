@@ -166,7 +166,7 @@
     {#if isToday(bday)}
       Today
     {:else}
-      On <abbr title="9th of March, 2020">12020.03.09</abbr>
+      On <abbr title="March 9th, 2020">12020.03.09</abbr>
     {/if}
     I began a
     <span class="»g">new</span> chapter of my
