@@ -1,5 +1,6 @@
 <script>
   import { solarpunk, golden_circle } from '@f*g/fumonicon'
+  import Aside from 'components/Aside.svelte'
 </script>
 
 <style>
@@ -7,9 +8,14 @@
     @apply grid;
     @apply gap-4;
   }
-
   p {
     @apply px-8;
+  }
+
+  abbr {
+    @apply text-gray-400;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--yellow-300);
   }
 
   nav {
@@ -38,15 +44,19 @@
     @apply text-gray-200;
   }
 
+  ol {
+    @apply grid;
+    @apply my-4;
+    @apply gap-4;
+  }
   ol > li {
     @apply grid;
     @apply px-8;
-    @apply gap-4;
-    align-items: first baseline;
+    @apply gap-8;
     grid-template-columns: auto 1fr;
   }
-  .text-8xl {
-    font-size: 8rem;
+  .text-6xl {
+    font-size: 6rem;
   }
 </style>
 
@@ -81,18 +91,20 @@
     </p>
   </article>
 
-  <aside>
-    <span class="»o">Warning:</span>
-    I am not a words person- I am a visual person. This is my best attempt to
-    articulate a specific vision. If you share a similar vision and can help
-    explain or communicate it better please join me. I believe strongly that
-    the collective voice is far more powerful than the singular.
-  </aside>
+  <Aside>
+    <span class="»o text-center">⚠️ Warning</span>
+    <p class="plain -text-1 text-left">
+      I am not a words person— I am a visual person. This is my best attempt to
+      articulate a specific vision. If you feel it too and can help
+      explain or communicate it better please join me. I believe strongly that
+      the collective voice is stronger than the singular.
+    </p>
+  </Aside>
 
 </section>
 
 <nav id="philosophy">
-  <li>
+  <li class="-text-2">
     <a href="solarpunk#philosophy" class="selected">
       <div class="text-center">
         <div class="h-12" style="
@@ -107,7 +119,7 @@
       </div>
     </a>
   </li>
-  <li>
+  <li class="-text-2">
     <a href="solarpunk#science">
       <div class="text-center">
         <div class="h-12" style="
@@ -122,7 +134,7 @@
       </div>
     </a>
   </li>
-  <li>
+  <li class="-text-2">
     <a href="solarpunk#technology">
       <div class="text-center">
         <div class="h-12" style="
@@ -133,7 +145,7 @@
           {@html golden_circle.svg}
         </div>
         <h4 class="»p">Technology</h4>
-        What does it look like?
+        What is it like?
       </div>
     </a>
   </li>
@@ -255,7 +267,7 @@
 </section>
 
 <nav id="science">
-  <li>
+  <li class="-text-2">
     <a href="solarpunk#philosophy">
       <div class="text-center">
         <div class="h-12" style="
@@ -270,7 +282,7 @@
       </div>
     </a>
   </li>
-  <li>
+  <li class="-text-2">
     <a href="solarpunk#science" class="selected">
       <div class="text-center">
         <div class="h-12" style="
@@ -284,7 +296,7 @@
       </div>
     </a>
   </li>
-  <li>
+  <li class="-text-2">
     <a href="solarpunk#technology">
       <div class="text-center">
         <div class="h-12" style="
@@ -295,7 +307,7 @@
           {@html golden_circle.svg}
         </div>
         <h4 class="»p">Technology</h4>
-        What does it look like?
+        What is it like?
       </div>
     </a>
   </li>
@@ -308,33 +320,32 @@
 "Question your constraints."
 -->
 
-
-
 <section>
 
   <article>
 
-  <h2 class="text-center"><span class="»r">First</span> Principles</h2>
+    <h2 class="text-center"><span class="»o">First</span> Principles</h2>
 
     <p> 
       When approaching something
       <span class="»y">new</span>,
       the
       <span class="»p">framework</span>
-      used for 💭 
-      <span class="»g">thinking</span>
+      used for
+      <br />
+      💭 <span class="»b">thinking</span>
       determines what is
       <span class="»p">possible</span>.
       <br />
       Generally there are 2 ways to 🧠
-      <span class="»g">reason</span>:
+      <span class="»b">reason</span>:
     </p>
 
     <ol>
-      <li>
-        <dt class="text-5xl text-blue-500">1</dt>
+      <li style="align-items: first baseline;">
+        <dt class="text-5xl text-red-500">1</dt>
         <dd>
-          <h4>by <span class="»b">analogy</span></h4>
+          <h4>by <span class="»r">analogy</span></h4>
           <span class="text-lg text-gray-300">
             Essentially 
             <span class="»p">copying</span> 🎨 what has been done
@@ -342,29 +353,32 @@
           </span>
         </dd>
       </li>
-      <li>
-        <dt class="text-5xl text-red-500">2</dt>
+      <li style="align-items: first baseline;">
+        <dt class="text-5xl text-orange-500">2</dt>
         <dd>
-          <h4>using <span class="»r">first</span> principles</h4>
+          <h4>using <span class="»o">first</span> principles</h4>
           <span class="text-lg text-gray-300">
             Boil things down to their ⚛️
-            <span class="»r">fundamental</span>
+            <span class="»i">fundamental</span>
             <span class="»g">truths</span> and
-            <span class="»g">reason</span> up from there.  
+            <span class="»b">reason</span> up from there.  
           </span>
         </dd>
       </li>
     </ol>
 
     <p>
-      We all get through life reasoning through
-      <span class="»b">analogy</span>
+      We all get through
+      <span class="»g">life</span> reasoning through
+      <span class="»r">analogy</span>
       because it comes
       <span class="»p">naturally</span> and is far more
       <span class="»g">efficient</span>.
-      <br />
+    </p>
+    <p>
       <span class="text-orange-500">«</span><span class="»o">In fact</span><span class="text-orange-500">»</span> it
-      <span class="»r">has</span> to be done because otherwise mentally,
+      <span class="»r">has</span> to be done because otherwise
+      <span class="»b">mentally</span>,
       a person couldn't get through a
       <span class="»y">day</span>. 
     </p>
@@ -376,9 +390,11 @@
       <span class="»y">new</span>,
       <br />
       Using the 📏
-      <span class="»b">physics</span> approach of 🧠 reasoning by
-      <span class="»r">first</span> principles,
-      <span class="»g">helps</span> reach solutions that are
+      <span class="»b">physics</span> approach of 🧠
+      <span class="»g">reasoning</span> by
+      <span class="»o">first</span> principles,
+      <span class="»g">helps</span> reach
+      <span class="»b">solutions</span> that are
       <span class="»i">counter</span>intuitive
       <br />
       And would never have been
@@ -386,106 +402,202 @@
       by iterating on what already exists.
     </p>
 
-    <blockquote>Solarpunk is about imagining the system </blockquote>
-
   </article>
 
   <blockquote class="mx-auto py-6 px-20">Everything is a system.</blockquote>
 
-  <p>
-    <span class="»o">Warning:</span>
-    I know very little about systems.
-    I find them incredibly fascinating and love studying them.
-    This is my best attempt to articulate the first principles
-    of designing and building solarpunk systems.
-    If you can boil these down to more basic truths or suggest alternatives,
-    please share them with me!
-  </p>
+  <Aside>
+    <span class="»o text-center">⚠️ Warning</span>
+    <p class="plain -text-1 text-left">
+      I know very little about systems.
+      I find them incredibly fascinating and love studying them.
+      This is my best attempt to articulate the first principles
+      of designing and building solarpunk systems.
+      If you can boil these down to more basic truths or suggest alternatives,
+      please share them with me!
+    </p>
+  </Aside>
 
-  <div class="principle">
-    <div class="text-8xl">
-      1.
-    </div>
-    <div class="content">
-      <h3>Self-correction</h3>
-      <p class="text-gray-400 text-lg">Similar concepts: Feedback Loops, Self-learning,
-    Adaptation, Evolution, Bayesian reasoning, Design thinking, Checks & balances</p>
-      <p>
-        Everything can be improved- no system is without flaws. Adaptation correlates with survival. 
-      </p>
-    </div>
-  </div>
+  <ol>
+    <li>
+      <dt class="text-6xl text-red-600">1</dt>
+      <dd>
+        <h3>Self-correction</h3>
+        <span class="text-red-600">«</span><span class="»r"
+          >Take the actions that are most likely to
+          <br />
+          make the
+          <span class="»g">future</span>
+          better. Then
+          <span class="»b">re-evaluate</span>
+          .</span><span class="text-red-600"
+        >»</span> -Elon
+        <br />
+        <span class="»grey">Similar concepts:</span>
+        <div class="grid grid-cols-2">
+          <span>🔄 Feedback Loops</span>
+          <span>🚼 Self-learning</span>
+          <span>🔨 Adaptation</span>
+          <span>🧬 Evolution</span>
+          <span>🧰 Bayesian reasoning</span>
+          <span>📐 Design thinking</span>
+          <span>🕸 Systems thinking</span>
+          <span>⚖️ Checks & balances</span>
+        </div>
+        <!-- <span>
+          Everything can be improved- no system is without flaws.
+        </span> -->
+      </dd>
+    </li>
+  </ol>
 
-  <blockquote>
+  <!-- <blockquote class="px-8">
     I think the single best piece of advice is to have a feedback loop:
     question yourself and constantly think about how you
     could be doing things better. ~ Elon Musk
-  </blockquote>
+  </blockquote> -->
   
-  <div class="principle">
-    <div class="text-8xl">
-      2.
-    </div>
-    <div class="content">
-      <h3>Open</h3>
-      <p class="text-gray-400 text-lg">Similar concepts: Transparency, Accountability</p>
-      <p>"Information wants to be free."</p>
-      <p>open source, open government (democracy), open p</p>
-    </div>
-  </div>
-  
-  <div class="principle">
-    <div class="text-8xl">
-      3.
-    </div>
-    <div class="content">
-      <h3>Sustainable</h3>
-      <p class="text-gray-400 text-lg">Similar concepts: Permaculture, Long-term thinking, Seven generation stewardship, Futuristic</p>
-      <p>We need to start making decisions today, based on how it will
-  affect the tomorrow.</p>
-    </div>
-  </div>
-  
-  <div class="principle">
-    <div class="text-8xl">
-      4.
-    </div>
-    <div class="content">
-      <h3>Egalitarian</h3>
-      <p class="text-gray-400 text-lg">Similar concepts: Equal Representation, Indiviudal Freedom & Privacy, Social & Climate Justice, Sociocracy, Communism</p>
-      <p>From billionaires to slave-owners, serial killers to genociders, all are human</p>
-    </div>
-  </div>
-  
-  <div class="principle">
-    <div class="text-8xl">
-      5.
-    </div>
-    <div class="content">
-      <h3>Xenophilic</h3>
-      <p class="text-gray-400 text-lg">Similar concepts: Diversity</p>
-      <p></p>
-    </div>
-  </div>
-  
-  <div class="principle">
-    <div class="text-8xl">
-      6.
-    </div>
-    <div class="content">
-      <h3>Inspirational</h3>
-      <p class="text-gray-400 text-lg">Similar concepts: Idealism, Technological, Resourceful, Inventive, Ingenuinity. </p>
-      <p>
-        Making the future <abbr tile="Musk + Tesla = Model S, 3, X, Y">SEXY</abbr>.
-        Utopian. High-tech backends with simple, elegant outputs.
-      </p>
-    </div>
-  </div>
+  <ol>
+    <li>
+      <dt class="text-6xl text-orange-600">2</dt>
+      <dd>
+        <h3>Open</h3>
+        <span class="text-orange-600">«</span><span class="»o"
+          >Information is the currency of the universe. Counter-intuitively, the freer it is, the more everyone benefits.</span><span class="text-orange-600"
+        >»</span>
+        <br />
+        <span class="»grey">Similar concepts:</span>
+        <div class="grid grid-cols-2">
+          <span>Transparency</span>
+          <span>Accountability</span>
+          <span>Freedom</span>
+          <span>Public Domain</span>
+        </div>
+        <span class="»grey">In the 
+        <span class="»g">future</span>,
+        everything will be open:</span>
+        <div class="grid grid-cols-2">
+          <span>💡 Ideas</span>
+          <span>🖼 Art</span>
+          <span>📜 Knowledge</span>
+          <span>🔭 Processes</span>
+          <span>🕸 Systems</span>
+          <span>👁‍🗨 Privacy</span>
+          <span>🆔 Identification & Auth</span>
+          <span>💻 Digital Code</span>
+          <span>🧬 Genetic Code</span>
+          <span>🗃 Data</span>
+          <span>🔏 Patents</span>
+          <span>⛓ Copyright</span>
+          <span>🛂 Borders</span>
+          <span>⚖️ Justice</span>
+          <span>📜 Legislation & Regulation</span>
+          <span>🗳
+            <abbr title="Organizational, Corporate, National, Global" >
+              <span class="text-gray-100">
+                Governance
+              </span>
+            </abbr>
+          </span>
+          <span>💰 Wealth</span>
+          <span>🔋 Energy</span>
+        </div>
+      </dd>
+    </li>
+    <li>
+      <dt class="text-6xl text-yellow-600">3</dt>
+      <dd>
+        <h3>Sustainability</h3>
+          <span class="text-yellow-600">«</span><span class="»y"
+            >It's all one big problem:
+            <br />
+            To make civilization sustainable.</span><span class="text-yellow-600"
+          >»</span> -Boyan
+          <br />
+          <span class="»grey">Similar concepts:</span>
+          <div class="grid grid-cols-2">
+            <span>♻️ Permaculture</span>
+            <span>🗓 Long-term thinking</span>
+            <span>🏞 7 generation stewardship</span>
+            <span>🛸 Futurism</span>
+          </div>
+          <!-- <span>
+            We need to start making decisions today,
+            based on how it will affect the tomorrow.
+          </span> -->
+      </dd>
+    </li>
+    <li>
+      <dt class="text-6xl text-green-600">4</dt>
+      <dd>
+        <h3>Egalitarian</h3>
+        <span class="text-green-600">«</span><span class="»g"
+          >It is self-evident that all humans are born equal.</span><span class="text-green-600"
+        >»</span>
+        <span class="»grey">Similar concepts:</span>
+        <div class="grid grid-cols-2">
+          <span>Equal Representation</span>
+          <span>Indiviudal Freedom & Rights</span>
+          <span>Social & Climate Justice</span>
+          <span>Sociocracy</span>
+          <span>Democracy</span>
+          <span>Communism</span>
+        </div>
+        <!-- <span>
+          From billionaires to slave-owners, serial killers to genociders, all are human
+        </span> -->
+      </dd>
+    </li>
+    <li>
+      <dt class="text-6xl text-blue-600">5</dt>
+      <dd>
+        <h3>Xenophilic</h3>
+        <span class="text-blue-600">«</span><span class="»b"
+          >Every culture has beautiful aspects of humanity.
+          The diverse array of patterns amongst us
+          is what makes the individual special.</span><span class="text-blue-600"
+        >»</span>
+        <br />
+        <span class="»grey">Similar concepts:</span>
+        <div class="grid grid-cols-2">
+          <span>Diversity</span>
+          <span>Local communities</span>
+          <span>Social justice</span>
+          <span>Effective altruism</span>
+        </div>
+      </dd>
+    </li>
+    <li>
+      <dt class="text-6xl text-purple-600">6</dt>
+      <dd>
+        <h3>Inspirational</h3>
+        <span class="text-purple-600">«</span><span class="»p"
+          >High-tech backends with simple, elegant outputs</span><span class="text-purple-600"
+        >»</span>
+        <br />
+        <span class="»grey">Similar concepts:</span>
+        <div class="grid grid-cols-2">
+          <span>Idealism</span>
+          <span>Optimism</span>
+          <span>Benevolent Technology</span>
+          <span>Resourcefulness</span>
+          <span>Inventiveness</span>
+          <span>Ingenuinity</span>
+          <span>Exploration</span>
+          <span>Futuristic</span>
+        </div>
+        <!-- <span>
+          Making the future <abbr tile="Musk + Tesla = Model S, 3, X, Y">SEXY</abbr>.
+          Utopian. 
+        </span> -->
+      </dd>
+    </li>
+  </ol>
 
 </section>
 
 <nav id="technology">
-  <li>
+  <li class="-text-2">
     <a href="solarpunk#philosophy">
       <div class="text-center">
         <div class="h-12" style="
@@ -500,7 +612,7 @@
       </div>
     </a>
   </li>
-  <li>
+  <li class="-text-2">
     <a href="solarpunk#science">
       <div class="text-center">
         <div class="h-12" style="
@@ -515,7 +627,7 @@
       </div>
     </a>
   </li>
-  <li>
+  <li class="-text-2">
     <a href="solarpunk#technology" class="selected">
       <div class="text-center">
         <div class="h-12" style="
@@ -525,63 +637,103 @@
           {@html golden_circle.svg}
         </div>
         <h4 class="»p">Technology</h4>
-        What does it look like?
+        What is it like?
       </div>
     </a>
   </li>
 </nav>
 
-<section>
+<section class="text-center">
 
-  <h2>tech</h2>
+  <blockquote class="mx-auto py-6 px-20">
+    <!-- <div class={`
+      absolute
+      top-0
+      bottom-0
+      left-0
+      right-0
+    `} style="
+      --fumonicon-time-past: var(--red-800);
+      --fumonicon-time-present: var(--yellow-800);
+      --fumonicon-time-future: var(--green-800);
+      z-index: -1;
+      opacity: 0.1;
+    ">
+      {@html solarpunk.svg}
+    </div> -->
+    <span class="»p">What</span> does a 
+    <span class="»g">solarpunk future</span>
+    look like?
+    <br />
+    And
+    <span class="»b">how</span> do we get 
+    <span class="»g">there</span> from
+    <span class="»y">here</span>?
+  </blockquote>
 
-  In the end, it's all about survival.
+  <!-- know what question to ask. Like it took us a long time to even frame the question correctly. But once we could frame the question correctly, the answer was, I wouldn't say easy, but, the answer flowed once the question could be framed with precision. Framing that question with precision was very difficult. -->
+
+  <p class="my-4">
+    I
+    <span class="»r">don't</span> have the
+    <span class="»b">answers</span>. It's up to
+    <span class="»p">you</span>. And
+    <span class="»g">us</span>.
+  </p>
+
+  <p class="my-4">
+    In the end,
+    <span class="»g">Solarpunk</span> is a
+    <span class="»r">question</span>.
+  </p>
+
+  <blockquote class="mx-auto my-4 py-6 px-12">
+    What small thing can I do
+    <span class="»y">today</span>, to make
+    <span class="»g">tomorrow</span>
+    <span class="»o">better</span>?
+  </blockquote>
+
+  <blockquote class="mx-auto my-4 py-6 px-12">
+    What does my
+    <span class="»g">utopia</span>
+    look like?
+  </blockquote>
+  
+  <blockquote class="mx-auto my-4 py-6 px-12">
+    What does
+    <span class="»b">humanity</span>
+    need to do to
+    <span class="»p">move</span> in that
+    <span class="»g">direction</span>?
+  </blockquote>
+
+  <blockquote class="mx-auto my-4 py-6 px-12">
+    What can I
+    <span class="»p">do</span> for
+    <span class="»b">humanity</span>?
+  </blockquote>
+
+  <!-- <blockquote>Solarpunk is about imagining the system </blockquote> -->
+
+  <!-- In the end, it's all about survival.
   1. Individual.
   2. Tribe
-  3. Species
+  3. Species -->
+  
+  <!-- Solarpunks are not anarchists.  -->
+  
+  <!-- We believe humanity has the capability to imagine and build beautiful systems.
+  Look at the metric system. Look at LANGUAGE. -->
+  
+  <!-- This decade is going to be huge for the Solarpunk movement. -->
+  
+  <p class="-text-2 »grey plain my-4">
+    <span class="»o">TODO:</span> I'm working on compiling the
+    best solarpunk resources,
+    and they'll go here.
+  </p>
 
-  Solarpunk: - Philosophy (& Aesthetics) - Science - Technology
-  
-  Solarpunks are not anarchists. 
-  
-  Everything is a system.
-  
-  We believe humanity has the capability to imagine and build beautiful systems.
-  Look at the metric system.
-  
-  
-  Look at LANGUAGE.
-  
-  Solarpunk is a reaction to the science-fiction dystopias with harmful technology.
-
-  Solarpunk is a reaction to the accumulation of wealth and it's connection to survival.
-  
-  Solarpunk is a reaction to the destruction & exploitation of our home planet,
-  it's resources, and most importantly, it's humans.
-  
-  We can get more people to change their habits by ,
-  than with messages of doom.
-  
-  Solarpunk is the movement to organize collective human action.
-  
-  This decade is going to be huge for the Solarpunk movement.
-  
-  Millenials and Zoomers are waking up to the real shit show that the world is
-  in.
-  
-  Everything is chaos and no one is controlling anything. We need limits.
-  fundamentally anti-establishment (broken establishment) It’s hard out here for
-  futurists under 30,” declares one manifesto. “We’re solarpunks because the
-  only other options are denial or despair.” Solarpunk is the spear head of the
-   Restoration.
 </section>
 
 <!-- TODO: share links -->
-
-what does it look like
-
-different for every persom
-
-find the small thing you can do today, to make tomorrow better.
-
-Solarpunk is a question. 
