@@ -7,7 +7,7 @@
     @apply bg-gray-800;
     @apply text-gray-100;
   }
-  p {
+  p, li {
     @apply text-lg;
   }
   h1 {
@@ -23,7 +23,7 @@
     @apply text-xl !important;
   }
   @screen sm {
-    p {
+    p, li {
       @apply text-xl;
     }
     h1 {
@@ -40,7 +40,7 @@
     }
   }
   @screen md {
-    p {
+    p, li {
       @apply text-xl;
     }
     h1 {
@@ -57,7 +57,7 @@
     }
   }
   @screen lg {
-    p {
+    p, li {
       @apply text-2xl;
     }
     h1 {
@@ -74,7 +74,12 @@
     }
   }
 
-  
+  abbr {
+    @apply text-gray-400;
+    text-decoration-style: wavy;
+    text-decoration-color: var(--yellow-300);
+  }
+
   blockquote {
     @apply relative;
     @apply text-gray-200;
@@ -116,4 +121,57 @@
     bottom: 0;
     z-index: -1;
   } */
+
+  .»y { @apply text-yellow-300; } /* tag yellow */
+  .»g { @apply text-green-300; } /* tag green */
+  .»r { @apply text-red-300; } /* tag red */
+  .»b { @apply text-blue-300; } /* tag blue */
+  .»p { @apply text-purple-300; } /* tag purple */
+  .»o { @apply text-orange-300; } /* tag orange */
+  .»i {
+    @apply text-gray-900;
+    @apply bg-gray-400;
+    @apply rounded;
+    @apply p-1;
+  }
+
+  .»grey {
+    @apply text-gray-400;
+  }
+
+  .plain {
+    font-family: -apple-system, Helvetica Neue, sans-serif;
+  }
+
+  /* Idea to style tags more */
+
+  /* .»y {
+    @apply text-yellow-300;
+  } */
+  /* .»y::before {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -0.4625rem;
+    width: 0;
+    height: 0;
+    border-top: 0.925rem solid transparent;
+    border-bottom: 0.925rem solid transparent;
+    border-right: 0.4625rem solid var(--yellow-800);
+  }
+  .»y::after {
+    content: " ";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    right: -0.4625rem;
+    width: 0;
+    height: 0;
+    border-top: 0.925rem solid transparent;
+    border-bottom: 0.925rem solid transparent;
+    border-left: 0.4625rem solid var(--yellow-800);
+  } */
 </style>
+
+
