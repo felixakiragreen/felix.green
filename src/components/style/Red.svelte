@@ -1,0 +1,1 @@
+<span class="text-red-300"><slot></slot></span>
