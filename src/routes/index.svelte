@@ -1,8 +1,8 @@
 <script>
   import Index from './wiki/index.svelte'
-  import Hexagon from '../components/Hexagon.svelte'
-  import FelixAkiraGreen from '../components/FelixAkiraGreen.svelte'
-  import PlainTextWarning from '../components/PlainTextWarning.svelte'
+  import Hexagon from 'components/Hexagon.svelte'
+  import FelixAkiraGreen from 'components/FelixAkiraGreen.svelte'
+  import PlainTextWarning from 'components/PlainTextWarning.svelte'
 </script>
 
 <svelte:head>

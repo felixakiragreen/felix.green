@@ -1,6 +1,6 @@
 <script>
   import { dof } from '@f*g/fumonicon'
-  import Countdown from '../components/Countdown.svelte'
+  import Countdown from 'components/Countdown.svelte'
 
   let hbday = new Date('2020-09-09')  
 
