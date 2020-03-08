@@ -21,7 +21,7 @@
 
 <style>
   :root {
-    --bg: #53544c;
+    --bg: var(--grey-700);
   }
 </style>
 
