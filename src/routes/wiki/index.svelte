@@ -91,9 +91,13 @@
   </p>
 
   <p>
-    I want to be alive to <span class="»p">experience</span>
-    <span class="»b">humanity</span>'s <span class="»g">bright future</span> and
-    <span class="»p">play</span> a role in <span class="»p">building</span> it.
+    I want to be alive to
+    <span class="»p">experience</span>
+    <span class="»b">humanity</span>'s
+    <span class="»o">bright</span>
+    <span class="»g">future</span> and
+    <span class="»p">play</span> a role in
+    <span class="»p">building</span> it.
   </p>
 </section>
 
@@ -164,22 +168,36 @@
     {:else}
       On <abbr title="9th of March, 2020">12020.03.09</abbr>
     {/if}
-    I began a new chapter of my life.
+    I began a
+    <span class="»g">new</span> chapter of my
+    <span class="»b">life</span>.
   </p>
 
   <p>
-    My <span class="»i">greatest fear</span> is that I will spend most of my life dreaming and never
-    accomplish anything.
-    I can’t stop dreaming, so this website is my
-    <span class="»p">attempt</span> to start
+    My
+    <span class="»o">greatest</span>
+    <span class="»r">fear</span> is that I will spend most of my
+    <span class="»b">life</span>
+    <span class="»p">dreaming</span> and
+    <span class="»r">never</span>
+    <span class="»p">accomplish</span>
+    <span class="»b">anything</span>.
+    I can’t stop
+    <span class="»p">dreaming</span>, so this website is me
     <span class="»b">doing</span>.
   </p>
 
   <p>
-    I am looking for similar-minded collaborators
-    that want to work together on
-    <a href="projects">projects</a>
-    focused on building a better future.
+    I am looking for 
+    <span class="»y">collaborators</span>
+    that want to
+    <span class="»p">work</span>
+    <span class="»g">together</span> on
+    <SpiffyLink href="projects#top" color="blue">projects</SpiffyLink>
+    <span class="»r">focused</span> on
+    <span class="»p">building</span> a
+    <span class="»o">better</span>
+    <span class="»g">future</span>.
   </p>
 
 </section>
