@@ -730,7 +730,7 @@
   <!-- This decade is going to be huge for the Solarpunk movement. -->
   
   <p class="-text-2 »grey plain my-4">
-    <span class="»o">TODO:</span> I'm working on compiling the
+    <span class="»o">🔗 TODO:</span> I'm working on compiling the
     best solarpunk resources,
     and they'll go here.
   </p>

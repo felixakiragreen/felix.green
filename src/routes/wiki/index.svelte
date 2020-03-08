@@ -48,7 +48,7 @@
     </div>
     <span style="justify-self: start;">
       I am
-      <SpiffyLink href="about#top" color="yellow">my story</SpiffyLink>
+      <SpiffyLink href="about#top" color="yellow" cls="text-2xl">my story</SpiffyLink>
     </span>
   </h2>
 
@@ -113,7 +113,7 @@
     </div>
     <span style="justify-self: start;">
       I be
-      <SpiffyLink href="solarpunk#top" color="green">solarpunk</SpiffyLink>
+      <SpiffyLink href="solarpunk#top" color="green" cls="text-2xl">solarpunk</SpiffyLink>
     </span>
   </h2>
 
@@ -158,7 +158,7 @@
     </div>
     <span style="justify-self: start;">
       I do
-      <SpiffyLink href="projects#top" color="blue">projects</SpiffyLink>
+      <SpiffyLink href="projects#top" color="blue" cls="text-2xl">projects</SpiffyLink>
     </span>
   </h2>
 
@@ -198,6 +198,16 @@
     <span class="»p">building</span> a
     <span class="»o">better</span>
     <span class="»g">future</span>.
+  </p>
+
+  <p class="-text-2 »grey plain my-4">
+    <span class="»o">🚧 TODO:</span>
+    Site is WIP; if you find any mistakes
+    🙏 pls let me know on
+    <SpiffyLink
+      color="gray"
+      href="https://github.com/felixakiragreen/felix.green/issues">Github
+    </SpiffyLink>
   </p>
 
 </section>
