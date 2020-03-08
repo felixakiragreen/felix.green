@@ -9,6 +9,7 @@ import icon_tiktok from 'simple-icons/icons/tiktok'
 import icon_keybase from 'simple-icons/icons/keybase'
 import icon_ycombinator from 'simple-icons/icons/ycombinator'
 import icon_tesla from 'simple-icons/icons/tesla'
+import icon_webring from './icon_webring'
 
 export const socials = [
   [
@@ -97,7 +98,10 @@ export const socials = [
       ...icon_tiktok,
     },
     // {
-    // webring
+    //   url: 'https://webring.xxiivv.com/',
+    //   username: '113) felix.green',
+    //   color: 'grey',
+    //   ...icon_webring,
     // },
   ],
 ]
