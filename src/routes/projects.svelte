@@ -1,5 +1,5 @@
 <script>
-  import Projects from './wiki/Projects.svelte'
+  import Projects from 'wiki/projects.svelte'
 </script>
 
 <svelte:head>

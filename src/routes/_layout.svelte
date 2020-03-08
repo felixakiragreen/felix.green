@@ -1,11 +1,11 @@
 <script>
-  import Nav from '../components/Nav.svelte'
-  import Main from '../components/Main.svelte'
-  import Footer from '../components/Footer.svelte'
-  import Global from '../components/Global.svelte'
-  import Tailwind from '../components/Tailwind.svelte'
+  import Nav from 'components/Nav.svelte'
+  import Main from 'components/Main.svelte'
+  import Footer from 'components/Footer.svelte'
+  import Global from 'components/Global.svelte'
+  import Tailwind from 'components/Tailwind.svelte'
 
-  import ConditionalCountdown from '../components/ConditionalCountdown.svelte'
+  import ConditionalCountdown from 'components/ConditionalCountdown.svelte'
 
   export let segment
 

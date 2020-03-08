@@ -1,5 +1,5 @@
 <script>
-  import Bio from './wiki/bio.svelte'
+  import Bio from 'wiki/bio.svelte'
 </script>
 
 <svelte:head>

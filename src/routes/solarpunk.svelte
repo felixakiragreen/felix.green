@@ -1,5 +1,5 @@
 <script>
-  import Solarpunk from './wiki/solarpunk.svelte'
+  import Solarpunk from 'wiki/solarpunk.svelte'
 </script>
 
 <svelte:head>
