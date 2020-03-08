@@ -63,6 +63,12 @@
   let delay = 600
   let staggerHex = 300
   let staggerText = 900
+  // TODO: prevent animations on non-index pages
+  // if (segment !== undefined) {
+  //   delay = 0
+  //   staggerHex = 0
+  //   staggerText = 0
+  // }
 </script>
 
 <style>
@@ -265,7 +271,7 @@
       {@html fag.svg}
     </a>
     <a
-      href="about"
+      href="about#top"
       class="about"
       class:selected={segment === 'about'}
       transition:fade="{{delay: delay + staggerHex}}"
@@ -281,7 +287,7 @@
       </div>
     </a>
     <a
-      href="solarpunk"
+      href="solarpunk#top"
       class="solarpunk"
       class:selected={segment === 'solarpunk'}
       transition:fade="{{delay: delay + staggerHex}}"
@@ -297,7 +303,7 @@
       </div>
     </a>
     <a
-      href="projects"
+      href="projects#top"
       class="projects"
       class:selected={segment === 'projects'}
       transition:fade="{{delay: delay + staggerHex}}"
@@ -313,7 +319,7 @@
       </div>
     </a>
     <a
-      href="dof"
+      href="dof#top"
       class="flex dof"
       class:selected={segment === 'dof'}
       transition:fade="{{delay: delay + staggerHex}}"
@@ -321,7 +327,10 @@
       <div class="nav-item-bg">
         <HexagonHorizontalScaling rightTip={false} />
       </div>
-      <div class="smaller-hex item-scale-in" style="transform-origin: 0% 0%;">
+      <div class="smaller-hex item-scale-in" style="transform-origin: 0% 0%;
+      --fumonicon-dof-primary: var(--grey-600);
+      --fumonicon-dof-secondary: var(--grey-500);
+      ">
         {@html dof.svg}
       </div>
       <div class="label flex flex-col justify-center items-start">
