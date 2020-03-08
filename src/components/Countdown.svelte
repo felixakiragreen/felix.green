@@ -25,10 +25,10 @@
     </h1>
     {#if showPlain}
       <p class="plain text-xs text-gray-400">
-        {timeLeft.d} <span class="text-blue-600">days</span>
-        {timeLeft.h} <span class="text-purple-600">hours</span>
-        {timeLeft.m} <span class="text-red-600">minutes</span>
-        {timeLeft.s} <span class="text-orange-600">seconds</span>
+        {timeLeft.d} <span class="text-blue-600">day(s)</span>
+        {timeLeft.h} <span class="text-purple-600">hour(s)</span>
+        {timeLeft.m} <span class="text-red-600">minute(s)</span>
+        {timeLeft.s} <span class="text-orange-600">second(s)</span>
       </p>
     {/if}
   {/if}
