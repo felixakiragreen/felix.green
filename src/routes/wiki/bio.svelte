@@ -256,7 +256,7 @@
     <span class="»b">control</span> of myself.
     It
     <span class="»b">does</span>
-    things and I’m along for the 🎢 ride.
+    things and my 🥩 meatbag is along for the 🎢 ride.
   </p>
 
   <p>
