@@ -1,5 +1,5 @@
 <script>
-  import Index from './wiki/index.svelte'
+  import Index from 'wiki/index.svelte'
   import Hexagon from 'components/Hexagon.svelte'
   import FelixAkiraGreen from 'components/FelixAkiraGreen.svelte'
   import Aside from 'components/Aside.svelte'
