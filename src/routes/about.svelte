@@ -1,7 +1,20 @@
+<script>
+  import Bio from './wiki/bio.svelte'
+</script>
+
 <svelte:head>
-  <title>About</title>
+  <title>about ⬣ f⬡g</title>
 </svelte:head>
 
-<h1>About this site... lalalal</h1>
-
-<p>This is the 'about' page. There's not much here.</p>
+<div
+  class={`
+    relative
+    grid
+    gap-4
+    mt-8
+    z-20
+  `}
+  id="top"
+>
+  <Bio />
+</div>
