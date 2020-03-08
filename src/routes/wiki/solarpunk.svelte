@@ -1,6 +1,7 @@
 <script>
   import { solarpunk, golden_circle } from '@f*g/fumonicon'
   import Aside from 'components/Aside.svelte'
+  import TxtSolarpunk from 'txt/Solarpunk.svelte'
 </script>
 
 <style>
@@ -683,24 +684,24 @@
 
   <p class="my-4">
     In the end,
-    <span class="»g">Solarpunk</span> is a
+    <TxtSolarpunk /> is a
     <span class="»r">question</span>.
   </p>
 
-  <blockquote class="mx-auto my-4 py-6 px-12">
+  <blockquote class="m-4">
     What small thing can I do
     <span class="»y">today</span>, to make
     <span class="»g">tomorrow</span>
     <span class="»o">better</span>?
   </blockquote>
 
-  <blockquote class="mx-auto my-4 py-6 px-12">
+  <blockquote class="m-4">
     What does my
     <span class="»g">utopia</span>
     look like?
   </blockquote>
   
-  <blockquote class="mx-auto my-4 py-6 px-12">
+  <blockquote class="m-4">
     What does
     <span class="»b">humanity</span>
     need to do to
@@ -708,7 +709,7 @@
     <span class="»g">direction</span>?
   </blockquote>
 
-  <blockquote class="mx-auto my-4 py-6 px-12">
+  <blockquote class="m-4">
     What can I
     <span class="»p">do</span> for
     <span class="»b">humanity</span>?
