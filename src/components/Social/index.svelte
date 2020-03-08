@@ -10,11 +10,11 @@
     @apply max-w-md;
     @apply my-8;
   }
-  .list {
+  ul {
     @apply grid;
     grid-template-rows: repeat(3, 1fr);
   }
-  .row {
+  li {
     @apply grid;
     @apply -mt-2;
     grid-template-columns: repeat(12, 1fr);
@@ -22,25 +22,28 @@
 </style>
 
 <div class="socials">
-  <div class="list">
+  <ul>
 
-    <div class="row">
+    <li>
       <div style="grid-column: 1 / span 3;" />
       {#each socials[2] as social}
         <HexIcon {social} />
       {/each}
-    </div>
-    <div class="row">
+    </li>
+
+    <li>
       <div style="grid-column: 1 / span 2;" />
       {#each socials[1] as social}
         <HexIcon {social} />
       {/each}
-    </div>
-    <div class="row">
+    </li>
+
+    <li>
       <div style="grid-column: 1 / span 1;" />
       {#each socials[0] as social}
         <HexIcon {social} />
       {/each}
-    </div>
-  </div>
+    </li>
+
+  </ul>
 </div>
