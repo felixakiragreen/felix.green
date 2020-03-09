@@ -34,6 +34,7 @@
   }
   .h-icon {
     @apply h-16;
+    @apply w-16;
   }
 </style>
 
