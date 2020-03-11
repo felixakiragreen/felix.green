@@ -5,15 +5,7 @@
   import Global from 'components/Global.svelte'
   import Tailwind from 'components/Tailwind.svelte'
 
-  import ConditionalCountdown from 'components/ConditionalCountdown.svelte'
-
   export let segment
-
-  let bday = new Date('2020-03-09')  
-
-  let dev = new Date('2020-03-04T17:24Z')
-  let date = bday
-  // let date = dev
 </script>
 
 <style>
@@ -32,11 +24,9 @@
 <Global />
 
 <div id="layout">
-  <ConditionalCountdown {date}>
-    <Nav {segment} />
-    <Main>
-      <slot />
-    </Main>
-  </ConditionalCountdown>
+  <Nav {segment} />
+  <Main>
+    <slot />
+  </Main>
   <Footer />
 </div>
