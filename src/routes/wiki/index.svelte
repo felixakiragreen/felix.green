@@ -2,31 +2,75 @@
   import { golden_circle, time } from '@f*g/fumonicon'
 
   import SpiffyLink from 'components/SpiffyLink.svelte'
+  import Red from 'bits/Red.svelte'
+  import Orange from 'bits/Orange.svelte'
+  import Yellow from 'bits/Yellow.svelte'
+  import Green from 'bits/Green.svelte'
+  import Blue from 'bits/Blue.svelte'
+  import Purple from 'bits/Purple.svelte'
+  import Invert from 'bits/Invert.svelte'
+  import Grey from 'bits/Grey.svelte'
+  import NoWrap from 'bits/NoWrap.svelte'
 
   let bday = new Date('2020-03-09')  
 
   const isToday = (inputDate) => {
     const d = new Date()
     return inputDate.getDate() == d.getDate() && inputDate.getMonth() == d.getMonth() && inputDate.getFullYear() == d.getFullYear();
-}
+  }
+
+  const sectionCls = `
+    grid
+    gap-4
+    md:gap-8
+    mx-4
+    md:mx-8
+    text-lg
+    md:text-xl
+    lg:text-2xl
+  `
+  const h3xCls = `
+    grid
+    gap-2
+    md:gap-4
+    my-4
+    md:my-8
+    text-3xl
+    md:text-4xl
+    lg:text-5xl
+  `
 </script>
 
 <style>
-  section {
-    @apply grid;
-    @apply gap-4;
-  }
   h2 {
-    @apply grid;
-    @apply gap-4;
-    @apply py-4;
+    /* @apply grid; */
+    /* @apply gap-4; */
+    /* @apply py-4; */
     grid-template-columns: 1fr max-content 1fr;
     align-items: center;
   }
-  p {
-    @apply px-8;
+  /* p {
+    @apply px-2;
+    @apply text-lg;
   }
-  
+  @screen sm {
+    p {
+      @apply px-4;
+    }
+  }
+  @screen md {
+    p {
+      @apply px-6;
+      @apply text-xl;
+    }
+  }
+  @screen lg {
+    p {
+      @apply px-8;
+      @apply text-2xl;
+    }
+  } */
+
   abbr {
     @apply text-gray-400;
     text-decoration-style: wavy;
@@ -38,8 +82,8 @@
   }
 </style>
 
-<section>
-  <h2>
+<section class={sectionCls}>
+  <h2 class={h3xCls}>
     <span class="»g" style="justify-self: end;">Why</span>
     <div class="h-icon" style="
       --fumonicon-golden-circle-how: var(--grey-700);
@@ -49,11 +93,17 @@
     </div>
     <span style="justify-self: start;">
       I am
-      <SpiffyLink href="about#top" color="yellow" cls="text-2xl">my story</SpiffyLink>
+      <SpiffyLink
+        href="about#top"
+        color="yellow"
+        cls="hidden md:inline text-2xl"
+      >
+        my story
+      </SpiffyLink>
     </span>
   </h2>
 
-  <blockquote>
+  <blockquote class="-mx-4 md:-mx-8">
     <div class={`
       absolute
       top-0
@@ -69,41 +119,55 @@
     ">
       {@html time.svg}
     </div>
-    <span class="»p">Learn</span> from the <span class="»r">past</span>.
+    <Purple>Learn</Purple> from the
+    <Red>past</Red>.
     <br />
-    <span class="»p">Be</span> in the <span class="»y">present</span>.
+    <Purple>Be</Purple> in the
+    <Yellow>present</Yellow>.
     <br />
-    The <span class="»g">future</span> is <span class="»b">everything</span> else.
+    The <Green>future</Green> is
+    <Blue>everything</Blue> else.
   </blockquote>
 
   <p>
-    Nothing <span class="»p">inspires</span> me more than
-    <span class="»b">our</span> 🌍 <span class="»g">future</span>.
+    Nothing <Purple>inspires</Purple> me more than
+    <Blue>our</Blue>
+    <NoWrap>
+      🌍 <Green>future</Green>.
+    </NoWrap>
     <br />
-    In the lifespan of <span class="»b">humanity</span>,
-    <span class="»b">we</span>'re only teenagers.
+    In the lifespan of <Blue>humanity</Blue>,
+    <Blue>we</Blue>'re only teenagers.
     <br />
-    And naturally it’s a 🔥 <span class="»o">hot</span> 💩 mess.
+    And naturally it’s a 
+    <NoWrap>
+      🔥 <Orange>hot</Orange>
+    </NoWrap>
+    <NoWrap>💩 mess.</NoWrap>
   </p>
 
   <p>
-    I am a single ⚛️ atom in the <span class="»b">human</span> organism, wholly
+    I am a single
+    <NoWrap>⚛️ atom</NoWrap>
+    in the
+    <Blue>human</Blue>
+    organism, wholly
     <span class="»i">insignificant</span> but to a few other atoms with whom I have connections.
   </p>
 
   <p>
     I want to be alive to
-    <span class="»p">experience</span>
-    <span class="»b">humanity</span>'s
-    <span class="»o">bright</span>
-    <span class="»g">future</span> and
-    <span class="»p">play</span> a role in
-    <span class="»p">building</span> it.
+    <Purple>experience</Purple>
+    <Blue>humanity</Blue>'s
+    <Orange>bright</Orange>
+    <Green>future</Green> and
+    <Purple>play</Purple> a role in
+    <Purple>building</Purple> it.
   </p>
 </section>
 
-<section>
-  <h2>
+<section class={sectionCls}>
+  <h2 class={h3xCls}>
     <span class="»p" style="justify-self: end;">How</span>
     <div class="h-icon" style="
       --fumonicon-golden-circle-why: var(--grey-700);
@@ -114,7 +178,13 @@
     </div>
     <span style="justify-self: start;">
       I be
-      <SpiffyLink href="solarpunk#top" color="green" cls="text-2xl">solarpunk</SpiffyLink>
+      <SpiffyLink
+        href="solarpunk#top"
+        color="green"
+        cls="hidden md:inline text-2xl"
+      >
+        solarpunk
+      </SpiffyLink>
     </span>
   </h2>
 
@@ -126,29 +196,51 @@
   </blockquote> -->
 
   <p>
-    I am a <span class="»g">solarpunk futurist</span> that <span class="»p">believes</span>
-    that through 🛰 technology, <span class="»b">humanity</span>
-    can <span class="»p">build</span> a <span class="»g">utopia</span>.
+    I am a
+    <Green>solarpunk futurist</Green>
+    that
+    <Purple>believes</Purple>
+    that through
+    <NoWrap>🛰 technology,</NoWrap>
+    <Blue>humanity</Blue>
+    can
+    <Purple>build</Purple> a
+    <Green>utopia</Green>.
   </p>
 
   <p>
-    In the <span class="»g">future</span> we will <span class="»p">solve</span> 99% of the biggest problems
-    <span class="»b">we</span> face <span class="»y">today</span>:
-    🦠 disease, 💸 poverty, ⚖️ inequality, crime, 📈 short-term thinking, and even 🧬 <span class="»i">death</span>.
+    In the
+    <Green>future</Green>
+    we will
+    <Purple>solve</Purple>
+    99% of the biggest problems
+    <Blue>we</Blue> face <Yellow>today</Yellow>:
+    <NoWrap>🦠 disease,</NoWrap>
+    <NoWrap>💸 poverty,</NoWrap>
+    <NoWrap>⚖️ inequality,</NoWrap>
+    crime,
+    <NoWrap>📈 short-term thinking,</NoWrap> and even
+    <NoWrap>🧬 <span class="»i">death</span>.</NoWrap>
   </p>
 
-  <p>But <span class="»b">we</span>’re stuck here
-    <span class="»y">today</span>, in the
+  <p>
+    But
+    <Blue>we</Blue>’re
+    stuck here
+    <Yellow>today</Yellow>, in the
     <abbr title="2020 AD/CE = 12020 HE - 10k years of human history">12020th</abbr> year of the
-    <span class="»b">Holocene</span> Era. I have no 💡 how we're going to get there.
+    <Blue>Holocene</Blue>
+    Era. I have no 💡 how we're going to get there.
   </p>
-  <p class="text-right">
-    But I'm pretty sure <span class="»g">⬢ hexagons</span> are involved.
+  <p class="text-right px-4 md:px-8">
+    But I'm pretty sure 
+    <NoWrap><Green>⬢ hexagons</Green></NoWrap>
+    are involved.
   </p>
 </section>
 
-<section>
-  <h2>
+<section class={sectionCls}>
+  <h2 class={h3xCls}>
     <span class="»b" style="justify-self: end;">What</span>
     <div class="h-icon" style="
       --fumonicon-golden-circle-why: var(--grey-600);
@@ -159,7 +251,13 @@
     </div>
     <span style="justify-self: start;">
       I do
-      <SpiffyLink href="projects#top" color="blue" cls="text-2xl">projects</SpiffyLink>
+      <SpiffyLink
+        href="projects#top"
+        color="blue"
+        cls="hidden md:inline text-2xl"
+      >
+        projects
+      </SpiffyLink>
     </span>
   </h2>
 
@@ -170,44 +268,56 @@
       On <abbr title="March 9th, 2020">12020.03.09</abbr>
     {/if}
     I began a
-    <span class="»g">new</span> chapter of my
-    <span class="»b">life</span>.
+    <Green>new</Green> chapter of my
+    <Blue>life</Blue>.
   </p>
 
   <p>
     My
-    <span class="»o">greatest</span>
-    <span class="»r">fear</span> is that I will spend most of my
-    <span class="»b">life</span>
-    <span class="»p">dreaming</span> and
-    <span class="»r">never</span>
-    <span class="»p">accomplish</span>
-    <span class="»b">anything</span>.
+    <Orange>greatest</Orange>
+    <Red>fear</Red> is that I will spend most of my
+    <Blue>life</Blue>
+    <Purple>dreaming</Purple> and
+    <Red>never</Red>
+    <Purple>accomplish</Purple>
+    <Blue>anything</Blue>.
     I can’t stop
-    <span class="»p">dreaming</span>, so this website is me
-    <span class="»b">doing</span>.
+    <Purple>dreaming</Purple>, so this website is me
+    <Blue>doing</Blue>.
   </p>
 
   <p>
     I am looking for 
-    <span class="»y">collaborators</span>
+    <Yellow>collaborators</Yellow>
     that want to
-    <span class="»p">work</span>
-    <span class="»g">together</span> on
-    <SpiffyLink href="projects#top" color="blue">projects</SpiffyLink>
-    <span class="»r">focused</span> on
-    <span class="»p">building</span> a
-    <span class="»o">better</span>
-    <span class="»g">future</span>.
+    <Purple>work</Purple>
+    <Green>together</Green> on
+    <SpiffyLink
+      inline
+      color="blue"
+      href="projects#top"
+    >
+      projects
+    </SpiffyLink>
+    <Red>focused</Red> on
+    <Purple>building</Purple> a
+    <Orange>better</Orange>
+    <Green>future</Green>.
   </p>
 
   <p class="-text-2 »grey plain my-4">
-    <span class="»o">🚧 TODO:</span>
+    <Orange>🚧 TODO:</Orange>
     Site is WIP; if you find any mistakes
-    🙏 pls let me know on
+    <NoWrap>
+      🙏 pls
+    </NoWrap>
+    let me know on
     <SpiffyLink
+      inline
       color="gray"
-      href="https://github.com/felixakiragreen/felix.green/issues">Github
+      href="https://github.com/felixakiragreen/felix.green/issues"
+    >
+      Github
     </SpiffyLink>
   </p>
 
