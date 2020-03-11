@@ -37,12 +37,8 @@ const entries = [
     replacement: `${__dirname}/src/routes/wiki`,
   },
   {
-    find: `txt`,
-    replacement: `${__dirname}/src/components/txt`,
-  },
-  {
-    find: `style`,
-    replacement: `${__dirname}/src/components/style`,
+    find: `bits`,
+    replacement: `${__dirname}/src/components/bits`,
   },
 ]
 
