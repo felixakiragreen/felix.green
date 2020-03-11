@@ -1,0 +1,1 @@
+<span style="white-space: nowrap;"><slot></slot></span>
