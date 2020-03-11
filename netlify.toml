@@ -4,3 +4,7 @@
   command = "yarn run export"
 [build.environment]
   NODE_VERSION = "12"
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
