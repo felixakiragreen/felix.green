@@ -1,15 +1,26 @@
 <script>
-  import { projects, fag, dof, doorway, uniform, ha_tsume, union_nordic, yin_yang } from '@f*g/fumonicon'
+  import {
+    projects,
+    fag,
+    dof,
+    // doorway,
+    // uniform,
+    // ha_tsume,
+    // union_nordic,
+    // yin_yang
+  } from '@f*g/fumonicon'
 
   import Aside from 'components/Aside.svelte'
-  import Red from 'style/Red.svelte'
-  import Orange from 'style/Orange.svelte'
-  import Yellow from 'style/Yellow.svelte'
-  import Green from 'style/Green.svelte'
-  import Blue from 'style/Blue.svelte'
-  import Purple from 'style/Purple.svelte'
-  import Invert from 'style/Invert.svelte'
-  import Grey from 'style/Grey.svelte'
+
+  import Red from 'bits/Red.svelte'
+  import Orange from 'bits/Orange.svelte'
+  import Yellow from 'bits/Yellow.svelte'
+  import Green from 'bits/Green.svelte'
+  import Blue from 'bits/Blue.svelte'
+  import Purple from 'bits/Purple.svelte'
+  import Invert from 'bits/Invert.svelte'
+  import Grey from 'bits/Grey.svelte'
+  import WorkInProgress from 'bits/WorkInProgress.svelte'
 </script>
 
 <style>
@@ -48,6 +59,8 @@
 <div class="h-64">
   {@html projects.svg}
 </div>
+
+<WorkInProgress />
 
 <section>
   <p>
