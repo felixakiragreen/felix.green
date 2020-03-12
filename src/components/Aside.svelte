@@ -10,15 +10,13 @@
     @apply relative;
     @apply text-orange-200;
     @apply mx-auto;
-    @apply text-2xl;
     @apply text-center;
-    @apply px-6;
     @apply py-4;
     @apply z-10;
   }
 </style>
 
-<aside class={cls}>
+<aside class={`text-base md:text-lg lg:text-xl px-0 md:px-6 ${cls}`}>
   <Hexagon style="z-index: -1;" />
   ⬢
   <br />
