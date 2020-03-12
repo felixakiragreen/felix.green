@@ -7,47 +7,47 @@
     @apply bg-gray-800;
     @apply text-gray-100;
   }
-  p, li {
+  /* p, li, blockquote {
     @apply text-lg;
-  }
+  } */
   .-text-1 { @apply text-base; }
-  .-text-2 { @apply text-sm; }
-  h1 { @apply text-3xl !important; }
+  .-text-2 { @apply text-xs; }
+  /* h1 { @apply text-3xl !important; }
   h2 { @apply text-2xl !important; }
   h3 { @apply text-xl !important; }
-  h4 { @apply text-xl !important; }
+  h4 { @apply text-xl !important; } */
   @screen sm {
-    p, li {
+    /* p, li, blockquote {
       @apply text-xl;
-    }
-    .-text-1 { @apply text-lg; }
-    .-text-2 { @apply text-base; }
-    h1 { @apply text-4xl !important; }
+    } */
+    .-text-1 { @apply text-base; }
+    .-text-2 { @apply text-xs; }
+    /* h1 { @apply text-4xl !important; }
     h2 { @apply text-3xl !important; }
     h3 { @apply text-2xl !important; }
-    h4 { @apply text-xl !important; }
+    h4 { @apply text-xl !important; } */
   }
   @screen md {
-    p, li {
+    /* p, li, blockquote {
       @apply text-xl;
-    }
+    } */
     .-text-1 { @apply text-lg; }
     .-text-2 { @apply text-base; }
-    h1 { @apply text-5xl !important; }
+    /* h1 { @apply text-5xl !important; }
     h2 { @apply text-4xl !important; }
     h3 { @apply text-3xl !important; }
-    h4 { @apply text-2xl !important; }
+    h4 { @apply text-2xl !important; } */
   }
   @screen lg {
-    p, li {
+    /* p, li, blockquote {
       @apply text-2xl;
-    }
+    } */
     .-text-1 { @apply text-xl; }
     .-text-2 { @apply text-lg; }
-    h1 { @apply text-6xl !important; }
+    /* h1 { @apply text-6xl !important; }
     h2 { @apply text-5xl !important; }
     h3 { @apply text-4xl !important; }
-    h4 { @apply text-3xl !important; }
+    h4 { @apply text-3xl !important; } */
   }
 
   abbr {
@@ -59,7 +59,6 @@
   blockquote {
     @apply relative;
     @apply text-gray-200;
-    @apply text-2xl;
     @apply text-center;
     @apply -mx-6;
     @apply px-6;
@@ -108,7 +107,13 @@
     @apply text-gray-900;
     @apply bg-gray-400;
     @apply rounded;
-    @apply p-1;
+    @apply px-1;
+  }
+  @screen md {
+    .»i {
+      @apply px-2;
+      @apply py-1;
+    }
   }
 
   .»grey {
