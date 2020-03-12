@@ -9,18 +9,33 @@ Dev TODOs:
   + Add click on "Fag" fumonicon to go to "/"
   + Make visually active NAV
   + publish to `@f*g/`
-  - move Svelte:window binds and resize to store
-  - Big fumonicon is the page's fumonicon
-
-Postlaunch:
-  - Nav.svelte needs to be broken down into smaller components like I did for Social
-  - consider adding a global SVG for common symbols
+  + Big fumonicon is the page's fumonicon
+  Socials:
+    + Add webring (commented out until 9th)
+    + Put whole countdown page in single CSS grid
+    + For colors use mine- not theirs
+    + Target _blank
+    + Make bigger
+    
+  Postlaunch:
+    - Nav.svelte needs to be broken down into smaller components like I did for Social
+    - consider adding a global SVG for common symbols
+    - Clean up the double span structure
+    + Clean up all the old spans with <Green> etc
+    - move Svelte:window binds and resize to store
+    - improve responsiveness
+      + index
+      + solarpunk
+      + bio
+      - projects
+      - dof
+    + figure out how to make groups of text non-breaking
 
 LAUNCH:
   Index:
-    - WHY (future)
-    - HOW (technology)
-    - WHAT (projects)
+    + WHY (future)
+    + HOW (technology)
+    + WHAT (projects)
 
   Akira:
     - uppercase
@@ -42,8 +57,11 @@ LAUNCH:
       + dof
       - sverige 🇸🇪
       - nordic union
-      - golden_circle
-      - past_present_future
+      + golden_circle
+      + past_present_future
+      - Doorway
+      - Uniform
+      - yin_yang
 
   A solarpunk story:
     - chapter 1
@@ -61,9 +79,10 @@ LAUNCH:
     - UNcopyright (with TODO)
 
   Ideas:
-    - Collaborators (current, or looking for)
+    + Collaborators (current, or looking for)
     - Add MONO for hover fumonicon
     - All the pages inside wikis are essentially going to be markdown
+    - Match the quote game?
 
   FIX:
     + whitespace between spans & , (not formatting on Save)
@@ -71,9 +90,6 @@ LAUNCH:
 FUTURE:
   Packages:
     - V
-
-  Tech Debt:
-    - fag / @fag repo
     
   Awaiting Development from others:
     - MDsveX hits 0.5 (it's broken now)
