@@ -17,7 +17,7 @@
   {#if timeLeft.done}
     <slot></slot>
   {:else}
-    <h1>
+    <h1 class="text-3xl md:text-4xl lg:text-5xl">
       {timeLeft.d} <span class="text-blue-300">d</span>
       {timeLeft.h} <span class="text-purple-300">h</span>
       {timeLeft.m} <span class="text-red-300">m</span>
