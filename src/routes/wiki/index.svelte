@@ -1,7 +1,7 @@
 <script>
   import { golden_circle, time } from '@f*g/fumonicon'
 
-  import SpiffyLink from 'components/SpiffyLink.svelte'
+  import SpiffyLink from 'bits/SpiffyLink.svelte'
   import Red from 'bits/Red.svelte'
   import Orange from 'bits/Orange.svelte'
   import Yellow from 'bits/Yellow.svelte'
@@ -43,34 +43,9 @@
 
 <style>
   h2 {
-    /* @apply grid; */
-    /* @apply gap-4; */
-    /* @apply py-4; */
     grid-template-columns: 1fr max-content 1fr;
     align-items: center;
   }
-  /* p {
-    @apply px-2;
-    @apply text-lg;
-  }
-  @screen sm {
-    p {
-      @apply px-4;
-    }
-  }
-  @screen md {
-    p {
-      @apply px-6;
-      @apply text-xl;
-    }
-  }
-  @screen lg {
-    p {
-      @apply px-8;
-      @apply text-2xl;
-    }
-  } */
-
   abbr {
     @apply text-gray-400;
     text-decoration-style: wavy;
