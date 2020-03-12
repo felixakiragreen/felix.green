@@ -17,7 +17,7 @@
   // import Bar from './Bar.svelte'
   // import Hexagon from './Hexagon.svelte'
   // import EntryPortrait from './EntryPortrait.svelte'
-  import FelixAkiraGreen from './FelixAkiraGreen.svelte'
+  import FelixAkiraGreen from 'bits/FelixAkiraGreen.svelte'
   import HexagonHorizontalScaling from './HexagonHorizontalScaling.svelte'
 
   export let segment
