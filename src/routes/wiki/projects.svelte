@@ -21,20 +21,36 @@
   import Invert from 'bits/Invert.svelte'
   import Grey from 'bits/Grey.svelte'
   import WorkInProgress from 'bits/WorkInProgress.svelte'
+
+  const sectionCls = `
+    grid
+    gap-4
+    md:gap-8
+    mx-4
+    md:mx-8
+    text-lg
+    md:text-xl
+    lg:text-2xl
+  `
+  const h3xCls = `
+    text-3xl
+    md:text-4xl
+    lg:text-5xl
+  `
 </script>
 
 <style>
-  section, article {
-    @apply grid;
-    @apply gap-4;
+  li {
+    grid-template-rows: auto 1fr;
   }
 
-  section > p, article > p {
-    @apply px-8;
-  }
-
-  blockquote {
-    @apply mx-auto;
+  @screen sm {
+    li {
+      grid-template-columns: auto 1fr;
+    }
+    .text-6xl {
+      font-size: 6rem;
+    }
   }
 
   abbr {
@@ -42,37 +58,25 @@
     text-decoration-style: wavy;
     text-decoration-color: var(--yellow-300);
   }
-
-  h2 {
-    @apply text-center;
-    @apply py-8;
-  }
-
-  ul {
-    @apply my-4;
-    @apply ml-16;
-    @apply grid;
-    @apply gap-4;
-  }
 </style>
 
-<div class="h-64">
+<div class="h-40 md:h-64">
   {@html projects.svg}
 </div>
 
 <WorkInProgress />
 
-<section>
+<section class={sectionCls}>
   <p>
     I have more
-    💡 ideas than I could ever
+    <Yellow>💡 ideas</Yellow> than I could ever
     accomplish in one or even a dozen lifetimes.
     At first I thought it was a
-    blessing and then I thought it was a
-    curse.
-    Now I've just accepted that it's my 🧠
-    brain.
-    The 🧠
+    <Purple>blessing</Purple> and then I thought it was a
+    <Red>curse</Red>.
+    Now I've just accepted that it's my
+    <Blue>🧠 brain</Blue>.
+  The 🧠
     be what it 
     do.
   </p>
@@ -88,40 +92,55 @@
   </p>
 </section>
 
-<section>
+<section class={sectionCls}>
 
   <article id="akira">
 
-    <h2>Akira</h2>
-    <blockquote class="mx-auto -mt-8 mb-4 px-12">
+    <h2 class="{h3xCls} text-center">Akira</h2>
+
+    <blockquote class="mb-4 px-12">
       A font based on my own handwriting.
     </blockquote>
 
     <p>
-      This project started when I was a child. 
+      This project began when I was a
+      👦 child. 
     </p>
     <p>
-      I was not satisfied with the efficiency of writing, so I learned Gregg shorthand.
+      I was unsatisfied with the
+      ⚙️ efficiency of
+      📝 writing, so I learned Gregg shorthand.
     </p>
     <p>
-      But the problem was no one else could read it.
+      But the problem was no one else could
+      🔮 read
+      it.
     </p>
 
-    <ul>
+    <ul class="grid gap-4 my-4" style="align-items: baseline;">
+
       <li>
-        <h3>
-          <span class="text-green-600">Step <Green>1</Green>.</span>
+        <p class="text-green-600">Step <Green>1</Green>.</p>
+        <h3 class={h3xCls}>
           Single stroke
-          <Grey cls="-text-1">
-            (began <abbr title="2004">12004</abbr>)
-          </Grey>
         </h3>
-        <p class="-ml-8">
-          I started modifying how I wrote all the letters
-          so it only used a single stroke,
-          but still be quite legible to others.
-        </p>
       </li>
+
+      <li class="">
+        <div class="text-right">
+          <Grey cls="-text-1 mt-4">
+            began <abbr title="2004">12004</abbr>
+          </Grey>
+        </div>
+        <div>
+          <p>
+            I started modifying how I wrote all the letters
+            so it only used a single stroke,
+            but still be quite legible to others.
+          </p>
+        </div>
+      </li>
+
       <li>
         <h3>
           <span class="text-green-600">Step <Green>2</Green>.</span>
@@ -165,7 +184,7 @@
 
   <article id="fumonicons">
     
-    <h2>
+    <h2 class={h3xCls}>
       Fumonicons
       <Grey cls="-text-1">(name of step 1)</Grey>
     </h2> 
@@ -206,7 +225,7 @@
 
   <article id="story">
 
-    <h2>A Story About Shapes</h2>
+    <h2 class={h3xCls}>A Story About Shapes</h2>
     <blockquote class="mx-auto -mt-8 mb-4 px-12">
       Yeah... I need a title
     </blockquote>
@@ -237,7 +256,7 @@
       {@html fag.svg}
     </div>
 
-    <h2>Felix Akira Green</h2>
+    <h2 class={h3xCls}>Felix Akira Green</h2>
     <blockquote class="mx-auto -mt-8 mb-4 px-12">
       Inventing myself
     </blockquote>

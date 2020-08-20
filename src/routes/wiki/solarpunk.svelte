@@ -70,26 +70,6 @@
     /* @apply grid; */
     @apply list-none;
   }
-
-  nav a {
-    /* @apply block;
-    @apply p-8;
-    @apply text-gray-400; */
-  }
-  /* nav a:hover {
-    @apply bg-gray-700;
-    @apply text-gray-200;
-  } */
-  /* a.selected {
-    @apply bg-gray-700;
-    @apply text-gray-200;
-  } */
-
-  /* ol {
-    @apply grid;
-    @apply my-4;
-    @apply gap-4;
-  } */
   ol > li {
     @apply grid;
     grid-template-columns: auto 1fr;
@@ -148,8 +128,7 @@
 
 </section>
 
-<NavSolarpunk
-  id="philosophy"
+<NavSolarpunk id="philosophy"
   cssVariablesById={{
     philosophy: `
       --fumonicon-golden-circle-how: var(--grey-700);
@@ -244,8 +223,7 @@
 
 </section>
 
-<NavSolarpunk
-  id="science"
+<NavSolarpunk id="science"
   cssVariablesById={{
     philosophy: `
       --fumonicon-golden-circle-why: var(--green-500);

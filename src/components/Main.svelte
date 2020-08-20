@@ -66,8 +66,8 @@
     createShit()
   }
 
-  let delay = 1800
-  let duration = 1800
+  let delay = 1200
+  let duration = 1200
 </script>
 
 <style>

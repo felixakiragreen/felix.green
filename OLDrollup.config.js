@@ -1,36 +1,47 @@
+import alias from '@rollup/plugin-alias'
 import resolve from '@rollup/plugin-node-resolve'
 import replace from '@rollup/plugin-replace'
 import commonjs from '@rollup/plugin-commonjs'
-import json from '@rollup/plugin-json'
-import typescript from '@rollup/plugin-typescript'
 import svelte from 'rollup-plugin-svelte'
-import babel from '@rollup/plugin-babel'
+import babel from 'rollup-plugin-babel'
 import { terser } from 'rollup-plugin-terser'
-import config from 'sapper/config/rollup'
+import url from '@rollup/plugin-url'
+import typescript from '@rollup/plugin-typescript'
+import config from 'sapper/config/rollup.js'
+import sveltePreprocess from 'svelte-preprocess'
 import pkg from './package.json'
-import { preprocess as sveltePreprocessConfig } from './svelte.config'
-
-const preprocess = [
-  sveltePreprocessConfig,
-  // You could have more preprocessors, like MDsveX
-]
 
 const mode = process.env.NODE_ENV
 const dev = mode === 'development'
-const sourcemap = dev ? 'inline' : false
 const legacy = !!process.env.SAPPER_LEGACY_BUILD
 
-const warningIsIgnored = (warning) =>
-  warning.message.includes(
-    'Use of eval is strongly discouraged, as it poses security risks and may cause issues with minification'
-  ) || warning.message.includes('Circular dependency: node_modules')
-
-// Workaround for https://github.com/sveltejs/sapper/issues/1266
-const onwarn = (warning, _onwarn) =>
+const onwarn = (warning, onwarn) =>
   (warning.code === 'CIRCULAR_DEPENDENCY' &&
     /[/\\]@sapper[/\\]/.test(warning.message)) ||
-  warningIsIgnored(warning) ||
-  console.warn(warning.toString())
+  onwarn(warning)
+
+const preprocess = sveltePreprocess({
+  postcss: true,
+})
+
+const entries = [
+  {
+    find: `@sapper`,
+    replacement: `${__dirname}/src/node_modules/@sapper`,
+  },
+  {
+    find: `components`,
+    replacement: `${__dirname}/src/components`,
+  },
+  {
+    find: `wiki`,
+    replacement: `${__dirname}/src/routes/wiki`,
+  },
+  {
+    find: `bits`,
+    replacement: `${__dirname}/src/components/bits`,
+  },
+]
 
 export default {
   client: {
@@ -43,9 +54,12 @@ export default {
       }),
       svelte({
         dev,
+        preprocess,
         hydratable: true,
         emitCss: true,
-        preprocess,
+      }),
+      alias({
+        entries,
       }),
       resolve({
         browser: true,
@@ -53,12 +67,12 @@ export default {
       }),
       commonjs(),
       typescript(),
-      json(),
+      url(),
 
       legacy &&
         babel({
           extensions: ['.js', '.mjs', '.html', '.svelte'],
-          babelHelpers: 'runtime',
+          runtimeHelpers: true,
           exclude: ['node_modules/@babel/**'],
           presets: [
             [
@@ -85,13 +99,17 @@ export default {
         }),
     ],
 
-    preserveEntrySignatures: false,
     onwarn,
   },
 
   server: {
     input: { server: config.server.input().server.replace(/\.js$/, '.ts') },
-    output: { ...config.server.output(), sourcemap },
+    output: { ...config.server.output() },
+    // input: config.server.input(),
+    // output: {
+    //   ...config.server.output(),
+    //   // format: 'esm',
+    // },
     plugins: [
       replace({
         'process.browser': false,
@@ -99,23 +117,25 @@ export default {
         'module.require': 'require',
       }),
       svelte({
-        generate: 'ssr',
         dev,
         preprocess,
+        generate: 'ssr',
+      }),
+      alias({
+        entries,
       }),
       resolve({
         dedupe: ['svelte'],
       }),
       commonjs(),
       typescript(),
-      json(),
+      url(),
     ],
     external: Object.keys(pkg.dependencies).concat(
       require('module').builtinModules ||
-        Object.keys(process.binding('natives')) // eslint-disable-line global-require
+        Object.keys(process.binding('natives'))
     ),
 
-    preserveEntrySignatures: 'strict',
     onwarn,
   },
 
@@ -128,12 +148,15 @@ export default {
         'process.browser': true,
         'process.env.NODE_ENV': JSON.stringify(mode),
       }),
+      alias({
+        entries,
+      }),
       commonjs(),
       typescript(),
+      url(),
       !dev && terser(),
     ],
 
-    preserveEntrySignatures: false,
     onwarn,
   },
 }

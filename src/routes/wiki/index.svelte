@@ -107,18 +107,14 @@
   <p>
     Nothing <Purple>inspires</Purple> me more than
     <Blue>our</Blue>
-    <NoWrap>
-      🌍 <Green>future</Green>.
-    </NoWrap>
+    <Green nw>🌍 future</Green>.
     <br />
     In the lifespan of <Blue>humanity</Blue>,
     <Blue>we</Blue>'re only teenagers.
     <br />
     And naturally it’s a 
-    <NoWrap>
-      🔥 <Orange>hot</Orange>
-    </NoWrap>
-    <NoWrap>💩 mess.</NoWrap>
+    <Orange nw>🔥 hot</Orange>
+    <Red nw>💩 mess</Red>.
   </p>
 
   <p>

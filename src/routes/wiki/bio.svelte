@@ -40,7 +40,7 @@
   }
 </style>
 
-<div class="h-64">
+<div class="h-40 md:h-64">
   {@html portrait_fag.svg}
 </div>
 
@@ -179,7 +179,7 @@
       <Red>critical</Red>
       <Green>🏗 foundation</Green>
       <Red>needed</Red> to
-      <Green>🗿 invent</Green> myself.
+      <Green>invent</Green> 🗿 myself.
     </li>
     <li>
       I am one of the
@@ -240,7 +240,7 @@
       </ul>
     </div>
 
-    <div class="h-64 mr-8 order-first md:order-1">
+    <div class="h-64 md:mr-8 order-first md:order-1 ">
       {@html portrait_meg.svg}
     </div>
 
@@ -345,8 +345,8 @@
     My <Red>partner</Red>
     likes to call me
     <Guillemet cls="»g"
-      ><Grey>an 👽 alien from another planet</Grey>
-    </Guillemet>.
+      ><Grey>an 👽 alien from another planet</Grey
+    ></Guillemet>.
     Many days, I
     <Red>feel</Red> like one. But that doesn’t
     <Blue>explain</Blue>

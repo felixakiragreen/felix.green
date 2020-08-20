@@ -280,7 +280,10 @@
         <HexagonHorizontalScaling leftTip={false} />
       </div>
       <div class="label flex flex-col justify-center items-end">
-        <h3 class="title" transition:fade="{{delay: delay + staggerText}}">about</h3>
+        <h3
+          class="title text-2xl md:text-3xl lg:text-4xl"
+          transition:fade="{{delay: delay + staggerText}}"
+        >about</h3>
       </div>
       <div class="smaller-hex item-scale-in" style="transform-origin: 100% 100%;">
         {@html portrait_fag.svg}
@@ -299,7 +302,10 @@
         {@html solarpunk.svg}
       </div>
       <div class="label flex flex-col justify-center items-start">
-        <h3 class="title" transition:fade="{{delay: delay + staggerText}}">solarpunk</h3>
+        <h3
+          class="title text-2xl md:text-3xl lg:text-4xl"
+          transition:fade="{{delay: delay + staggerText}}"
+        >solarpunk</h3>
       </div>
     </a>
     <a
@@ -312,7 +318,10 @@
         <HexagonHorizontalScaling leftTip={false} />
       </div>
       <div class="label flex flex-col justify-center items-end">
-        <h3 class="title" transition:fade="{{delay: delay + staggerText}}">projects</h3>
+        <h3
+          class="title text-2xl md:text-3xl lg:text-4xl"
+          transition:fade="{{delay: delay + staggerText}}"
+        >projects</h3>
       </div>
       <div class="smaller-hex item-scale-in" style="transform-origin: 100% 0%;">
         {@html projects.svg}
@@ -334,7 +343,10 @@
         {@html dof.svg}
       </div>
       <div class="label flex flex-col justify-center items-start">
-        <h3 class="title" transition:fade="{{delay: delay + staggerText}}">future</h3>
+        <h3
+          class="title text-2xl md:text-3xl lg:text-4xl" 
+          transition:fade="{{delay: delay + staggerText}}"
+        >future</h3>
       </div>
     </a>
 
