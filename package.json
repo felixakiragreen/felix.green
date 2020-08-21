@@ -25,9 +25,9 @@
     "trailingComma": "es5"
   },
   "dependencies": {
-    "@f*g/felix": "^0.1.0",
+    "@f*g/felix": "^0.1.3",
     "@f*g/fumonicon": "^0.1.3",
-    "@f*g/hexagonal": "^0.1.0",
+    "@f*g/hexagonal": "^0.2.0",
     "compression": "^1.7.1",
     "polka": "next",
     "sirv": "^0.4.2"
