@@ -19,7 +19,7 @@
     z-20
   `}
   id="top">
-  <Aside>
+  <!-- <Aside>
     <p class="text-orange-300">
       <span class="plain">
         Welcome 🖖
@@ -35,6 +35,6 @@
         >Akira</a>.</NoWrap>
       </span>
     </p>
-  </Aside>
+  </Aside> -->
   <Index />
 </div>
