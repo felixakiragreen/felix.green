@@ -8,11 +8,12 @@
   import Purple from 'bits/Purple.svelte'
 
   let hbday = new Date('2020-09-09')  
-  let date = hbday
+  let bday = new Date('2021-03-09')  
+  let date = bday
 </script>
 
 <svelte:head>
-  <title>12020.09.09 – the next chapter</title>
+  <title>12021.03.09 – the next chapter</title>
 </svelte:head>
 
 <div class={`
@@ -32,7 +33,7 @@
   </div>
 
   <p class="text-3xl md:text-4xl text-gray-400">
-    12020<Green>.</Green>09<Green>.</Green>09
+    12021<Green>.</Green>03<Green>.</Green>09
   </p>
   
   <p class="text-2xl md:text-3xl text-gray-300">
