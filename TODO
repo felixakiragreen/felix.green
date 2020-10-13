@@ -99,3 +99,9 @@ FUTURE:
 Next Steps:
   - Plan out everything I need to do
   - update to MDsveX
+
+Akira Slider:
+  - create different versions of Akira
+    - how many?
+  - implement slider that switches between font "versions"
+    - come up with a better name than "versions" for it, because it's a different kind of version
