@@ -1,10 +1,6 @@
-
 [build]
-  publish = "__sapper__/export"
-  command = "yarn run export"
+command = "pnpm build"
+publish = "build"
+
 [build.environment]
-  NODE_VERSION = "12"
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
+NODE_VERSION = "18"
