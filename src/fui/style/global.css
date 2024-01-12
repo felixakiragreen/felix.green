@@ -23,3 +23,11 @@ body {
 * {
 	box-sizing: border-box;
 }
+
+@font-face {
+	font-family: 'Monaspace Krypton';
+	src: url('../../assets/MonaspaceKrypton.woff2') format('woff2-variations');
+	font-weight: 100 200 300 400 500 600 700 800 900;
+	/* font-stretch: 75% 125%; Adjust as per the width range of your font */
+	font-style: oblique -11deg 0deg; /* Adjust as per the slant range of your font */
+}
