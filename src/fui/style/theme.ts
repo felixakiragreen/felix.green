@@ -62,8 +62,8 @@ export const tokens = {
 	},
 	fontSizes,
 	fonts: {
-		main: 'Inter, georgia, apple-system, sans-serif',
-		mono: '"Azeret Mono", menlo, monospace',
+		main: '"Monaspace Krypton", Inter, georgia, apple-system, sans-serif',
+		mono: '"Monaspace Krypton", menlo, monospace',
 		sans: 'Inter, georgia, apple-system, sans-serif',
 	},
 	fontWeights: {
