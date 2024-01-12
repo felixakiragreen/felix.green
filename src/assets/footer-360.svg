@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-miterlimit="1.5" clip-rule="evenodd" viewBox="0 0 360 150">
+  <path id="footer-360" fill="none" d="M0 0h360v150H0z"/>
+  <clipPath id="_clip1">
+    <path d="M0 0h360v150H0z"/>
+  </clipPath>
+  <g clip-path="url(#_clip1)">
+    <!-- <path id="bg" fill="#0a0a0a" d="M0 0h360v150.111H0z"/> -->
+    <g id="footer" fill="none" stroke="#adfd2d">
+      <path vector-effect="non-scaling-stroke" d="M60 150.111v-5.773l120-69.282 120 69.282v5.773M60 0v5.774l120 69.282L300 5.774V0"/>
+    </g>
+  </g>
+</svg>
