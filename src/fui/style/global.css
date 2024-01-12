@@ -5,10 +5,19 @@
 body {
 	margin: 0;
 	padding: 0;
-	background: var(--colors-background);
+	background: var(--colors-backgroundest);
 	color: var(--colors-foreground);
-	font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-		Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+	font-family:
+		'Inter',
+		-apple-system,
+		BlinkMacSystemFont,
+		'Segoe UI',
+		Roboto,
+		Oxygen-Sans,
+		Ubuntu,
+		Cantarell,
+		'Helvetica Neue',
+		sans-serif;
 }
 
 * {
