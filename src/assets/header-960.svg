@@ -4,7 +4,7 @@
     <path d="M0 0h960v693H0z"/>
   </clipPath>
   <g clip-path="url(#_clip1)">
-    <path id="bg" fill="#0a0a0a" d="M0 0h960v693H0z"/>
+    <!-- <path id="bg" fill="#0a0a0a" d="M0 0h960v693H0z"/> -->
     <g id="header">
       <g id="body" fill="none" stroke="#adfd2d">
         <g id="o100">
