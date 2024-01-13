@@ -11,18 +11,21 @@
 	height="100%"
 	shape-rendering="crispEdges"
 >
-	<symbol id="tip" viewBox="0 0 69.3 242" preserveAspectRatio="xMinYMid">
-		<path vector-effect="non-scaling-stroke" d="M70.282 1 1 121l69.282 120" />
+	<symbol id="tip" viewBox="-10 0 3997.5 13777" preserveAspectRatio="xMinYMid">
+		<path
+			vector-effect="non-scaling-stroke"
+			d="M3977.5 13776 1 6888.5 3977.5 1"
+		/>
 	</symbol>
 	<symbol
 		id="tip-bounds"
-		viewBox="0 0 68.3 242"
+		viewBox="0 0 3977.5 13777"
 		preserveAspectRatio="xMinYMid"
 	>
 		<rect x="0%" y="0%" width="100%" height="100%" />
 	</symbol>
-	<symbol id="sides" viewBox="0 0 242 242" preserveAspectRatio="none">
-		<path vector-effect="non-scaling-stroke" d="M1 241h240m0-240H1" />
+	<symbol id="sides" viewBox="0 0 15908 13777" preserveAspectRatio="none">
+		<path vector-effect="non-scaling-stroke" d="M1 1h15906m0 13775H1" />
 	</symbol>
 	<mask id="mask">
 		<rect x="0%" y="0%" width="100%" height="100%" fill="white" />
@@ -54,6 +57,7 @@
 				y="0%"
 				width="100%"
 				height="100%"
+				stroke-width="1.8"
 			/>
 			<use xlink:href="#tip" x="0%" y="0%" height="100%" width="50%" />
 			<use
