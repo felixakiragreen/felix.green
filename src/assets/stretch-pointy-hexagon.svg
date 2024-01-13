@@ -4,24 +4,28 @@
 	fill-rule="evenodd"
 	clip-rule="evenodd"
 	stroke-miterlimit="1.5"
-	stroke-linecap="round"
+	stroke-linecap="square"
 	x="0%"
 	y="0%"
 	width="100%"
 	height="100%"
+	shape-rendering="crispEdges"
 >
-	<symbol id="tip" viewBox="0 0 242 69.3" preserveAspectRatio="xMidYMin">
-		<path vector-effect="non-scaling-stroke" d="M241 70.282 121 1 1 70.282" />
+	<symbol id="tip" viewBox="0 -10 13777 3977.5" preserveAspectRatio="xMidYMin">
+		<path
+			vector-effect="non-scaling-stroke"
+			d="M1 3977.5 6888.5 1 13776 3977.5"
+		/>
 	</symbol>
 	<symbol
 		id="tip-bounds"
-		viewBox="0 0 241 69.3"
+		viewBox="0 10 13777 3997.5"
 		preserveAspectRatio="xMidYMin"
 	>
 		<rect x="0%" y="0%" width="100%" height="100%" />
 	</symbol>
-	<symbol id="sides" viewBox="0 0 242 242" preserveAspectRatio="none">
-		<path vector-effect="non-scaling-stroke" d="M241 241V1M1 1v240" />
+	<symbol id="sides" viewBox="-10 0 13797 15908" preserveAspectRatio="none">
+		<path vector-effect="non-scaling-stroke" d="M13776 1v15906M1 15907V1" />
 	</symbol>
 	<mask id="mask">
 		<rect x="0%" y="0%" width="100%" height="100%" fill="white" />
