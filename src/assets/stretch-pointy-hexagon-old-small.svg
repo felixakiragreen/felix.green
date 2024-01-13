@@ -1,0 +1,67 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	xmlns:xlink="http://www.w3.org/1999/xlink"
+	fill-rule="evenodd"
+	clip-rule="evenodd"
+	stroke-miterlimit="1.5"
+	stroke-linecap="square"
+	x="0%"
+	y="0%"
+	width="100%"
+	height="100%"
+	shape-rendering="crispEdges"
+>
+	<symbol id="tip" viewBox="0 0 242 69.3" preserveAspectRatio="xMidYMin">
+		<path vector-effect="non-scaling-stroke" d="M241 70.282 121 1 1 70.282" />
+	</symbol>
+	<symbol
+		id="tip-bounds"
+		viewBox="0 0 241 69.3"
+		preserveAspectRatio="xMidYMin"
+	>
+		<rect x="0%" y="0%" width="100%" height="100%" />
+	</symbol>
+	<symbol id="sides" viewBox="0 0 242 242" preserveAspectRatio="none">
+		<path vector-effect="non-scaling-stroke" d="M241 241V1M1 1v240" />
+	</symbol>
+	<mask id="mask">
+		<rect x="0%" y="0%" width="100%" height="100%" fill="white" />
+		<use
+			xlink:href="#tip-bounds"
+			x="0%"
+			y="0%"
+			height="50%"
+			width="100%"
+			fill="black"
+		/>
+		<use
+			xlink:href="#tip-bounds"
+			x="0%"
+			y="-100%"
+			height="50%"
+			width="100%"
+			fill="black"
+			transform="scale(1,-1)"
+		/>
+	</mask>
+
+	<g fill="none" stroke="#adfd2d">
+		<use
+			xlink:href="#sides"
+			mask="url(#mask)"
+			x="0%"
+			y="0%"
+			width="100%"
+			height="100%"
+		/>
+		<use xlink:href="#tip" x="0%" y="0%" height="50%" width="100%" />
+		<use
+			xlink:href="#tip"
+			x="0%"
+			y="-100%"
+			height="50%"
+			width="100%"
+			transform="scale(1,-1)"
+		/>
+	</g>
+</svg>
