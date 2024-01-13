@@ -12,6 +12,8 @@
 	import footer360 from '@/assets/footer-360.svg'
 	import footer600 from '@/assets/footer-600.svg'
 	import footer960 from '@/assets/footer-960.svg'
+
+	import stretchPointyHexagon from '@/assets/stretch-pointy-hexagon.svg'
 </script>
 
 <VStack
@@ -19,11 +21,15 @@
 		position: 'absolute',
 		top: 0,
 		left: 0,
-		width: '100%',
-		height: '100%',
-		'& img': {
-			width: '100%',
-		},
+		right: 0,
+		bottom: 0,
+		// width: '100%',
+		// height: '100%',
+		// '& img': {
+		// 	width: '100%',
+		// 	// height: 'auto',
+		// 	// objectFit: 'fill',
+		// },
 		pointerEvents: 'none',
 	}}
 >
@@ -61,6 +67,29 @@
 	<!-- CENTER -->
 
 	<Image
+		url={stretchPointyHexagon}
+		css={{
+			flexGrow: 1,
+			marginBottom: 'calc(var(--Unit) * 1)',
+			'@bp3': {
+				marginTop: 'calc(var(--Unit) * -5 - 0.5px)',
+				marginLeft: 'calc(var(--WUnit) * 1 - 0.5px)',
+				width: 'calc(var(--WUnit) * 4 + 1px)',
+			},
+			'@bp6': {
+				marginTop: 'calc(var(--Unit) * -6 - 0.5px)',
+				marginLeft: 'calc(var(--WUnit) * 1 - 0.5px)',
+				width: 'calc(var(--WUnit) * 8 + 1px)',
+			},
+			'@bp9': {
+				marginTop: 'calc(var(--Unit) * -7 - 0.5px)',
+				marginLeft: 'calc(var(--WUnit) * 2 - 0.5px)',
+				width: 'calc(var(--WUnit) * 12 + 1px)',
+			},
+		}}
+	/>
+
+	<!-- <Image
 		url={center360}
 		css={{
 			display: 'none',
@@ -89,10 +118,10 @@
 				display: 'block',
 			},
 		}}
-	/>
+	/> -->
 
 	<!-- FOOTER -->
-
+	<!-- 
 	<Image
 		url={footer360}
 		css={{
@@ -122,5 +151,5 @@
 				display: 'block',
 			},
 		}}
-	/>
+	/> -->
 </VStack>
