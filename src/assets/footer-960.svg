@@ -1,12 +1,14 @@
-<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-miterlimit="1.5" clip-rule="evenodd" viewBox="0 0 960 427">
-  <path id="footer-960" fill="none" d="M0 0h960v427H0z"/>
-  <clipPath id="_clip1">
-    <path d="M0 0h960v427H0z"/>
-  </clipPath>
-  <g clip-path="url(#_clip1)">
-    <!-- <path id="bg" fill="#0a0a0a" d="M0 0h960v427.239H0z"/> -->
-    <g id="footer" fill="none" stroke="#adfd2d">
-      <path vector-effect="non-scaling-stroke" d="M120 427.239v-5.773L480 213.62l360 207.846v5.773M120 0v5.774L480 213.62 840 5.774V0"/>
-    </g>
-  </g>
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	fill-rule="evenodd"
+	clip-rule="evenodd"
+	stroke-miterlimit="1.5"
+	viewBox="0 0 960 427"
+>
+	<g id="footer" fill="none" stroke="#adfd2d">
+		<path
+			vector-effect="non-scaling-stroke"
+			d="M120 427.239v-5.773L480 213.62l360 207.846v5.773M120 0v5.774L480 213.62 840 5.774V0"
+		/>
+	</g>
 </svg>
