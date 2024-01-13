@@ -73,18 +73,18 @@
 			marginBottom: 'calc(var(--Unit) * 1)',
 			'@bp3': {
 				marginTop: 'calc(var(--Unit) * -5 - 0.5px)',
-				marginLeft: 'calc(var(--WUnit) * 1 - 0.5px)',
-				width: 'calc(var(--WUnit) * 4 + 1px)',
+				marginLeft: 'calc(var(--WUnit) * 1 - 0.4px)',
+				width: 'calc(var(--WUnit) * 4 + 0.8px)',
 			},
 			'@bp6': {
 				marginTop: 'calc(var(--Unit) * -6 - 0.5px)',
-				marginLeft: 'calc(var(--WUnit) * 1 - 0.5px)',
-				width: 'calc(var(--WUnit) * 8 + 1px)',
+				marginLeft: 'calc(var(--WUnit) * 1 - 0.4px)',
+				width: 'calc(var(--WUnit) * 8 + 0.8px)',
 			},
 			'@bp9': {
 				marginTop: 'calc(var(--Unit) * -7 - 0.5px)',
-				marginLeft: 'calc(var(--WUnit) * 2 - 0.5px)',
-				width: 'calc(var(--WUnit) * 12 + 1px)',
+				marginLeft: 'calc(var(--WUnit) * 2 - 0.4px)',
+				width: 'calc(var(--WUnit) * 12 + 0.8px)',
 			},
 		}}
 	/>
