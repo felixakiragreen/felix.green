@@ -5,6 +5,8 @@
 
 	import miniHexagon from '@/assets/mini-hexagon.svg'
 	import mezoHexagon from '@/assets/mezo-hexagon.svg'
+	import stretchFlatHexagon from '@/assets/stretch-flat-hexagon.svg'
+	import stretchPointyHexagon from '@/assets/stretch-pointy-hexagon.svg'
 </script>
 
 <Content p="0">
@@ -31,7 +33,7 @@
 					height: 'calc(var(--Unit) * 6)',
 					width: 'calc(var(--WUnit) * 6)',
 					// red with opacity
-					backgroundColor: 'rgba(255, 0, 0, 0.2)',
+					// backgroundColor: 'rgba(255, 0, 0, 0.2)',
 				}}
 			>
 				<Box
@@ -41,7 +43,7 @@
 						left: 0,
 						width: '100%',
 						height: '100%',
-						backgroundColor: 'rgba(0, 0, 255, 0.2)',
+						// backgroundColor: 'rgba(0, 0, 255, 0.2)',
 					}}
 				>
 					<Image
@@ -50,6 +52,18 @@
 					/>
 				</Box>
 				<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
+				<Image
+					url={stretchPointyHexagon}
+					css={{
+						width: 'var(--Unit)',
+						height: 'calc(var(--Unit) * 6)',
+						p: '$1',
+					}}
+				/>
+				<Image
+					url={stretchFlatHexagon}
+					css={{ width: '100%', height: 'var(--Unit)', p: '$1' }}
+				/>
 			</VStack>
 		</VStack>
 		<Box
