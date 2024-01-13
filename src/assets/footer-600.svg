@@ -4,6 +4,7 @@
 	clip-rule="evenodd"
 	stroke-miterlimit="1.5"
 	viewBox="0 0 600 288"
+	shape-rendering="crispEdges"
 >
 	<g id="footer" fill="none" stroke="#adfd2d">
 		<path

@@ -5,6 +5,7 @@
 	stroke-miterlimit="1.5"
 	viewBox="0 0 360 10"
 	preserveAspectRatio="none"
+	shape-rendering="crispEdges"
 >
 	<g id="center" fill="none" stroke="#adfd2d">
 		<path vector-effect="non-scaling-stroke" d="M60 0v11.547M300 0v11.547" />
