@@ -24,6 +24,9 @@ export const {
 		lg: '(min-width: 1024px)',
 		xl: '(min-width: 1280px)',
 		xxl: '(min-width: 1536px)',
+		bp3: '(max-width: 599.9px)',
+		bp6: '(min-width: 600px) and (max-width: 959.9px)',
+		bp9: '(min-width: 960px)',
 	},
 	utils,
 })
