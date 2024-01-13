@@ -8,6 +8,19 @@
 		gridTemplateRows: 'auto 1fr auto',
 		minHeight: '100vh',
 		position: 'relative',
+		//
+		'@bp3': {
+			$WUnit: 'calc(100vw / 6)',
+		},
+		'@bp6': {
+			$WUnit: 'calc(100vw / 10)',
+		},
+		'@bp9': {
+			$WUnit: 'calc(100vw / 16)',
+		},
+		$Unit: 'calc(var(--WUnit) * 1.155)',
+		$DuodeciUnit: 'calc(var(--Unit) / 12)',
+		$HexiUnit: 'calc(var(--Unit) / 6)',
 	})
 
 	// export const ssr = false
