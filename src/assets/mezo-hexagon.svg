@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-miterlimit="1.5" clip-rule="evenodd" viewBox="0 0 241 278">
+  <path id="mezo-hexagon" fill="none" d="M0 0h241v278H0z"/>
+  <clipPath id="_clip1">
+    <path d="M0 0h241v278H0z"/>
+  </clipPath>
+  <g clip-path="url(#_clip1)">
+    <path vector-effect="non-scaling-stroke" fill="none" stroke="#adfd2d" d="M120.5.5.5 69.782v138.564l120 69.282 120-69.282V69.782L120.5.5Z"/>
+  </g>
+</svg>
