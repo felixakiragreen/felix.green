@@ -24,6 +24,7 @@
 		'& img': {
 			width: '100%',
 		},
+		pointerEvents: 'none',
 	}}
 >
 	<!-- HEADER -->
@@ -33,8 +34,7 @@
 		css={{
 			display: 'none',
 			height: 'auto',
-			// css breakpoint only show below 600px
-			'@media (max-width: 600px)': {
+			'@bp3': {
 				display: 'block',
 			},
 		}}
@@ -43,8 +43,7 @@
 		url={header600}
 		css={{
 			display: 'none',
-			// css breakpoint only show between 600px and 960px
-			'@media (min-width: 600px) and (max-width: 960px)': {
+			'@bp6': {
 				display: 'block',
 			},
 		}}
@@ -53,8 +52,7 @@
 		url={header960}
 		css={{
 			display: 'none',
-			// css breakpoint only show above 960px
-			'@media (min-width: 960px)': {
+			'@bp9': {
 				display: 'block',
 			},
 		}}
@@ -67,8 +65,7 @@
 		css={{
 			display: 'none',
 			flexGrow: 1,
-			// css breakpoint only show below 600px
-			'@media (max-width: 600px)': {
+			'@bp3': {
 				display: 'block',
 			},
 		}}
@@ -78,8 +75,7 @@
 		css={{
 			display: 'none',
 			flexGrow: 1,
-			// css breakpoint only show between 600px and 960px
-			'@media (min-width: 600px) and (max-width: 960px)': {
+			'@bp6': {
 				display: 'block',
 			},
 		}}
@@ -89,8 +85,7 @@
 		css={{
 			display: 'none',
 			flexGrow: 1,
-			// css breakpoint only show above 960px
-			'@media (min-width: 960px)': {
+			'@bp9': {
 				display: 'block',
 			},
 		}}
@@ -103,8 +98,7 @@
 		css={{
 			display: 'none',
 			height: 'auto',
-			// css breakpoint only show below 600px
-			'@media (max-width: 600px)': {
+			'@bp3': {
 				display: 'block',
 			},
 		}}
@@ -114,8 +108,7 @@
 		css={{
 			display: 'none',
 			height: 'auto',
-			// css breakpoint only show between 600px and 960px
-			'@media (min-width: 600px) and (max-width: 960px)': {
+			'@bp6': {
 				display: 'block',
 			},
 		}}
@@ -125,8 +118,7 @@
 		css={{
 			display: 'none',
 			height: 'auto',
-			// css breakpoint only show above 960px
-			'@media (min-width: 960px)': {
+			'@bp9': {
 				display: 'block',
 			},
 		}}
