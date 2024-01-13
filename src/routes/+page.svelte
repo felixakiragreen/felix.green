@@ -2,6 +2,9 @@
 	import { Box, Content, VStack, HStack, Text, Link, Image } from '@/fui'
 
 	import HexagonalScrollBorder from '@/lib/components/HexagonalScrollBorder.svelte'
+
+	import miniHexagon from '@/assets/mini-hexagon.svg'
+	import mezoHexagon from '@/assets/mezo-hexagon.svg'
 </script>
 
 <Content p="0">
@@ -9,17 +12,9 @@
 	<VStack>
 		<VStack
 			fg="felix"
+			align="center"
 			css={{
 				textAlign: 'center',
-				'@bp3': {
-					$Unit: 'calc((100vw / 6) * 1.155)',
-				},
-				'@bp6': {
-					$Unit: 'calc((100vw / 10) * 1.155)',
-				},
-				'@bp9': {
-					$Unit: 'calc((100vw / 16) * 1.155)',
-				},
 				marginTop: 'calc(var(--Unit) * 4)',
 			}}
 		>
@@ -27,6 +22,35 @@
 				I<br />am</Text
 			>
 			<Text size="2xl" weight="thinn">felix green</Text>
+			<VStack
+				p="0"
+				m="0"
+				align="center"
+				css={{
+					position: 'relative',
+					height: 'calc(var(--Unit) * 6)',
+					width: 'calc(var(--WUnit) * 6)',
+					// red with opacity
+					backgroundColor: 'rgba(255, 0, 0, 0.2)',
+				}}
+			>
+				<Box
+					css={{
+						position: 'absolute',
+						top: 0,
+						left: 0,
+						width: '100%',
+						height: '100%',
+						backgroundColor: 'rgba(0, 0, 255, 0.2)',
+					}}
+				>
+					<Image
+						url={mezoHexagon}
+						css={{ width: 'calc(var(--WUnit) * 6)' }}
+					/>
+				</Box>
+				<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
+			</VStack>
 		</VStack>
 		<Box
 			css={{
