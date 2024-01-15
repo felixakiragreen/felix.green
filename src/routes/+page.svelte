@@ -59,16 +59,16 @@
 				<Box
 					css={{
 						...bgSx,
+						backgroundImage: `url(${stretchPointyHexagon})`,
 					}}
-				>
-					<Image url={mezoHexagon} />
-				</Box>
+				/>
 				<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
 				<Box
 					css={{
 						position: 'relative',
 						px: '$xl',
 						py: '$lg',
+						textAlign: 'center',
 					}}
 				>
 					<Box
