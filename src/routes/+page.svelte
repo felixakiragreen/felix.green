@@ -24,11 +24,15 @@
 		<VStack
 			align="center"
 			css={{
-				textAlign: 'center',
 				marginTop: 'calc(var(--Unit) * 4)',
 			}}
 		>
-			<VStack fg="felix">
+			<VStack
+				fg="felix"
+				css={{
+					textAlign: 'center',
+				}}
+			>
 				<Text size="lg" css={{ opacity: 0.4 }}>
 					I<br />am</Text
 				>
@@ -97,20 +101,12 @@
 				<Box
 					css={{
 						position: 'relative',
-						// p::first-letter {
-						// float: left;
-						// font-size: 3em;
-						// line-height: 1;
-						// margin-right: 0.1em;
-						// }
-						width: '100%',
-						// height: 'var(--Unit)',
 						px: '$2xl',
-						py: '$lg',
+						py: '$sm',
 						textAlign: 'left',
 						'& p::first-letter': {
 							float: 'left',
-							fontSize: '$2xl',
+							fontSize: '$3xl',
 							lineHeight: 1,
 							marginRight: '$md',
 						},
@@ -132,11 +128,62 @@
 							backgroundImage: `url(${stretchFlatHexagon})`,
 						}}
 					/>
-					<Text as="p" css={{ position: 'relative', zIndex: 2 }}>
+					<Text
+						as="p"
+						size="md"
+						css={{
+							position: 'relative',
+							zIndex: 2,
+							lineHeight: '1.65rem',
+						}}
+					>
 						I design and program digital things. What I enjoy most is:
 					</Text>
 				</Box>
-				<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
+				<VStack p="md" gap="lg">
+					<HStack>
+						<Image
+							url={miniHexagon}
+							css={{
+								width: 'var(--HexiUnit)',
+								mx: '$lg',
+								transform: 'rotate(90deg)',
+							}}
+						/>
+						<Text size="sm">
+							Reducing complexity with systems design, especially
+							interfaces and workflows
+						</Text>
+					</HStack>
+					<HStack>
+						<Image
+							url={miniHexagon}
+							css={{
+								width: 'var(--HexiUnit)',
+								mx: '$lg',
+								transform: 'rotate(90deg)',
+							}}
+						/>
+						<Text size="sm">
+							Informing and transforming user behavior through data
+							visualization
+						</Text>
+					</HStack>
+					<HStack>
+						<Image
+							url={miniHexagon}
+							css={{
+								width: 'var(--HexiUnit)',
+								mx: '$lg',
+								transform: 'rotate(90deg)',
+							}}
+						/>
+						<Text size="sm">
+							Accomplishing the previously impossible by standing on the
+							shoulders of giants
+						</Text>
+					</HStack>
+				</VStack>
 			</VStack>
 		</VStack>
 		<Box
