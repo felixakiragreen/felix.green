@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" fill-rule="evenodd" stroke-linecap="square" stroke-miterlimit="1.5" clip-rule="evenodd" viewBox="0 0 15908 15908">
+  <path id="Artboard1" fill="none" d="M0 0h15908v15908H0z"/>
+  <clipPath id="_clip1">
+    <path d="M0 0h15908v15908H0z"/>
+  </clipPath>
+  <g fill="none" stroke="#000" stroke-width="83.33" clip-path="url(#_clip1)">
+    <g id="flat">
+      <g id="sides">
+        <path d="M1 1h15906m0 13775H1"/>
+      </g>
+      <path id="tip" d="M4200 13776h-222.5L1 6888.5 3977.5 1H4200"/>
+    </g>
+    <g id="pointy">
+      <g id="sides1">
+        <path d="M13776 1v15906M1 15907V1"/>
+      </g>
+      <path id="tip1" d="M1 4200v-222.5L6888.5 1 13776 3977.5V4200"/>
+    </g>
+  </g>
+</svg>
