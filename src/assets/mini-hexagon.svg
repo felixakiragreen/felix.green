@@ -1,16 +1,12 @@
 <svg
 	xmlns="http://www.w3.org/2000/svg"
-	xml:space="preserve"
-	fill-rule="evenodd"
 	stroke-miterlimit="1.5"
+	fill-rule="evenodd"
 	clip-rule="evenodd"
 	viewBox="0 0 11 13"
+	preserveAspectRatio="xMidYMid meet"
 >
-	<path id="mini-hexagon" fill="none" d="M0 0h11v13H0z" />
-	<clipPath id="_clip1">
-		<path d="M0 0h11v13H0z" />
-	</clipPath>
-	<g clip-path="url(#_clip1)">
+	<g>
 		<path
 			vector-effect="non-scaling-stroke"
 			fill="none"
