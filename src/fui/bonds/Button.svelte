@@ -50,6 +50,11 @@
 
 		variants: {
 			look: {
+				icon: {
+					bg: '$clear',
+					border: 0,
+					'&:active': {},
+				},
 				basic: {
 					bg: '$primaryHighground',
 					color: '$primaryBackgroundest',
@@ -155,7 +160,8 @@
 						bg: '$primaryHighgroundest',
 
 						'.front': {
-							transition: 'transform 250ms cubic-bezier(.3, .7, .4, 1.5)',
+							transition:
+								'transform 250ms cubic-bezier(.3, .7, .4, 1.5)',
 							transform: 'translateY(-6px)',
 						},
 					},
