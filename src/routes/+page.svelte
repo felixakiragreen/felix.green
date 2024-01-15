@@ -2,6 +2,7 @@
 	import { Box, Content, VStack, HStack, Text, Link, Image } from '@/fui'
 
 	import HexagonalScrollBorder from '@/lib/components/HexagonalScrollBorder.svelte'
+	import Socials from '@/lib/components/Socials/index.svelte'
 
 	import miniHexagon from '@/assets/mini-hexagon.svg'
 	import mezoHexagon from '@/assets/mezo-hexagon.svg'
@@ -268,26 +269,17 @@
 				</VStack>
 			</VStack>
 		</VStack>
-		<Box
+		<VStack
+			align="center"
+			my="xl"
 			css={{
-				// width: '100px',
-				// height: '200px',
-				//  red bg with 0.2 alpha,
-				backgroundColor: 'rgba(255, 0, 0, 0.2)',
-				margin: '0 auto',
-				'@bp3': {
-					height: 'calc(var(--Unit) * 1)',
-					width: 'calc(var(--WUnit) * 4 + 0.6px)',
-				},
-				'@bp6': {
-					height: 'calc(var(--Unit) * 2)',
-					width: 'calc(var(--WUnit) * 8 + 0.6px)',
-				},
-				'@bp9': {
-					height: 'calc(var(--Unit) * 3)',
-					width: 'calc(var(--WUnit) * 12 + 0.6px)',
-				},
+				'--ICON-ground': '$colors$background',
+				'--ICON-symbol': '$colors$felix',
+				'--ICON-symbol-hover': '$colors$backgroundest',
+				'--ICON-ground-hover': '$colors$felix',
 			}}
-		></Box>
+		>
+			<Socials size="2xl" />
+		</VStack>
 	</VStack>
 </Content>
