@@ -268,14 +268,26 @@
 				</VStack>
 			</VStack>
 		</VStack>
-		<!-- <Box
+		<Box
 			css={{
-				width: '100px',
-				height: '2000px',
+				// width: '100px',
+				// height: '200px',
 				//  red bg with 0.2 alpha,
 				backgroundColor: 'rgba(255, 0, 0, 0.2)',
 				margin: '0 auto',
+				'@bp3': {
+					height: 'calc(var(--Unit) * 1)',
+					width: 'calc(var(--WUnit) * 4 + 0.6px)',
+				},
+				'@bp6': {
+					height: 'calc(var(--Unit) * 2)',
+					width: 'calc(var(--WUnit) * 8 + 0.6px)',
+				},
+				'@bp9': {
+					height: 'calc(var(--Unit) * 3)',
+					width: 'calc(var(--WUnit) * 12 + 0.6px)',
+				},
 			}}
-		></Box> -->
+		></Box>
 	</VStack>
 </Content>
