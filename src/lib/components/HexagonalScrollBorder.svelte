@@ -14,6 +14,7 @@
 	import footer960 from '@/assets/footer-960.svg'
 
 	import stretchPointyHexagon from '@/assets/stretch-pointy-hexagon.svg'
+	import stretchPointyHexagonTop from '@/assets/stretch-pointy-hexagon-top.svg'
 </script>
 
 <VStack
@@ -70,19 +71,19 @@
 		url={stretchPointyHexagon}
 		css={{
 			flexGrow: 1,
-			marginBottom: 'calc(var(--Unit) * 1)',
+			marginBottom: 'calc(-1.1vw)',
 			'@bp3': {
-				marginTop: 'calc(var(--Unit) * -5 - 0.52vw)',
+				marginTop: 'calc(var(--Unit) * -5 - 0.65vw)',
 				marginLeft: 'calc(var(--WUnit) * 1 - 0.3px)',
 				width: 'calc(var(--WUnit) * 4 + 0.6px)',
 			},
 			'@bp6': {
-				marginTop: 'calc(var(--Unit) * -6 - 0.52vw)',
+				marginTop: 'calc(var(--Unit) * -6 - 0.6vw)',
 				marginLeft: 'calc(var(--WUnit) * 1 - 0.3px)',
 				width: 'calc(var(--WUnit) * 8 + 0.6px)',
 			},
 			'@bp9': {
-				marginTop: 'calc(var(--Unit) * -7 - 0.52vw)',
+				marginTop: 'calc(var(--Unit) * -7 - 0.55vw)',
 				marginLeft: 'calc(var(--WUnit) * 2 - 0.3px)',
 				width: 'calc(var(--WUnit) * 12 + 0.6px)',
 			},
@@ -121,6 +122,28 @@
 	/> -->
 
 	<!-- FOOTER -->
+
+	<Image
+		url={stretchPointyHexagonTop}
+		css={{
+			'@bp3': {
+				marginLeft: 'calc(var(--WUnit) * 1 - 0.3px)',
+				height: 'calc(var(--Unit) * 1)',
+				width: 'calc(var(--WUnit) * 4 + 0.6px)',
+			},
+			'@bp6': {
+				marginLeft: 'calc(var(--WUnit) * 1 - 0.3px)',
+				height: 'calc(var(--Unit) * 2)',
+				width: 'calc(var(--WUnit) * 8 + 0.6px)',
+			},
+			'@bp9': {
+				marginLeft: 'calc(var(--WUnit) * 2 - 0.3px)',
+				height: 'calc(var(--Unit) * 3)',
+				width: 'calc(var(--WUnit) * 12 + 0.6px)',
+			},
+		}}
+	/>
+
 	<!-- 
 	<Image
 		url={footer360}
