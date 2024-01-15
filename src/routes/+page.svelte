@@ -7,6 +7,7 @@
 	import mezoHexagon from '@/assets/mezo-hexagon.svg'
 	import stretchFlatHexagon from '@/assets/stretch-flat-hexagon.svg'
 	import stretchPointyHexagon from '@/assets/stretch-pointy-hexagon.svg'
+	import fancyHexagon from '@/assets/fancy-hexagon.svg'
 
 	const bgSx = {
 		position: 'absolute',
@@ -39,7 +40,7 @@
 				<Text size="2xl" weight="thinn">felix green</Text>
 			</VStack>
 			<VStack
-				mt="xl"
+				my="xl"
 				p="lg"
 				gap="lg"
 				align="center"
@@ -47,12 +48,15 @@
 					position: 'relative',
 					'@bp3': {
 						width: 'calc(var(--WUnit) * 3)',
+						paddingBottom: 'calc(var(--Unit) * 1)',
 					},
 					'@bp6': {
 						width: 'calc(var(--WUnit) * 6)',
+						paddingBottom: 'calc(var(--Unit) * 1.5)',
 					},
 					'@bp9': {
 						width: 'calc(var(--WUnit) * 8)',
+						paddingBottom: 'calc(var(--Unit) * 2)',
 					},
 				}}
 			>
@@ -94,10 +98,6 @@
 					>
 				</Box>
 				<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
-				<!-- <Image
-					url={stretchFlatHexagon}
-					css={{ width: '100%', height: 'var(--Unit)', p: '$1' }}
-				/> -->
 				<Box
 					css={{
 						position: 'relative',
@@ -183,6 +183,81 @@
 							shoulders of giants
 						</Text>
 					</HStack>
+				</VStack>
+			</VStack>
+			<VStack
+				css={{
+					position: 'relative',
+					'@bp3': {
+						width: 'calc(var(--WUnit) * 3)',
+						marginTop: 'calc(var(--Unit) * -1)',
+					},
+					'@bp6': {
+						width: 'calc(var(--WUnit) * 6)',
+						marginTop: 'calc(var(--Unit) * -1.5)',
+					},
+					'@bp9': {
+						width: 'calc(var(--WUnit) * 8)',
+						marginTop: 'calc(var(--Unit) * -2)',
+					},
+				}}
+			>
+				<Box
+					css={{
+						...bgSx,
+						my: '$-2',
+						mx: 'calc(var(--WUnit) * 1)',
+						// backgroundColor: '$red400',
+						backgroundColor: '$backgroundest',
+						zIndex: 1,
+						opacity: 0.8,
+					}}
+				/>
+				<Box
+					css={{
+						...bgSx,
+						backgroundImage: `url(${fancyHexagon})`,
+						backgroundRepeat: 'no-repeat',
+						backgroundPosition: 'top center',
+						backgroundSize: 'fill',
+						zIndex: 2,
+					}}
+				/>
+				<VStack
+					p="lg"
+					gap="lg"
+					align="center"
+					css={{
+						position: 'relative',
+						zIndex: 2,
+						textAlign: 'center',
+						lineHeight: '$lg',
+					}}
+				>
+					<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
+					<Text>
+						I <Text weight="semi" css={{ color: '$blue400' }}>aspire</Text
+						><br />
+						to use <Text weight="semi" css={{ color: '$purple400' }}
+							>technology</Text
+						> for<br />
+						<Text weight="semi" css={{ color: '$red400' }}>creating</Text>
+						<Text weight="semi" css={{ color: '$orange400' }}
+							>magical</Text
+						><br />
+						<Text weight="semi" css={{ color: '$yellow400' }}
+							>experiences</Text
+						><br />
+					</Text>
+					<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
+					<Text
+						>thus<br />
+						becoming a<br />
+						<Text weight="semi" css={{ color: '$green400' }}
+							>technomancer</Text
+						>
+					</Text>
+					<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
 				</VStack>
 			</VStack>
 		</VStack>
