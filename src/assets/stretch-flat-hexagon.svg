@@ -4,14 +4,20 @@
 	fill-rule="evenodd"
 	clip-rule="evenodd"
 	stroke-miterlimit="1.5"
-	stroke-linecap="square"
+	stroke-linecap="round"
 	x="0%"
 	y="0%"
 	width="100%"
 	height="100%"
 	shape-rendering="crispEdges"
 >
-	<symbol id="tip" viewBox="-10 0 3997.5 13777" preserveAspectRatio="xMinYMid">
+	<symbol id="tip" viewBox="-100 0 4200 13777" preserveAspectRatio="xMinYMid">
+		<path
+			id="tip-sides"
+			stroke-width="1.8"
+			vector-effect="non-scaling-stroke"
+			d="M4200 13776h-222.5m0-13775H4200"
+		/>
 		<path
 			vector-effect="non-scaling-stroke"
 			d="M3977.5 13776 1 6888.5 3977.5 1"
@@ -19,13 +25,17 @@
 	</symbol>
 	<symbol
 		id="tip-bounds"
-		viewBox="0 0 3977.5 13777"
+		viewBox="0 0 4070 13777"
 		preserveAspectRatio="xMinYMid"
 	>
 		<rect x="0%" y="0%" width="100%" height="100%" />
 	</symbol>
 	<symbol id="sides" viewBox="0 0 15908 13777" preserveAspectRatio="none">
-		<path vector-effect="non-scaling-stroke" d="M1 1h15906m0 13775H1" />
+		<path
+			stroke-width="1.8"
+			vector-effect="non-scaling-stroke"
+			d="M1 1h15906m0 13775H1"
+		/>
 	</symbol>
 	<mask id="mask">
 		<rect x="0%" y="0%" width="100%" height="100%" fill="white" />
@@ -57,7 +67,6 @@
 				y="0%"
 				width="100%"
 				height="100%"
-				stroke-width="1.8"
 			/>
 			<use xlink:href="#tip" x="0%" y="0%" height="100%" width="50%" />
 			<use
