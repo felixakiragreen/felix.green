@@ -78,7 +78,21 @@ export const tokens = {
 		thiccc: '900', // black, heavy
 	},
 	// TODO: redo line heights
-
+	lineHeights: {
+		xs: '1rem',
+		sm: '1.25rem',
+		md: '1.5rem',
+		lg: '1.75rem',
+		xl: '2rem',
+		'2xl': '2.25rem',
+		'3xl': '2.5rem',
+		'4xl': '2.75rem',
+		'5xl': '1',
+		'6xl': '1',
+		'7xl': '1',
+		'8xl': '1',
+		'9xl': '1',
+	},
 	//
 	// letterSpacings: {},
 	borders: {
