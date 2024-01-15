@@ -1,16 +1,11 @@
 <svg
 	xmlns="http://www.w3.org/2000/svg"
-	xml:space="preserve"
 	fill-rule="evenodd"
-	stroke-miterlimit="1.5"
 	clip-rule="evenodd"
+	stroke-miterlimit="1.5"
 	viewBox="0 0 241 278"
 >
-	<path id="mezo-hexagon" fill="none" d="M0 0h241v278H0z" />
-	<clipPath id="_clip1">
-		<path d="M0 0h241v278H0z" />
-	</clipPath>
-	<g clip-path="url(#_clip1)">
+	<g>
 		<path
 			vector-effect="non-scaling-stroke"
 			fill="none"
