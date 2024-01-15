@@ -22,17 +22,18 @@
 	<HexagonalScrollBorder />
 	<VStack>
 		<VStack
-			fg="felix"
 			align="center"
 			css={{
 				textAlign: 'center',
 				marginTop: 'calc(var(--Unit) * 4)',
 			}}
 		>
-			<Text size="lg" css={{ opacity: 0.4 }}>
-				I<br />am</Text
-			>
-			<Text size="2xl" weight="thinn">felix green</Text>
+			<VStack fg="felix">
+				<Text size="lg" css={{ opacity: 0.4 }}>
+					I<br />am</Text
+				>
+				<Text size="2xl" weight="thinn">felix green</Text>
+			</VStack>
 			<VStack
 				mt="xl"
 				p="lg"
@@ -79,26 +80,62 @@
 						css={{
 							...bgSx,
 							zIndex: 2,
+							backgroundImage: `url(${stretchFlatHexagon})`,
 						}}
-					>
-						<Image
-							url={stretchFlatHexagon}
-							css={{ width: '100%', height: '100%' }}
-						/>
-					</Box>
+					/>
 
-					<Text
-						color="foreground"
-						css={{ position: 'relative', zIndex: 2 }}
+					<Text css={{ position: 'relative', zIndex: 2 }}
 						>I live for the <Text color="felix" weight="semi">future</Text
 						>. And hexagons!</Text
 					>
 				</Box>
 				<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
-				<Image
+				<!-- <Image
 					url={stretchFlatHexagon}
 					css={{ width: '100%', height: 'var(--Unit)', p: '$1' }}
-				/>
+				/> -->
+				<Box
+					css={{
+						position: 'relative',
+						// p::first-letter {
+						// float: left;
+						// font-size: 3em;
+						// line-height: 1;
+						// margin-right: 0.1em;
+						// }
+						width: '100%',
+						// height: 'var(--Unit)',
+						px: '$2xl',
+						py: '$lg',
+						textAlign: 'left',
+						'& p::first-letter': {
+							float: 'left',
+							fontSize: '$2xl',
+							lineHeight: 1,
+							marginRight: '$md',
+						},
+					}}
+				>
+					<Box
+						css={{
+							...bgSx,
+							my: '$-2',
+							backgroundColor: '$backgroundest',
+							zIndex: 1,
+							opacity: 0.8,
+						}}
+					/>
+					<Box
+						css={{
+							...bgSx,
+							zIndex: 2,
+							backgroundImage: `url(${stretchFlatHexagon})`,
+						}}
+					/>
+					<Text as="p" css={{ position: 'relative', zIndex: 2 }}>
+						I design and program digital things. What I enjoy most is:
+					</Text>
+				</Box>
 				<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
 			</VStack>
 		</VStack>
