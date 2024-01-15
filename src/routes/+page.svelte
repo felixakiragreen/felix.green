@@ -26,10 +26,12 @@
 			align="center"
 			css={{
 				marginTop: 'calc(var(--Unit) * 4)',
+				marginBottom: 'calc(var(--Unit) * 4)',
 			}}
 		>
 			<VStack
 				fg="felix"
+				gap="lg"
 				css={{
 					textAlign: 'center',
 				}}
@@ -266,7 +268,7 @@
 				</VStack>
 			</VStack>
 		</VStack>
-		<Box
+		<!-- <Box
 			css={{
 				width: '100px',
 				height: '2000px',
@@ -274,6 +276,6 @@
 				backgroundColor: 'rgba(255, 0, 0, 0.2)',
 				margin: '0 auto',
 			}}
-		></Box>
+		></Box> -->
 	</VStack>
 </Content>
