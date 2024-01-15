@@ -140,50 +140,55 @@
 						I design and program digital things. What I enjoy most is:
 					</Text>
 				</Box>
-				<VStack p="md" gap="lg">
-					<HStack>
+				<Box
+					css={{
+						p: '$md',
+						display: 'grid',
+						gridTemplateColumns: 'auto 1fr',
+						gap: '$lg',
+						alignItems: 'center',
+					}}
+				>
+					<Box>
 						<Image
 							url={miniHexagon}
 							css={{
 								width: 'var(--HexiUnit)',
-								mx: '$lg',
 								transform: 'rotate(90deg)',
 							}}
 						/>
-						<Text size="sm">
-							Reducing complexity with systems design, especially
-							interfaces and workflows
-						</Text>
-					</HStack>
-					<HStack>
+					</Box>
+					<Text size="sm">
+						Reducing complexity with systems design, especially interfaces
+						and workflows
+					</Text>
+					<Box>
 						<Image
 							url={miniHexagon}
 							css={{
 								width: 'var(--HexiUnit)',
-								mx: '$lg',
 								transform: 'rotate(90deg)',
 							}}
 						/>
-						<Text size="sm">
-							Informing and transforming user behavior through data
-							visualization
-						</Text>
-					</HStack>
-					<HStack>
+					</Box>
+					<Text size="sm">
+						Informing and transforming user behavior through data
+						visualization
+					</Text>
+					<Box>
 						<Image
 							url={miniHexagon}
 							css={{
 								width: 'var(--HexiUnit)',
-								mx: '$lg',
 								transform: 'rotate(90deg)',
 							}}
 						/>
-						<Text size="sm">
-							Accomplishing the previously impossible by standing on the
-							shoulders of giants
-						</Text>
-					</HStack>
-				</VStack>
+					</Box>
+					<Text size="sm">
+						Accomplishing the previously impossible by standing on the
+						shoulders of giants
+					</Text>
+				</Box>
 			</VStack>
 			<VStack
 				css={{
