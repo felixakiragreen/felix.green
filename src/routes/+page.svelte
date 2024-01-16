@@ -18,6 +18,7 @@
 	import stretchFlatHexagon from '@/assets/stretch-flat-hexagon.svg'
 	import stretchPointyHexagon from '@/assets/stretch-pointy-hexagon.svg'
 	import fancyHexagon from '@/assets/fancy-hexagon.svg'
+	import fancyHexagonSm from '@/assets/fancy-hexagon-sm.svg'
 	import cv from '@/assets/felix_green_resume_2024.pdf'
 
 	import SvgHexagonFlatStretch from '@/fui/bonds/SvgHexagonFlatStretch.svelte'
@@ -71,7 +72,7 @@
 				css={{
 					position: 'relative',
 					'@sm': {
-						width: 'calc(var(--WUnit) * 3)',
+						width: 'calc(var(--WUnit) * 4)',
 						pb: 'calc(var(--Unit) * 1)',
 					},
 					'@md': {
@@ -140,7 +141,7 @@
 				<Box
 					css={{
 						position: 'relative',
-						px: '$3xl',
+						px: '$4xl',
 						py: '$sm',
 						textAlign: 'left',
 						'@sm': {
@@ -277,7 +278,7 @@
 					css={{
 						...bgSx,
 						my: 'calc(var(--Unit) * 0.33)',
-						maxWidth: 'calc(var(--WUnit) * 7)',
+						maxWidth: 'calc(var(--WUnit) * 6)',
 						mx: 'auto',
 						backgroundColor: '$backgroundest',
 						zIndex: 1,
@@ -287,16 +288,27 @@
 				<Box
 					css={{
 						...bgSx,
-						// backgroundImage: `url(${fancyHexagon})`,
-						// backgroundRepeat: 'no-repeat',
-						// backgroundPosition: 'top center',
-						// backgroundSize: 'contain',
 						zIndex: 2,
 					}}
 				>
 					<Image
+						url={fancyHexagonSm}
+						css={{
+							display: 'none',
+							'@sm': {
+								display: 'block',
+								width: '100%',
+								height: '100%',
+							},
+						}}
+					/>
+					<Image
 						url={fancyHexagon}
-						css={{ width: '100%', height: '100%' }}
+						css={{
+							'@sm': { display: 'none' },
+							width: '100%',
+							height: '100%',
+						}}
 					/>
 				</Box>
 				<VStack
