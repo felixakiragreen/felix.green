@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { PropBoolean, PropString, SocialLink } from '@/types'
 
-	import Link from './Link.svelte'
+	import { Link } from '@/fui'
 	import IconSocial from './IconSocial.svelte'
 
 	export let url: string
