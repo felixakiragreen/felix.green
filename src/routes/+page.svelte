@@ -18,7 +18,7 @@
 	import stretchFlatHexagon from '@/assets/stretch-flat-hexagon.svg'
 	import stretchPointyHexagon from '@/assets/stretch-pointy-hexagon.svg'
 	import fancyHexagon from '@/assets/fancy-hexagon.svg'
-	import cv from '@/assets/felix_green_resume_2023.pdf'
+	import cv from '@/assets/felix_green_resume_2024.pdf'
 
 	import SvgHexagonFlatStretch from '@/fui/bonds/SvgHexagonFlatStretch.svelte'
 
