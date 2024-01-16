@@ -1,5 +1,5 @@
 import type { CSS } from './stitches.config'
-import type * as Stitches from '@stitches/core'
+import * as Stitches from '@stitches/core'
 import type { CssComponent } from '@stitches/core/types/styled-component'
 
 export type { CSS, CssComponent, Stitches }
@@ -14,18 +14,6 @@ export const baseColors = [
 	'grey',
 ] as const
 export type Color = (typeof baseColors)[number]
-
-export enum IconTheme {
-	None = 'no',
-	Clear = 'cl',
-	CurrentColor = 'cc',
-	Foreground = 'fg',
-	Background = 'bg',
-	Highlight = 'hl',
-	Lowlight = 'll',
-	BrandExact = 'be',
-	BrandHue = 'bh',
-}
 
 export type PropString = string | null | undefined
 export type PropBoolean = boolean | null | undefined
