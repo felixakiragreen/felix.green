@@ -141,14 +141,21 @@
 				<Box
 					css={{
 						position: 'relative',
-						px: '$4xl',
+						px: '$3xl',
 						py: '$sm',
-						textAlign: 'left',
+						// mx: 'auto',
+						// textAlign: 'left',
 						'@sm': {
 							mx: 'calc(var(--WUnit) * -1)',
 						},
 						'@md': {
-							mx: 'calc(var(--WUnit) * -0.5)',
+							mx: 'calc(var(--WUnit) * -1)',
+						},
+						'@media (min-width: 600px) and (max-width: 680px)': {
+							mx: 'calc(var(--WUnit) * -1.5)',
+						},
+						'@media (min-width: 800px) and (max-width: 1150px)': {
+							mx: 'calc(var(--WUnit) * -0.75)',
 						},
 						'& p::first-letter': {
 							fontSize: '300%',
@@ -163,6 +170,11 @@
 							},
 							'@md': {
 								mt: '0.2rem',
+							},
+							'@media (min-width: 1760px)': {
+								fontSize: '100%',
+								m: '0',
+								float: 'none',
 							},
 						},
 					}}
@@ -197,11 +209,18 @@
 							position: 'relative',
 							zIndex: 2,
 							lineHeight: '1.65rem',
+							// backgroundColor: '$red400',
+							'@sm': {
+								mx: '$xl',
+							},
 						}}
 					>
-						I design and program digital things. <Break no
-							>What I enjoy most is:</Break
+						<Break no
+							>I design and program <Break below="sm" /><Break no
+								>digital things.</Break
+							></Break
 						>
+						<Break no>What I enjoy most is:</Break>
 					</Text>
 				</Box>
 				<!-- ENJOY LIST -->
@@ -277,23 +296,31 @@
 				<Box
 					css={{
 						...bgSx,
-						my: 'calc(var(--Unit) * 0.33)',
-						maxWidth: 'calc(var(--WUnit) * 6)',
-						mx: 'auto',
-						backgroundColor: '$backgroundest',
-						zIndex: 1,
-						opacity: 0.8,
-					}}
-				/>
-				<Box
-					css={{
-						...bgSx,
-						zIndex: 2,
 					}}
 				>
+					<Box
+						css={{
+							// width: '100%',
+							// height: '100%',
+							...bgSx,
+							mt: 'calc(var(--Unit) * 0.33)',
+							height: '100%',
+							aspectRatio: '9.4 / 7',
+							'@sm': {
+								aspectRatio: '7.9 / 7',
+							},
+							mx: 'auto',
+							backgroundColor: '$backgroundest',
+							// backgroundColor: '$red400',
+							zIndex: 1,
+							opacity: 0.8,
+						}}
+					/>
 					<Image
 						url={fancyHexagonSm}
 						css={{
+							position: 'relative',
+							zIndex: 2,
 							display: 'none',
 							'@sm': {
 								display: 'block',
@@ -305,6 +332,8 @@
 					<Image
 						url={fancyHexagon}
 						css={{
+							position: 'relative',
+							zIndex: 2,
 							'@sm': { display: 'none' },
 							width: '100%',
 							height: '100%',
