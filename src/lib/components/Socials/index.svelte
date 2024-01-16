@@ -1,17 +1,34 @@
 <script lang="ts">
-	import type { ComponentProps } from 'svelte'
-	import type { PropCss } from '@/types'
-	import { HStack } from '@/fui'
+	import { VStack } from '@/fui'
 
 	import { socials } from './socials'
 	import IconSocialRow from './IconSocialRow.svelte'
-
-	export let gap: ComponentProps<HStack>['gap'] = 'sm'
-	export let align: ComponentProps<HStack>['align'] = undefined
-	export let size: ComponentProps<IconSocialRow>['size'] = 'md'
-	export let css: PropCss = undefined
-
-	export let shape: 'square' | 'hexagon' = 'square'
 </script>
 
-<IconSocialRow {socials} {css} {gap} {align} {size} {shape} />
+<VStack
+	align="center"
+	alignV="center"
+	css={{
+		'--ICON-ground': '$colors$clear',
+		'--ICON-symbol': '$colors$felix',
+		'--ICON-stroke': '$colors$felix',
+		'--ICON-symbol-hover': '$colors$backgroundest',
+		'--ICON-ground-hover': '$colors$felix',
+		'@sm': {
+			pt: '$3xl',
+			height: 'calc(var(--Unit) * 1)',
+			'--ICON-size': '$space$7',
+		},
+		'@md': {
+			pt: '$3xl',
+			height: 'calc(var(--Unit) * 2)',
+			'--ICON-size': '$space$8',
+		},
+		'@lg': {
+			height: 'calc(var(--Unit) * 2)',
+			'--ICON-size': '$space$9',
+		},
+	}}
+>
+	<IconSocialRow {socials} gap="sm" shape="hexagon" />
+</VStack>
