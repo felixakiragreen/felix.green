@@ -41,7 +41,7 @@
 		css={{
 			display: 'none',
 			height: 'auto',
-			'@bp3': {
+			'@sm': {
 				display: 'block',
 			},
 		}}
@@ -50,7 +50,7 @@
 		url={header600}
 		css={{
 			display: 'none',
-			'@bp6': {
+			'@md': {
 				display: 'block',
 			},
 		}}
@@ -59,7 +59,7 @@
 		url={header960}
 		css={{
 			display: 'none',
-			'@bp9': {
+			'@lg': {
 				display: 'block',
 			},
 		}}
@@ -72,17 +72,17 @@
 		css={{
 			flexGrow: 1,
 			marginBottom: 'calc(-1.1vw)',
-			'@bp3': {
+			'@sm': {
 				marginTop: 'calc(var(--Unit) * -5 - 0.65vw)',
 				marginLeft: 'calc(var(--WUnit) * 1 - 0.3px)',
 				width: 'calc(var(--WUnit) * 4 + 0.6px)',
 			},
-			'@bp6': {
+			'@md': {
 				marginTop: 'calc(var(--Unit) * -6 - 0.6vw)',
 				marginLeft: 'calc(var(--WUnit) * 1 - 0.3px)',
 				width: 'calc(var(--WUnit) * 8 + 0.6px)',
 			},
-			'@bp9': {
+			'@lg': {
 				marginTop: 'calc(var(--Unit) * -7 - 0.55vw)',
 				marginLeft: 'calc(var(--WUnit) * 2 - 0.3px)',
 				width: 'calc(var(--WUnit) * 12 + 0.6px)',
@@ -95,7 +95,7 @@
 		css={{
 			display: 'none',
 			flexGrow: 1,
-			'@bp3': {
+			'@sm': {
 				display: 'block',
 			},
 		}}
@@ -105,7 +105,7 @@
 		css={{
 			display: 'none',
 			flexGrow: 1,
-			'@bp6': {
+			'@md': {
 				display: 'block',
 			},
 		}}
@@ -115,7 +115,7 @@
 		css={{
 			display: 'none',
 			flexGrow: 1,
-			'@bp9': {
+			'@lg': {
 				display: 'block',
 			},
 		}}
@@ -126,17 +126,17 @@
 	<Image
 		url={stretchPointyHexagonTop}
 		css={{
-			'@bp3': {
+			'@sm': {
 				marginLeft: 'calc(var(--WUnit) * 1 - 0.3px)',
 				height: 'calc(var(--Unit) * 1)',
 				width: 'calc(var(--WUnit) * 4 + 0.6px)',
 			},
-			'@bp6': {
+			'@md': {
 				marginLeft: 'calc(var(--WUnit) * 1 - 0.3px)',
 				height: 'calc(var(--Unit) * 2)',
 				width: 'calc(var(--WUnit) * 8 + 0.6px)',
 			},
-			'@bp9': {
+			'@lg': {
 				marginLeft: 'calc(var(--WUnit) * 2 - 0.3px)',
 				height: 'calc(var(--Unit) * 3)',
 				width: 'calc(var(--WUnit) * 12 + 0.6px)',
@@ -150,7 +150,7 @@
 		css={{
 			display: 'none',
 			height: 'auto',
-			'@bp3': {
+			'@sm': {
 				display: 'block',
 			},
 		}}
@@ -160,7 +160,7 @@
 		css={{
 			display: 'none',
 			height: 'auto',
-			'@bp6': {
+			'@md': {
 				display: 'block',
 			},
 		}}
@@ -170,7 +170,7 @@
 		css={{
 			display: 'none',
 			height: 'auto',
-			'@bp9': {
+			'@lg': {
 				display: 'block',
 			},
 		}}
