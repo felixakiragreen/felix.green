@@ -35,8 +35,16 @@
 		<VStack
 			align="center"
 			css={{
-				marginTop: 'calc(var(--Unit) * 4)',
-				marginBottom: 'calc(var(--Unit) * 4)',
+				mt: 'calc(var(--Unit) * 4)',
+				'@sm': {
+					mb: 'calc(var(--Unit) * 2)',
+				},
+				'@md': {
+					mb: 'calc(var(--Unit) * 2)',
+				},
+				'@lg': {
+					mb: 'calc(var(--Unit) * 4)',
+				},
 			}}
 		>
 			<VStack
@@ -51,6 +59,7 @@
 				>
 				<Text size="2xl" weight="thinn">felix green</Text>
 			</VStack>
+			<!-- MAIN HEXAGON -->
 			<VStack
 				my="xl"
 				p="lg"
@@ -60,15 +69,15 @@
 					position: 'relative',
 					'@sm': {
 						width: 'calc(var(--WUnit) * 3)',
-						paddingBottom: 'calc(var(--Unit) * 1)',
+						pb: 'calc(var(--Unit) * 1)',
 					},
 					'@md': {
 						width: 'calc(var(--WUnit) * 6)',
-						paddingBottom: 'calc(var(--Unit) * 1.5)',
+						pb: 'calc(var(--Unit) * 1.5)',
 					},
 					'@lg': {
 						width: 'calc(var(--WUnit) * 8)',
-						paddingBottom: 'calc(var(--Unit) * 2)',
+						pb: 'calc(var(--Unit) * 2)',
 					},
 				}}
 			>
@@ -202,20 +211,21 @@
 					</Text>
 				</Box>
 			</VStack>
+			<!-- FANCY HEXAGON -->
 			<VStack
 				css={{
 					position: 'relative',
 					'@sm': {
 						width: 'calc(var(--WUnit) * 6)',
-						marginTop: 'calc(var(--Unit) * -1)',
+						mt: 'calc(var(--Unit) * -1)',
 					},
 					'@md': {
 						width: 'calc(var(--WUnit) * 6)',
-						marginTop: 'calc(var(--Unit) * -1.5)',
+						mt: 'calc(var(--Unit) * -1.5)',
 					},
 					'@lg': {
 						width: 'calc(var(--WUnit) * 8)',
-						marginTop: 'calc(var(--Unit) * -2)',
+						mt: 'calc(var(--Unit) * -2)',
 					},
 				}}
 			>
@@ -278,27 +288,6 @@
 				</VStack>
 			</VStack>
 		</VStack>
-		<VStack
-			align="center"
-			my="xl"
-			css={{
-				'--ICON-ground': '$colors$clear',
-				'--ICON-symbol': '$colors$felix',
-				'--ICON-stroke': '$colors$felix',
-				'--ICON-symbol-hover': '$colors$backgroundest',
-				'--ICON-ground-hover': '$colors$felix',
-				'@sm': {
-					'--ICON-size': '$space$7',
-				},
-				'@md': {
-					'--ICON-size': '$space$8',
-				},
-				'@lg': {
-					'--ICON-size': '$space$9',
-				},
-			}}
-		>
-			<Socials shape="hexagon" />
-		</VStack>
+		<Socials />
 	</VStack>
 </Content>
