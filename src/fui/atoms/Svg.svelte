@@ -8,7 +8,7 @@
 	export let style: PropString = undefined
 	export let vrt = {}
 
-	export let viewBox: string
+	export let viewBox: PropString = undefined
 
 	const ss = cls || stitch({})
 </script>
