@@ -26,9 +26,10 @@
 	})
 
 	// export const ssr = true
-
-	const styles = `<${''}style id="stitches">:root { ${getCssText()} }</${''}style>`
 	// const styles = `<${''}style id="stitches">${getCssText()}</${''}style>`
+
+	// DO THIS FOR DEV
+	// const styles = `<${''}style id="stitches">:root { ${getCssText()} }</${''}style>`
 	// $: console.log('styles', styles)
 </script>
 
