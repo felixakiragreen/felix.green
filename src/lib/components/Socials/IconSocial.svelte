@@ -1,14 +1,8 @@
 <script lang="ts">
 	import { stitch, BoxAtom } from '@/fui'
-	import {
-		type PropBoolean,
-		type PropString,
-		type PropCss,
-		type SocialLink,
-	} from '@/types'
+	import type { PropBoolean, PropString, PropCss, SocialLink } from '@/types'
 
-	import SvgSquare from './SvgSquare.svelte'
-	import SvgHexagon from './SvgHexagon.svelte'
+	import { SvgSquare, SvgHexagon } from '@/fui'
 
 	export let css: PropCss = undefined
 
