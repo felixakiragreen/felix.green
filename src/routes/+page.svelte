@@ -273,8 +273,9 @@
 			align="center"
 			my="xl"
 			css={{
-				'--ICON-ground': '$colors$background',
+				'--ICON-ground': '$colors$clear',
 				'--ICON-symbol': '$colors$felix',
+				'--ICON-stroke': '$colors$felix',
 				'--ICON-symbol-hover': '$colors$backgroundest',
 				'--ICON-ground-hover': '$colors$felix',
 			}}
