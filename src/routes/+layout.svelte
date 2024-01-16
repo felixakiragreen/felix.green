@@ -10,13 +10,13 @@
 		minHeight: '100vh',
 		position: 'relative',
 		//
-		'@bp3': {
+		'@sm': {
 			$WUnit: 'calc(100vw / 6)',
 		},
-		'@bp6': {
+		'@md': {
 			$WUnit: 'calc(100vw / 10)',
 		},
-		'@bp9': {
+		'@lg': {
 			$WUnit: 'calc(100vw / 16)',
 		},
 		$Unit: 'calc(var(--WUnit) * 1.155)',
