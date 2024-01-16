@@ -5,7 +5,6 @@
 		type PropString,
 		type PropCss,
 		type SocialLink,
-		IconTheme,
 	} from '@/types'
 
 	import SvgSquare from './SvgSquare.svelte'
@@ -26,9 +25,11 @@
 
 		'--symbol': 'var(--ICON-symbol)',
 		'--ground': 'var(--ICON-ground)',
+		'--stroke': 'var(--ICON-stroke)',
 		'&:hover': {
 			'--symbol': 'var(--ICON-symbol-hover, var(--ICON-symbol))',
 			'--ground': 'var(--ICON-ground-hover, var(--ICON-ground))',
+			'--stroke': 'var(--ICON-stroke-hover, var(--ICON-stroke))',
 		},
 	})
 </script>
@@ -43,7 +44,7 @@
 			</g>
 		</SvgSquare>
 	{:else if shape === 'hexagon'}
-		<SvgHexagon fill="currentcolor" {rounded}>
+		<SvgHexagon {rounded} fill="currentcolor" stroke="var(--stroke)">
 			<g
 				transform={`translate(${transform.translate.x},${transform.translate.y}) scale(${transform.scale})`}
 			>
