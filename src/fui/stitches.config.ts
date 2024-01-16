@@ -17,16 +17,20 @@ export const {
 		...tokens,
 	},
 	media: {
-		xxs: '(min-width: 240px)',
-		xs: '(min-width: 320px)',
-		sm: '(min-width: 480px)',
-		md: '(min-width: 640px)',
-		lg: '(min-width: 1024px)',
-		xl: '(min-width: 1280px)',
-		xxl: '(min-width: 1536px)',
-		bp3: '(max-width: 599.9px)',
-		bp6: '(min-width: 600px) and (max-width: 959.9px)',
-		bp9: '(min-width: 960px)',
+		// default
+		// xxs: '(min-width: 240px)',
+		// xs: '(min-width: 320px)',
+		// sm: '(min-width: 480px)',
+		// md: '(min-width: 640px)',
+		// lg: '(min-width: 1024px)',
+		// xl: '(min-width: 1280px)',
+		// xxl: '(min-width: 1536px)',
+		//
+		// CUSTOM
+		//
+		sm: '(max-width: 599.9px)',
+		md: '(min-width: 600px) and (max-width: 959.9px)',
+		lg: '(min-width: 960px)',
 	},
 	utils,
 })
