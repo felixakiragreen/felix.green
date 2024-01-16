@@ -524,14 +524,14 @@
 		--sxs: 6 c-PJLV-igJRnpu-css c-PJLV-icYDUtS-css c-PJLV-iciAXQH-css
 			c-PJLV-ibsedBV-css c-PJLV-igssdFd-css c-PJLV-ildAcrB-css
 			c-PJLV-ikoDvmf-css c-PJLV-igjdJOs-css c-PJLV-iduGldE-css
-			c-PJLV-ieImiGJ-css c-PJLV-igvsIOV-css c-PJLV-ikhQIgj-css
-			c-PJLV-icxPyx-css c-PJLV-ieBAJM-css c-PJLV-iiqlLPb-css
+			c-PJLV-ieImiGJ-css c-PJLV-ihinyfY-css c-PJLV-ikhQIgj-css
+			c-PJLV-icxPyx-css c-PJLV-ieBAJM-css c-PJLV-icmmtgO-css
 			c-PJLV-ikYMMba-css c-PJLV-icuQybG-css c-PJLV-iiOVpSv-css
 			c-PJLV-icpoRfK-css c-PJLV-ifzcXzO-css c-PJLV-idZwHJM-css
-			c-PJLV-igNbIRh-css c-PJLV-iePWMfV-css c-PJLV-icpjhnD-css
-			c-PJLV-ieLXfUI-css c-PJLV-ieURXYc-css c-PJLV-idgROoV-css
-			c-PJLV-ifkbgwS-css c-PJLV-ihxermW-css c-PJLV-igmhvcx-css
-			c-PJLV-isIgjH-css c-PJLV-idfdYtX-css;
+			c-PJLV-igNbIRh-css c-PJLV-icpjhnD-css c-PJLV-ieLXfUI-css
+			c-PJLV-ieURXYc-css c-PJLV-idgROoV-css c-PJLV-ifkbgwS-css
+			c-PJLV-ihxermW-css c-PJLV-igmhvcx-css c-PJLV-isIgjH-css
+			c-PJLV-idfdYtX-css;
 	}
 	@media {
 		.c-PJLV-igJRnpu-css {
@@ -658,14 +658,9 @@
 				padding-bottom: calc(var(--Unit) * 2);
 			}
 		}
-		.c-PJLV-igvsIOV-css {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			pointer-events: none;
-			background-image: url(/src/assets/stretch-pointy-hexagon.svg);
+		.c-PJLV-ihinyfY-css {
+			width: 100%;
+			height: 100%;
 		}
 		.c-PJLV-ikhQIgj-css {
 			width: var(--HexiUnit);
@@ -693,7 +688,7 @@
 			z-index: 1;
 			opacity: 0.8;
 		}
-		.c-PJLV-iiqlLPb-css {
+		.c-PJLV-icmmtgO-css {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -701,7 +696,6 @@
 			bottom: 0;
 			pointer-events: none;
 			z-index: 2;
-			background-image: url(/src/assets/stretch-flat-hexagon.svg);
 		}
 		.c-PJLV-ikYMMba-css {
 			position: relative;
@@ -802,19 +796,6 @@
 			background-color: var(--colors-backgroundest);
 			z-index: 1;
 			opacity: 0.8;
-		}
-		.c-PJLV-iePWMfV-css {
-			position: absolute;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			pointer-events: none;
-			background-image: url(/src/assets/fancy-hexagon.svg);
-			background-repeat: no-repeat;
-			background-position: top center;
-			background-size: contain;
-			z-index: 2;
 		}
 		.c-PJLV-icpjhnD-css {
 			position: relative;
