@@ -6,6 +6,7 @@
 		HStack,
 		Text,
 		Link,
+		LinkButton,
 		Image,
 		Break,
 	} from '@/fui'
@@ -14,11 +15,10 @@
 	import Socials from '@/lib/components/Socials/index.svelte'
 
 	import miniHexagon from '@/assets/mini-hexagon.svg'
-	import mezoHexagon from '@/assets/mezo-hexagon.svg'
 	import stretchFlatHexagon from '@/assets/stretch-flat-hexagon.svg'
-	import stretchFlatHexagonFill from '@/assets/stretch-flat-hexagon-fill.svg'
 	import stretchPointyHexagon from '@/assets/stretch-pointy-hexagon.svg'
 	import fancyHexagon from '@/assets/fancy-hexagon.svg'
+	import cv from '@/assets/felix_green_resume_2023.pdf'
 
 	import SvgHexagonFlatStretch from '@/fui/bonds/SvgHexagonFlatStretch.svelte'
 
@@ -40,13 +40,13 @@
 			css={{
 				mt: 'calc(var(--Unit) * 4)',
 				'@sm': {
-					mb: 'calc(var(--Unit) * 2)',
+					mb: 'calc(var(--Unit) * 1)',
 				},
 				'@md': {
-					mb: 'calc(var(--Unit) * 2)',
+					mb: 'calc(var(--Unit) * 1.5)',
 				},
 				'@lg': {
-					mb: 'calc(var(--Unit) * 4)',
+					mb: 'calc(var(--Unit) * 3)',
 				},
 			}}
 		>
@@ -188,6 +188,7 @@
 						>
 					</Text>
 				</Box>
+				<!-- ENJOY LIST -->
 				<Box
 					css={{
 						p: '$md',
@@ -316,7 +317,9 @@
 				</VStack>
 			</VStack>
 			<!-- BELOW -->
-			<Text>Download CV</Text>
+			<LinkButton url={cv} newTab>
+				<Text>Download CV</Text>
+			</LinkButton>
 		</VStack>
 		<Socials />
 	</VStack>
