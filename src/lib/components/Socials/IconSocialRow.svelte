@@ -30,8 +30,8 @@
 
 	let cssInl: PropCss
 	$: cssInl = css
-		? { ...css, '> *': { size: iconSize } }
-		: { '> *': { size: iconSize } }
+		? { ...css, '> *': { size: 'var(--ICON-size, $space$6)' } }
+		: { '> *': { size: 'var(--ICON-size, $space$6)' } }
 </script>
 
 <HStack css={cssInl} {gap} {align}>
