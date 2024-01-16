@@ -280,7 +280,7 @@
 				'--ICON-ground-hover': '$colors$felix',
 			}}
 		>
-			<Socials size="2xl" />
+			<Socials size="xl" shape="hexagon" />
 		</VStack>
 	</VStack>
 </Content>
