@@ -1,11 +1,6 @@
 <script lang="ts">
 	import type { ComponentProps } from 'svelte'
-	import {
-		IconTheme,
-		type PropCss,
-		type SocialLink,
-		type PropBoolean,
-	} from '@/types'
+	import type { PropCss, SocialLink, PropBoolean } from '@/types'
 
 	import Button from './Button.svelte'
 	import HStack from './HStack.svelte'
@@ -22,12 +17,6 @@
 
 	export let shape: 'square' | 'hexagon' = 'square'
 	export let rounded: PropBoolean = undefined
-
-	// variants
-	export let symbol: IconTheme | undefined = IconTheme.Foreground
-	export let ground: IconTheme | undefined = IconTheme.Background
-	export let hoverSymbol: IconTheme | undefined = undefined
-	export let hoverGround: IconTheme | undefined = undefined
 
 	const iconSizes: {
 		[key in string]: string
@@ -55,9 +44,9 @@
 				{path}
 				{transform}
 				{...{ shape, rounded }}
-				{...{ symbol, ground, hoverSymbol, hoverGround }}
 				brandExact={hex}
 				brandHue={hue}
+				newTab={true}
 			/>
 		</Button>
 	{/each}
