@@ -88,9 +88,14 @@
 				<Box
 					css={{
 						...bgSx,
-						backgroundImage: `url(${stretchPointyHexagon})`,
+						// backgroundImage: `url(${stretchPointyHexagon})`,
 					}}
-				/>
+				>
+					<Image
+						url={stretchPointyHexagon}
+						css={{ width: '100%', height: '100%' }}
+					/>
+				</Box>
 				<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
 				<Box
 					css={{
@@ -115,9 +120,14 @@
 						css={{
 							...bgSx,
 							zIndex: 2,
-							backgroundImage: `url(${stretchFlatHexagon})`,
+							// backgroundImage: `url(${stretchFlatHexagon})`,
 						}}
-					/>
+					>
+						<Image
+							url={stretchFlatHexagon}
+							css={{ width: '100%', height: '100%' }}
+						/>
+					</Box>
 
 					<Text css={{ position: 'relative', zIndex: 2 }}
 						>I live for the <Text color="felix" weight="semi">future</Text
@@ -171,9 +181,14 @@
 						css={{
 							...bgSx,
 							zIndex: 2,
-							backgroundImage: `url(${stretchFlatHexagon})`,
+							// backgroundImage: `url(${stretchFlatHexagon})`,
 						}}
-					/>
+					>
+						<Image
+							url={stretchFlatHexagon}
+							css={{ width: '100%', height: '100%' }}
+						/>
+					</Box>
 					<Text
 						as="p"
 						size="md"
@@ -272,13 +287,18 @@
 				<Box
 					css={{
 						...bgSx,
-						backgroundImage: `url(${fancyHexagon})`,
-						backgroundRepeat: 'no-repeat',
-						backgroundPosition: 'top center',
-						backgroundSize: 'contain',
+						// backgroundImage: `url(${fancyHexagon})`,
+						// backgroundRepeat: 'no-repeat',
+						// backgroundPosition: 'top center',
+						// backgroundSize: 'contain',
 						zIndex: 2,
 					}}
-				/>
+				>
+					<Image
+						url={fancyHexagon}
+						css={{ width: '100%', height: '100%' }}
+					/>
+				</Box>
 				<VStack
 					p="xl"
 					gap="lg"
