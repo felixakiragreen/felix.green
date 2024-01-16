@@ -1,5 +1,14 @@
 <script lang="ts">
-	import { Box, Content, VStack, HStack, Text, Link, Image } from '@/fui'
+	import {
+		Box,
+		Content,
+		VStack,
+		HStack,
+		Text,
+		Link,
+		Image,
+		Break,
+	} from '@/fui'
 
 	import HexagonalScrollBorder from '@/lib/components/HexagonalScrollBorder.svelte'
 	import Socials from '@/lib/components/Socials/index.svelte'
@@ -49,15 +58,15 @@
 				align="center"
 				css={{
 					position: 'relative',
-					'@bp3': {
+					'@sm': {
 						width: 'calc(var(--WUnit) * 3)',
 						paddingBottom: 'calc(var(--Unit) * 1)',
 					},
-					'@bp6': {
+					'@md': {
 						width: 'calc(var(--WUnit) * 6)',
 						paddingBottom: 'calc(var(--Unit) * 1.5)',
 					},
-					'@bp9': {
+					'@lg': {
 						width: 'calc(var(--WUnit) * 8)',
 						paddingBottom: 'calc(var(--Unit) * 2)',
 					},
@@ -97,7 +106,7 @@
 
 					<Text css={{ position: 'relative', zIndex: 2 }}
 						>I live for the <Text color="felix" weight="semi">future</Text
-						>. And hexagons!</Text
+						>. <Break no>And hexagons!</Break></Text
 					>
 				</Box>
 				<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
@@ -196,15 +205,15 @@
 			<VStack
 				css={{
 					position: 'relative',
-					'@bp3': {
+					'@sm': {
 						width: 'calc(var(--WUnit) * 3)',
 						marginTop: 'calc(var(--Unit) * -1)',
 					},
-					'@bp6': {
+					'@md': {
 						width: 'calc(var(--WUnit) * 6)',
 						marginTop: 'calc(var(--Unit) * -1.5)',
 					},
-					'@bp9': {
+					'@lg': {
 						width: 'calc(var(--WUnit) * 8)',
 						marginTop: 'calc(var(--Unit) * -2)',
 					},
