@@ -16,8 +16,11 @@
 	import miniHexagon from '@/assets/mini-hexagon.svg'
 	import mezoHexagon from '@/assets/mezo-hexagon.svg'
 	import stretchFlatHexagon from '@/assets/stretch-flat-hexagon.svg'
+	import stretchFlatHexagonFill from '@/assets/stretch-flat-hexagon-fill.svg'
 	import stretchPointyHexagon from '@/assets/stretch-pointy-hexagon.svg'
 	import fancyHexagon from '@/assets/fancy-hexagon.svg'
+
+	import SvgHexagonFlatStretch from '@/fui/bonds/SvgHexagonFlatStretch.svelte'
 
 	const bgSx = {
 		position: 'absolute',
@@ -81,6 +84,7 @@
 					},
 				}}
 			>
+				<!-- LIVE FOR FUTURE -->
 				<Box
 					css={{
 						...bgSx,
@@ -99,12 +103,14 @@
 					<Box
 						css={{
 							...bgSx,
-							my: '$-2',
-							backgroundColor: '$backgroundest',
+							m: '$-3',
+							'--StretchFlatHexagonFill': '$colors$backgroundest',
 							zIndex: 1,
 							opacity: 0.8,
 						}}
-					/>
+					>
+						<SvgHexagonFlatStretch />
+					</Box>
 					<Box
 						css={{
 							...bgSx,
@@ -119,29 +125,48 @@
 					>
 				</Box>
 				<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
+
+				<!-- DESIGN & PROGRAM -->
 				<Box
 					css={{
 						position: 'relative',
-						px: '$2xl',
+						px: '$3xl',
 						py: '$sm',
 						textAlign: 'left',
+						'@sm': {
+							mx: 'calc(var(--WUnit) * -1)',
+						},
+						'@md': {
+							mx: 'calc(var(--WUnit) * -0.5)',
+						},
 						'& p::first-letter': {
+							fontSize: '300%',
 							float: 'left',
-							fontSize: '$3xl',
 							lineHeight: 1,
-							marginRight: '$md',
+							mb: '-0.5rem',
+							mr: '$md',
+							'@sm': {
+								fontSize: '320%',
+								mb: '-0.3rem',
+								mt: '0.05rem',
+							},
+							'@md': {
+								mt: '0.2rem',
+							},
 						},
 					}}
 				>
 					<Box
 						css={{
 							...bgSx,
-							my: '$-2',
-							backgroundColor: '$backgroundest',
+							m: '$-3',
+							'--StretchFlatHexagonFill': '$colors$backgroundest',
 							zIndex: 1,
 							opacity: 0.8,
 						}}
-					/>
+					>
+						<SvgHexagonFlatStretch />
+					</Box>
 					<Box
 						css={{
 							...bgSx,
@@ -158,7 +183,9 @@
 							lineHeight: '1.65rem',
 						}}
 					>
-						I design and program digital things. What I enjoy most is:
+						I design and program digital things. <Break no
+							>What I enjoy most is:</Break
+						>
 					</Text>
 				</Box>
 				<Box
