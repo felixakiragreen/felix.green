@@ -1,12 +1,5 @@
 <script lang="ts">
-	import type { PropBoolean } from '@/types'
 	import { Svg } from '@/fui'
-
-	// export let viewBox = '-1.5 -1.5 42 39'
-	// export let fill = '#ebebeb'
-	// export let stroke = 'none'
-
-	// export let rounded: PropBoolean = undefined
 </script>
 
 <Svg
