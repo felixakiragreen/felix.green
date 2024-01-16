@@ -21,3 +21,5 @@ vite.config.ts.timestamp-*
 .env
 .env.*
 !.env.example
+# Local Netlify folder
+.netlify
