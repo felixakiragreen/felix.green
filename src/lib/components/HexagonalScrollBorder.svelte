@@ -58,18 +58,18 @@
 			flexGrow: 1,
 			marginBottom: 'calc(-1.1vw)',
 			'@sm': {
-				marginTop: 'calc(var(--Unit) * -5 - 0.65vw)',
-				marginLeft: 'calc(var(--WUnit) * 1 - 0.3px)',
-				width: 'calc(var(--WUnit) * 4 + 0.6px)',
+				mt: 'calc(var(--Unit) * -5 - 0.65vw)',
+				ml: 'calc(var(--WUnit) * 0.5 - 0.3px)',
+				width: 'calc(var(--WUnit) * 5 + 0.6px)',
 			},
 			'@md': {
-				marginTop: 'calc(var(--Unit) * -6 - 0.6vw)',
-				marginLeft: 'calc(var(--WUnit) * 1 - 0.3px)',
+				mt: 'calc(var(--Unit) * -6 - 0.6vw)',
+				ml: 'calc(var(--WUnit) * 1 - 0.3px)',
 				width: 'calc(var(--WUnit) * 8 + 0.6px)',
 			},
 			'@lg': {
-				marginTop: 'calc(var(--Unit) * -7 - 0.55vw)',
-				marginLeft: 'calc(var(--WUnit) * 2 - 0.3px)',
+				mt: 'calc(var(--Unit) * -7 - 0.55vw)',
+				ml: 'calc(var(--WUnit) * 2 - 0.3px)',
 				width: 'calc(var(--WUnit) * 12 + 0.6px)',
 			},
 		}}
@@ -81,17 +81,17 @@
 		url={stretchPointyHexagonTop}
 		css={{
 			'@sm': {
-				marginLeft: 'calc(var(--WUnit) * 1 - 0.3px)',
+				ml: 'calc(var(--WUnit) * 1 - 0.3px)',
 				height: 'calc(var(--Unit) * 1)',
 				width: 'calc(var(--WUnit) * 4 + 0.6px)',
 			},
 			'@md': {
-				marginLeft: 'calc(var(--WUnit) * 1 - 0.3px)',
+				ml: 'calc(var(--WUnit) * 1 - 0.3px)',
 				height: 'calc(var(--Unit) * 2)',
 				width: 'calc(var(--WUnit) * 8 + 0.6px)',
 			},
 			'@lg': {
-				marginLeft: 'calc(var(--WUnit) * 2 - 0.3px)',
+				ml: 'calc(var(--WUnit) * 2 - 0.3px)',
 				height: 'calc(var(--Unit) * 3)',
 				width: 'calc(var(--WUnit) * 12 + 0.6px)',
 			},
