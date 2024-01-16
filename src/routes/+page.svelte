@@ -206,7 +206,7 @@
 				css={{
 					position: 'relative',
 					'@sm': {
-						width: 'calc(var(--WUnit) * 3)',
+						width: 'calc(var(--WUnit) * 6)',
 						marginTop: 'calc(var(--Unit) * -1)',
 					},
 					'@md': {
@@ -287,9 +287,18 @@
 				'--ICON-stroke': '$colors$felix',
 				'--ICON-symbol-hover': '$colors$backgroundest',
 				'--ICON-ground-hover': '$colors$felix',
+				'@sm': {
+					'--ICON-size': '$space$7',
+				},
+				'@md': {
+					'--ICON-size': '$space$8',
+				},
+				'@lg': {
+					'--ICON-size': '$space$9',
+				},
 			}}
 		>
-			<Socials size="xl" shape="hexagon" />
+			<Socials shape="hexagon" />
 		</VStack>
 	</VStack>
 </Content>
