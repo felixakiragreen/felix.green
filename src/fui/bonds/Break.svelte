@@ -37,8 +37,9 @@
 			},
 			below: {
 				sm: {
-					'@md': {
-						display: 'none',
+					display: 'none',
+					'@sm': {
+						display: 'initial',
 					},
 				},
 				md: {
