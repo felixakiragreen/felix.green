@@ -22,19 +22,6 @@
 				},
 			},
 			above: {
-				xxs: {},
-				xs: {
-					display: 'none',
-					'@xs': {
-						display: 'initial',
-					},
-				},
-				sm: {
-					display: 'none',
-					'@sm': {
-						display: 'initial',
-					},
-				},
 				md: {
 					display: 'none',
 					'@md': {
@@ -44,27 +31,11 @@
 				lg: {
 					display: 'none',
 					'@lg': {
-						display: 'initial',
-					},
-				},
-				xl: {
-					display: 'none',
-					'@xl': {
 						display: 'initial',
 					},
 				},
 			},
 			below: {
-				xxs: {
-					'@xs': {
-						display: 'none',
-					},
-				},
-				xs: {
-					'@sm': {
-						display: 'none',
-					},
-				},
 				sm: {
 					'@md': {
 						display: 'none',
@@ -72,11 +43,6 @@
 				},
 				md: {
 					'@lg': {
-						display: 'none',
-					},
-				},
-				lg: {
-					'@xl': {
 						display: 'none',
 					},
 				},
