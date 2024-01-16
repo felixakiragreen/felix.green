@@ -1,6 +1,11 @@
 <script lang="ts">
 	import { stitch } from '@/fui'
-	import type { PropCss, PropString, PropBoolean, VariantOption } from '@/types'
+	import type {
+		PropCss,
+		PropString,
+		PropBoolean,
+		VariantOption,
+	} from '@/types'
 	import { Span, Para, Heading } from '@/fui/atoms'
 
 	type TextType = 'span' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6'
