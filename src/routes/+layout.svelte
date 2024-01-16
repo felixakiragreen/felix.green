@@ -41,6 +41,7 @@
 	<!-- for TS projects due to a bug (https://github.com/sveltejs/svelte/issues/5292)-->
 	<!-- {@html `<${''}style id="stitches">${getCssText()}</${''}style>`} -->
 
+	<!-- DO THIS FOR DEV -->
 	<!-- {@html styles} -->
 </svelte:head>
 
