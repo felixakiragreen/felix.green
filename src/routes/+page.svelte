@@ -215,26 +215,27 @@
 			<VStack
 				css={{
 					position: 'relative',
+					width: '100%',
 					'@sm': {
-						width: 'calc(var(--WUnit) * 6)',
 						mt: 'calc(var(--Unit) * -1)',
+						mb: 'calc(var(--Unit) * 0.5)',
 					},
 					'@md': {
-						width: 'calc(var(--WUnit) * 6)',
 						mt: 'calc(var(--Unit) * -1.5)',
+						mb: 'calc(var(--Unit) * 1)',
 					},
 					'@lg': {
-						width: 'calc(var(--WUnit) * 8)',
 						mt: 'calc(var(--Unit) * -2)',
+						mb: 'calc(var(--Unit) * 1.5)',
 					},
 				}}
 			>
 				<Box
 					css={{
 						...bgSx,
-						my: '$-2',
-						mx: 'calc(var(--WUnit) * 1)',
-						// backgroundColor: '$red400',
+						my: 'calc(var(--Unit) * 0.33)',
+						maxWidth: 'calc(var(--WUnit) * 7)',
+						mx: 'auto',
 						backgroundColor: '$backgroundest',
 						zIndex: 1,
 						opacity: 0.8,
@@ -246,12 +247,12 @@
 						backgroundImage: `url(${fancyHexagon})`,
 						backgroundRepeat: 'no-repeat',
 						backgroundPosition: 'top center',
-						backgroundSize: 'fill',
+						backgroundSize: 'contain',
 						zIndex: 2,
 					}}
 				/>
 				<VStack
-					p="lg"
+					p="xl"
 					gap="lg"
 					align="center"
 					css={{
@@ -287,6 +288,8 @@
 					<Image url={miniHexagon} css={{ width: 'var(--HexiUnit)' }} />
 				</VStack>
 			</VStack>
+			<!-- BELOW -->
+			<Text>Download CV</Text>
 		</VStack>
 		<Socials />
 	</VStack>
