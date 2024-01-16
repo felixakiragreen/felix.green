@@ -5,14 +5,6 @@
 	import header600 from '@/assets/header-600.svg'
 	import header960 from '@/assets/header-960.svg'
 
-	import center360 from '@/assets/center-360.svg'
-	import center600 from '@/assets/center-600.svg'
-	import center960 from '@/assets/center-960.svg'
-
-	import footer360 from '@/assets/footer-360.svg'
-	import footer600 from '@/assets/footer-600.svg'
-	import footer960 from '@/assets/footer-960.svg'
-
 	import stretchPointyHexagon from '@/assets/stretch-pointy-hexagon.svg'
 	import stretchPointyHexagonTop from '@/assets/stretch-pointy-hexagon-top.svg'
 </script>
@@ -24,13 +16,6 @@
 		left: 0,
 		right: 0,
 		bottom: 0,
-		// width: '100%',
-		// height: '100%',
-		// '& img': {
-		// 	width: '100%',
-		// 	// height: 'auto',
-		// 	// objectFit: 'fill',
-		// },
 		pointerEvents: 'none',
 	}}
 >
@@ -90,37 +75,6 @@
 		}}
 	/>
 
-	<!-- <Image
-		url={center360}
-		css={{
-			display: 'none',
-			flexGrow: 1,
-			'@sm': {
-				display: 'block',
-			},
-		}}
-	/>
-	<Image
-		url={center600}
-		css={{
-			display: 'none',
-			flexGrow: 1,
-			'@md': {
-				display: 'block',
-			},
-		}}
-	/>
-	<Image
-		url={center960}
-		css={{
-			display: 'none',
-			flexGrow: 1,
-			'@lg': {
-				display: 'block',
-			},
-		}}
-	/> -->
-
 	<!-- FOOTER -->
 
 	<Image
@@ -143,36 +97,4 @@
 			},
 		}}
 	/>
-
-	<!-- 
-	<Image
-		url={footer360}
-		css={{
-			display: 'none',
-			height: 'auto',
-			'@sm': {
-				display: 'block',
-			},
-		}}
-	/>
-	<Image
-		url={footer600}
-		css={{
-			display: 'none',
-			height: 'auto',
-			'@md': {
-				display: 'block',
-			},
-		}}
-	/>
-	<Image
-		url={footer960}
-		css={{
-			display: 'none',
-			height: 'auto',
-			'@lg': {
-				display: 'block',
-			},
-		}}
-	/> -->
 </VStack>
