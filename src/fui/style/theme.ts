@@ -1,4 +1,5 @@
-import type * as Stitches from '@stitches/core'
+import * as Stitches from '@stitches/core'
+import type { Property } from '@stitches/core/types/css'
 import { colors } from './color'
 
 import { fontSizes, space, sizes } from '../fluid'
@@ -150,58 +151,56 @@ export const tokens = {
 	},
 }
 
-type SpaceOrPx = Stitches.ScaleValue<'space'> | `${number}px`
-
 export const utils = {
-	m: (value: SpaceOrPx) => ({
+	m: (value: Property.Margin) => ({
 		marginTop: value,
 		marginBottom: value,
 		marginLeft: value,
 		marginRight: value,
 	}),
-	mt: (value: SpaceOrPx) => ({
+	mt: (value: Property.MarginTop) => ({
 		marginTop: value,
 	}),
-	mr: (value: SpaceOrPx | 'auto') => ({
+	mr: (value: Property.MarginRight) => ({
 		marginRight: value,
 	}),
-	mb: (value: SpaceOrPx) => ({
+	mb: (value: Property.MarginBottom) => ({
 		marginBottom: value,
 	}),
-	ml: (value: SpaceOrPx | 'auto') => ({
+	ml: (value: Property.MarginLeft) => ({
 		marginLeft: value,
 	}),
-	mx: (value: SpaceOrPx | 'auto') => ({
+	mx: (value: Property.MarginLeft | Property.MarginRight) => ({
 		marginLeft: value,
 		marginRight: value,
 	}),
-	my: (value: SpaceOrPx) => ({
+	my: (value: Property.MarginTop | Property.MarginBottom) => ({
 		marginTop: value,
 		marginBottom: value,
 	}),
-	p: (value: SpaceOrPx) => ({
+	p: (value: Property.Padding) => ({
 		paddingTop: value,
 		paddingBottom: value,
 		paddingLeft: value,
 		paddingRight: value,
 	}),
-	pt: (value: SpaceOrPx) => ({
+	pt: (value: Property.PaddingTop) => ({
 		paddingTop: value,
 	}),
-	pr: (value: SpaceOrPx) => ({
+	pr: (value: Property.PaddingRight) => ({
 		paddingRight: value,
 	}),
-	pb: (value: SpaceOrPx) => ({
+	pb: (value: Property.PaddingBottom) => ({
 		paddingBottom: value,
 	}),
-	pl: (value: SpaceOrPx) => ({
+	pl: (value: Property.PaddingLeft) => ({
 		paddingLeft: value,
 	}),
-	px: (value: SpaceOrPx) => ({
+	px: (value: Property.PaddingLeft | Property.PaddingRight) => ({
 		paddingLeft: value,
 		paddingRight: value,
 	}),
-	py: (value: SpaceOrPx) => ({
+	py: (value: Property.PaddingTop | Property.PaddingBottom) => ({
 		paddingTop: value,
 		paddingBottom: value,
 	}),
