@@ -304,10 +304,10 @@
 							// height: '100%',
 							...bgSx,
 							mt: 'calc(var(--Unit) * 0.33)',
-							height: '100%',
+							height: 'calc(100% - (var(--Unit) * 0.66))',
 							aspectRatio: '9.4 / 7',
 							'@sm': {
-								aspectRatio: '7.9 / 7',
+								aspectRatio: '9.2 / 7',
 							},
 							mx: 'auto',
 							backgroundColor: '$backgroundest',
