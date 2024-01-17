@@ -71,6 +71,7 @@
 				align="center"
 				css={{
 					position: 'relative',
+					// mx: '$-4',
 					'@sm': {
 						width: 'calc(var(--WUnit) * 4)',
 						pb: 'calc(var(--Unit) * 1)',
@@ -158,18 +159,18 @@
 							mx: 'calc(var(--WUnit) * -0.75)',
 						},
 						'& p::first-letter': {
-							fontSize: '300%',
+							fontSize: '280%',
 							float: 'left',
 							lineHeight: 1,
-							mb: '-0.5rem',
+							mt: '0.2rem',
 							mr: '$md',
 							'@sm': {
-								fontSize: '320%',
-								mb: '-0.3rem',
-								mt: '0.05rem',
+								fontSize: '300%',
+								mb: '-0.4rem',
+								mt: '0.25rem',
 							},
 							'@md': {
-								mt: '0.2rem',
+								mt: '0.35rem',
 							},
 							'@media (min-width: 1760px)': {
 								fontSize: '100%',
