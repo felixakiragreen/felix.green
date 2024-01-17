@@ -537,7 +537,7 @@
 			c-PJLV-icxPyx-css c-PJLV-ieBAJM-css c-PJLV-icmmtgO-css
 			c-PJLV-ikYMMba-css c-PJLV-ilktqYb-css c-PJLV-iimilee-css
 			c-PJLV-icpoRfK-css c-PJLV-ifzcXzO-css c-PJLV-idZwHJM-css
-			c-PJLV-iUVnJg-css c-PJLV-ibTGmOS-css c-PJLV-ihkiWJn-css
+			c-PJLV-igvvQCr-css c-PJLV-ibTGmOS-css c-PJLV-ihkiWJn-css
 			c-PJLV-icpjhnD-css c-PJLV-ieLXfUI-css c-PJLV-ieURXYc-css
 			c-PJLV-idgROoV-css c-PJLV-ifkbgwS-css c-PJLV-ihxermW-css
 			c-PJLV-igmhvcx-css c-PJLV-isIgjH-css c-PJLV-idfdYtX-css;
@@ -817,7 +817,7 @@
 				margin-bottom: calc(var(--Unit) * 1.5);
 			}
 		}
-		.c-PJLV-iUVnJg-css {
+		.c-PJLV-igvvQCr-css {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -825,15 +825,15 @@
 			bottom: 0;
 			pointer-events: none;
 			margin-top: calc(var(--Unit) * 0.33);
-			height: 100%;
+			height: calc(100% - (var(--Unit) * 0.66));
 			aspect-ratio: 9.4 / 7;
 		}
 		@media (max-width: 599.9px) {
-			.c-PJLV-iUVnJg-css {
-				aspect-ratio: 7.9 / 7;
+			.c-PJLV-igvvQCr-css {
+				aspect-ratio: 9.2 / 7;
 			}
 		}
-		.c-PJLV-iUVnJg-css {
+		.c-PJLV-igvvQCr-css {
 			margin-left: auto;
 			margin-right: auto;
 			background-color: var(--colors-backgroundest);
