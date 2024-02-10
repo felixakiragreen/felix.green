@@ -23,6 +23,8 @@
 
 	import SvgHexagonFlatStretch from '@/fui/bonds/SvgHexagonFlatStretch.svelte'
 
+	import Projects from './Projects.svelte'
+
 	const bgSx = {
 		position: 'absolute',
 		top: 0,
@@ -379,6 +381,8 @@
 				</VStack>
 			</VStack>
 			<!-- BELOW -->
+			<Projects />
+
 			<LinkButton url={cv} newTab>
 				<Text>Download CV</Text>
 			</LinkButton>
