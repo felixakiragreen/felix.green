@@ -31,8 +31,15 @@
 		// color: "$foreground",
 
 		mx: 'auto',
-		maxWidth: '$screen-lg',
-		p: '$md',
+		'@sm': {
+			maxWidth: 'calc(var(--WUnit) * 5)',
+		},
+		'@md': {
+			maxWidth: 'calc(var(--WUnit) * 8)',
+		},
+		'@lg': {
+			maxWidth: 'calc(var(--WUnit) * 12)',
+		},
 	})
 </script>
 
