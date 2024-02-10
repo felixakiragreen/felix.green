@@ -199,6 +199,9 @@
 				muted: {
 					color: '$muted',
 				},
+				secondary: {
+					color: '$highgroundish',
+				},
 				gold: {
 					color: '$worm_halo_gold',
 				},
