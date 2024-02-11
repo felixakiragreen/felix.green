@@ -19,6 +19,11 @@
 	import fancyHexagonSm from '@/assets/fancy-hexagon-sm.svg'
 
 	import projRooted from '@/assets/projects/rooted.svg'
+	import projLifeTower from '@/assets/projects/lifetower2.svg'
+	import projWaWeGonaDo from '@/assets/projects/wawegonado2.svg'
+	import projVisaViz from '@/assets/projects/visaviz2.svg'
+	import projTheWorm from '@/assets/projects/theworm2.svg'
+	import projLilFks from '@/assets/projects/lilfks.svg'
 
 	import SvgHexagonFlatStretch from '@/fui/bonds/SvgHexagonFlatStretch.svelte'
 	import Divider from '@/lib/components/Divider.svelte'
@@ -34,7 +39,7 @@
 </script>
 
 <VStack gap="xl" align="center">
-	<Text size="2xl">Projects</Text>
+	<Text size="2xl" color="felix">Projects</Text>
 
 	<!-- Rooted -->
 	<HStack
@@ -172,9 +177,21 @@
 		}}
 		gap="xl"
 	>
-		<VStack alignV="center" align="center" bg="red300">
-			<Box css={{ width: 'calc(var(--WUnit) * 1)' }}>
-				<!-- <SvgHexagon /> -->
+		<VStack alignV="center" align="center">
+			<Box
+				css={{
+					'@sm': {
+						width: 'calc(var(--WUnit) * 2)',
+					},
+					'@md': {
+						width: 'calc(var(--WUnit) * 2)',
+					},
+					'@lg': {
+						width: 'calc(var(--WUnit) * 4)',
+					},
+				}}
+			>
+				<Image url={projLifeTower} />
 			</Box>
 		</VStack>
 		<VStack gap="md" css={{ zIndex: 3 }}>
@@ -263,9 +280,21 @@
 		}}
 		gap="xl"
 	>
-		<VStack alignV="center" align="center" bg="red300">
-			<Box css={{ width: 'calc(var(--WUnit) * 1)' }}>
-				<!-- <SvgHexagon /> -->
+		<VStack alignV="center" align="center">
+			<Box
+				css={{
+					'@sm': {
+						width: 'calc(var(--WUnit) * 2)',
+					},
+					'@md': {
+						width: 'calc(var(--WUnit) * 2)',
+					},
+					'@lg': {
+						width: 'calc(var(--WUnit) * 4)',
+					},
+				}}
+			>
+				<Image url={projWaWeGonaDo} />
 			</Box>
 		</VStack>
 		<VStack gap="md" css={{ zIndex: 3 }}>
@@ -355,9 +384,21 @@
 		}}
 		gap="xl"
 	>
-		<VStack alignV="center" align="center" bg="red300">
-			<Box css={{ width: 'calc(var(--WUnit) * 1)' }}>
-				<!-- <SvgHexagon /> -->
+		<VStack alignV="center" align="center">
+			<Box
+				css={{
+					'@sm': {
+						width: 'calc(var(--WUnit) * 2)',
+					},
+					'@md': {
+						width: 'calc(var(--WUnit) * 2)',
+					},
+					'@lg': {
+						width: 'calc(var(--WUnit) * 4)',
+					},
+				}}
+			>
+				<Image url={projVisaViz} />
 			</Box>
 		</VStack>
 		<VStack gap="md" css={{ zIndex: 3 }}>
@@ -448,9 +489,21 @@
 		}}
 		gap="xl"
 	>
-		<VStack alignV="center" align="center" bg="red300">
-			<Box css={{ width: 'calc(var(--WUnit) * 1)' }}>
-				<!-- <SvgHexagon /> -->
+		<VStack alignV="center" align="center">
+			<Box
+				css={{
+					'@sm': {
+						width: 'calc(var(--WUnit) * 2)',
+					},
+					'@md': {
+						width: 'calc(var(--WUnit) * 2)',
+					},
+					'@lg': {
+						width: 'calc(var(--WUnit) * 4)',
+					},
+				}}
+			>
+				<Image url={projTheWorm} />
 			</Box>
 		</VStack>
 		<VStack gap="md" css={{ zIndex: 3 }}>
@@ -466,7 +519,7 @@
 					><Text size="sm" color="secondary">↓</Text>
 				</HStack>
 				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}>
-					An token, a movement, a giant plushy, NOT a cult, a god, a worm.
+					A token, a movement, a giant plushy, NOT a cult, a god, a worm.
 				</Text>
 			</VStack>
 
@@ -542,9 +595,21 @@
 		}}
 		gap="xl"
 	>
-		<VStack alignV="center" align="center" bg="red300">
-			<Box css={{ width: 'calc(var(--WUnit) * 1)' }}>
-				<!-- <SvgHexagon /> -->
+		<VStack alignV="center" align="center">
+			<Box
+				css={{
+					'@sm': {
+						width: 'calc(var(--WUnit) * 2)',
+					},
+					'@md': {
+						width: 'calc(var(--WUnit) * 2)',
+					},
+					'@lg': {
+						width: 'calc(var(--WUnit) * 4)',
+					},
+				}}
+			>
+				<Image url={projLilFks} />
 			</Box>
 		</VStack>
 		<VStack gap="md" css={{ zIndex: 3 }}>
