@@ -208,7 +208,7 @@
 					>What I used</Text
 				>
 				<Text size="sm" color="secondary">→</Text>
-				<Text size="sm">Swift</Text>
+				<Text size="sm">Swift, Elixir, TypeScript</Text>
 			</HStack>
 
 			<HStack gap="md">
@@ -393,7 +393,7 @@
 					>What I used</Text
 				>
 				<Text size="sm" color="secondary">→</Text>
-				<Text size="sm">Swift</Text>
+				<Text size="sm">Swift, Metal</Text>
 			</HStack>
 
 			<HStack gap="md">
@@ -425,10 +425,186 @@
 	<Divider />
 
 	<!-- The Worm -->
+	<HStack
+		css={{
+			position: 'relative',
+			my: '$lg',
+			p: '$lg',
+		}}
+		gap="xl"
+	>
+		<VStack alignV="center" align="center" bg="red300">
+			<Box css={{ width: 'calc(var(--WUnit) * 1)' }}>
+				<!-- <SvgHexagon /> -->
+			</Box>
+		</VStack>
+		<VStack gap="md" css={{ zIndex: 3 }}>
+			<HStack alignV="baseline" gap="md">
+				<Text size="lg" weight="thic">The Worm</Text>
+				<Text size="md" color="secondary" weight="thin">ethereum NFT</Text>
+			</HStack>
+
+			<VStack gap="sm">
+				<HStack gap="md">
+					<Text size="sm" weight="medi" css={{ color: '$blue400' }}
+						>What it is</Text
+					><Text size="sm" color="secondary">↓</Text>
+				</HStack>
+				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}>
+					An token, a movement, a giant plushy, NOT a cult, a god, a worm.
+				</Text>
+			</VStack>
+
+			<VStack gap="sm">
+				<HStack gap="md">
+					<Text size="sm" weight="medi" css={{ color: '$purple400' }}
+						>How it works</Text
+					><Text size="sm" color="secondary">↓</Text>
+				</HStack>
+				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}>
+					1. The Worm is on a mission to visit every wallet on the Ethereum
+					blockchain.<br />
+					2. When The Worm visits you it gifts you a Soulbound copy to cherish
+					forever.<br />
+					3. Anyone can call The Worm to their wallet after it's been idle for
+					a week.
+				</Text>
+			</VStack>
+
+			<VStack gap="sm">
+				<HStack gap="md">
+					<Text size="sm" weight="medi" css={{ color: '$red400' }}
+						>Why it's cool</Text
+					><Text size="sm" color="secondary">↓</Text>
+				</HStack>
+				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}
+					>We pioneered the use of soulbound tokens, before they were even
+					called that. The Worm has been travelling for nearly 1000 days,
+					and has generated a saga of lore involving death, reincarnation,
+					and a mechsuit.
+				</Text>
+			</VStack>
+
+			<HStack gap="md">
+				<Text size="sm" weight="medi" css={{ color: '$orange400' }}
+					>What I used</Text
+				>
+				<Text size="sm" color="secondary">→</Text>
+				<Text size="sm">Solidity, TypeScript, Svelte, SVG</Text>
+			</HStack>
+
+			<HStack gap="md">
+				<Text size="sm" weight="medi" css={{ color: '$yellow400' }}
+					>What I did</Text
+				>
+				<Text size="sm" color="secondary">→</Text>
+				<Text size="sm">all Development, aid Design, aid Creative</Text>
+			</HStack>
+
+			<HStack gap="md">
+				<Text size="sm" weight="medi" css={{ color: '$green400' }}
+					>Where to find</Text
+				>
+				<Text size="sm" color="secondary">→</Text>
+				<Text size="sm">
+					<Link newTab url="https://theworm.wtf" look="normal">
+						Website
+					</Link>
+				</Text>
+			</HStack>
+		</VStack>
+	</HStack>
 
 	<Divider />
 
 	<!-- LilFks -->
 
-	<Box css={{ height: '$2xl' }} />
+	<HStack
+		css={{
+			position: 'relative',
+			my: '$lg',
+			p: '$lg',
+		}}
+		gap="xl"
+	>
+		<VStack alignV="center" align="center" bg="red300">
+			<Box css={{ width: 'calc(var(--WUnit) * 1)' }}>
+				<!-- <SvgHexagon /> -->
+			</Box>
+		</VStack>
+		<VStack gap="md" css={{ zIndex: 3 }}>
+			<HStack alignV="baseline" gap="md">
+				<Text size="lg" weight="thic">Lil Fks</Text>
+				<Text size="md" color="secondary" weight="thin">ethereum NFT</Text>
+			</HStack>
+
+			<VStack gap="sm">
+				<HStack gap="md">
+					<Text size="sm" weight="medi" css={{ color: '$blue400' }}
+						>What it is</Text
+					><Text size="sm" color="secondary">↓</Text>
+				</HStack>
+				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}>
+					An 100% on-chain, generative, and mutable collection.
+				</Text>
+			</VStack>
+
+			<VStack gap="sm">
+				<HStack gap="md">
+					<Text size="sm" weight="medi" css={{ color: '$purple400' }}
+						>How it works</Text
+					><Text size="sm" color="secondary">↓</Text>
+				</HStack>
+				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}>
+					1. Anyone can mint a token on the ethereum blockchain.<br />
+					2. The art and metadata are on-chain, viewable through Etherscan.<br
+					/>
+					3. You can customize the appearance of your token, on-chain.
+				</Text>
+			</VStack>
+
+			<VStack gap="sm">
+				<HStack gap="md">
+					<Text size="sm" weight="medi" css={{ color: '$red400' }}
+						>Why it's cool</Text
+					><Text size="sm" color="secondary">↓</Text>
+				</HStack>
+				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}
+					>We were the first project to allow holders to mutate their
+					on-chain NFTs. I condensed the art and metadata of over 200
+					traits to under 50kb.
+				</Text>
+			</VStack>
+
+			<HStack gap="md">
+				<Text size="sm" weight="medi" css={{ color: '$orange400' }}
+					>What I used</Text
+				>
+				<Text size="sm" color="secondary">→</Text>
+				<Text size="sm">Solidity, TypeScript, Svelte, SVG</Text>
+			</HStack>
+
+			<HStack gap="md">
+				<Text size="sm" weight="medi" css={{ color: '$yellow400' }}
+					>What I did</Text
+				>
+				<Text size="sm" color="secondary">→</Text>
+				<Text size="sm">all Development, aid Design, aid Creative</Text>
+			</HStack>
+
+			<HStack gap="md">
+				<Text size="sm" weight="medi" css={{ color: '$green400' }}
+					>Where to find</Text
+				>
+				<Text size="sm" color="secondary">→</Text>
+				<Text size="sm">
+					<Link newTab url="https://lilfks.wtf" look="normal">
+						Website
+					</Link>
+				</Text>
+			</HStack>
+		</VStack>
+	</HStack>
+
+	<Box css={{ height: '$0' }} />
 </VStack>
