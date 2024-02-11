@@ -76,14 +76,23 @@
 			},
 			collapse: {
 				sm: {
-					flexDirection: 'column',
-					'@sm': {
-						flexDirection: 'row',
+					flexDirection: 'row',
+					'@md': {
+						flexDirection: 'column',
+					},
+					'@lg': {
+						flexDirection: 'column',
 					},
 				},
 				md: {
-					flexDirection: 'column',
+					flexDirection: 'row',
+					'@sm': {
+						flexDirection: 'column',
+					},
 					'@md': {
+						flexDirection: 'row',
+					},
+					'@lg': {
 						flexDirection: 'row',
 					},
 				},
