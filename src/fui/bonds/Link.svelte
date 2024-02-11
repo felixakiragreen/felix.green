@@ -16,6 +16,10 @@
 					textDecoration: 'none',
 					color: 'inherit',
 				},
+				normal: {
+					// textDecoration: 'none',
+					color: 'inherit',
+				},
 				blocky: {
 					// text: '$lg',
 					// fontWeight: '$bold',
