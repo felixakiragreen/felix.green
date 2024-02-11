@@ -34,7 +34,7 @@
 <VStack gap="xl" align="center">
 	<Text size="2xl">Projects</Text>
 
-	<!-- ROOTED -->
+	<!-- Rooted -->
 	<HStack
 		css={{
 			position: 'relative',
@@ -239,6 +239,7 @@
 
 	<Divider />
 
+	<!-- WaWeGonaDo -->
 	<HStack
 		css={{
 			position: 'relative',
@@ -277,7 +278,7 @@
 				</HStack>
 				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}>
 					1. Send your friends a poll through Messages, and every one
-					answers using a head-to-head battle of optoins.<br />
+					answers using a head-to-head battle of options.<br />
 					2. The winning option is determined in the most democratic way possible.
 				</Text>
 			</VStack>
@@ -327,4 +328,107 @@
 			</HStack>
 		</VStack>
 	</HStack>
+
+	<Divider />
+
+	<!-- VisaViz -->
+	<HStack
+		css={{
+			position: 'relative',
+			my: '$lg',
+			p: '$lg',
+		}}
+		gap="xl"
+	>
+		<VStack alignV="center" align="center" bg="red300">
+			<Box css={{ width: 'calc(var(--WUnit) * 1)' }}>
+				<!-- <SvgHexagon /> -->
+			</Box>
+		</VStack>
+		<VStack gap="md" css={{ zIndex: 3 }}>
+			<HStack alignV="baseline" gap="md">
+				<Text size="lg" weight="thic">VisaViz</Text>
+				<Text size="md" color="secondary" weight="thin">macOS app</Text>
+			</HStack>
+
+			<VStack gap="sm">
+				<HStack gap="md">
+					<Text size="sm" weight="medi" css={{ color: '$blue400' }}
+						>What it is</Text
+					><Text size="sm" color="secondary">↓</Text>
+				</HStack>
+				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}>
+					A tool for (data) visualizing ALL of a person's tweets.
+				</Text>
+			</VStack>
+
+			<VStack gap="sm">
+				<HStack gap="md">
+					<Text size="sm" weight="medi" css={{ color: '$purple400' }}
+						>How it works</Text
+					><Text size="sm" color="secondary">↓</Text>
+				</HStack>
+				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}>
+					1. Download your Twitter archive and open it inside the app.<br
+					/>
+					2. Explore your tweets in giant grid, color-coded by person, likes,
+					and retweets.
+				</Text>
+			</VStack>
+
+			<VStack gap="sm">
+				<HStack gap="md">
+					<Text size="sm" weight="medi" css={{ color: '$red400' }}
+						>Why it's cool</Text
+					><Text size="sm" color="secondary">↓</Text>
+				</HStack>
+				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}>
+					I learned how to harness the power of the GPU, in order to
+					perfomantly render 100K+ boxes in a single view.
+				</Text>
+			</VStack>
+
+			<HStack gap="md">
+				<Text size="sm" weight="medi" css={{ color: '$orange400' }}
+					>What I used</Text
+				>
+				<Text size="sm" color="secondary">→</Text>
+				<Text size="sm">Swift</Text>
+			</HStack>
+
+			<HStack gap="md">
+				<Text size="sm" weight="medi" css={{ color: '$yellow400' }}
+					>What I did</Text
+				>
+				<Text size="sm" color="secondary">→</Text>
+				<Text size="sm">Design & Development</Text>
+			</HStack>
+
+			<HStack gap="md">
+				<Text size="sm" weight="medi" css={{ color: '$green400' }}
+					>Where to find</Text
+				>
+				<Text size="sm" color="secondary">→</Text>
+				<Text size="sm">
+					<Link
+						newTab
+						url="https://apps.apple.com/us/app/wawegonado/id6446915201"
+						look="normal"
+					>
+						Github
+					</Link>
+				</Text>
+			</HStack>
+		</VStack>
+	</HStack>
+
+	<Divider />
+
+	<!-- The Worm -->
+
+	<Divider />
+
+	<!-- LilFks -->
+
+	<Box css={{ height: '$2xl' }} />
 </VStack>
