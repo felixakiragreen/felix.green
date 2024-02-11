@@ -254,7 +254,7 @@
 		</VStack>
 		<VStack gap="md" css={{ zIndex: 3 }}>
 			<HStack alignV="baseline" gap="md">
-				<Text size="lg" weight="thic">LifeTower</Text>
+				<Text size="lg" weight="thic">WaWeGonaDo‽</Text>
 				<Text size="md" color="secondary" weight="thin">iOS app</Text>
 			</HStack>
 
@@ -265,7 +265,7 @@
 					><Text size="sm" color="secondary">↓</Text>
 				</HStack>
 				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}>
-					A Game Interface for Life.
+					Ranked Choice Voting for Friends
 				</Text>
 			</VStack>
 
@@ -276,8 +276,9 @@
 					><Text size="sm" color="secondary">↓</Text>
 				</HStack>
 				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}>
-					1. Each day you build a floor to grow your Tower.<br />
-					2. Throughout the day you fill it with your activities.
+					1. Send your friends a poll through Messages, and every one
+					answers using a head-to-head battle of optoins.<br />
+					2. The winning option is determined in the most democratic way possible.
 				</Text>
 			</VStack>
 
@@ -288,8 +289,8 @@
 					><Text size="sm" color="secondary">↓</Text>
 				</HStack>
 				<Text size="sm" css={{ color: '$highground', ml: '$lg' }}>
-					You can see your life progression visualized in a fun and
-					engaging way that encourages change and growth.
+					It animates the Ranked Voice Alternative Vote process so you can
+					see how Run-off votes are distributed.
 				</Text>
 			</VStack>
 
@@ -314,7 +315,15 @@
 					>Where to find</Text
 				>
 				<Text size="sm" color="secondary">→</Text>
-				<Text size="sm">App Store</Text>
+				<Text size="sm">
+					<Link
+						newTab
+						url="https://apps.apple.com/us/app/wawegonado/id6446915201"
+						look="normal"
+					>
+						App Store
+					</Link>
+				</Text>
 			</HStack>
 		</VStack>
 	</HStack>
