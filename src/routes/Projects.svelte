@@ -18,6 +18,8 @@
 	import fancyHexagon from '@/assets/fancy-hexagon.svg'
 	import fancyHexagonSm from '@/assets/fancy-hexagon-sm.svg'
 
+	import projRooted from '@/assets/projects/rooted.svg'
+
 	import SvgHexagonFlatStretch from '@/fui/bonds/SvgHexagonFlatStretch.svelte'
 	import Divider from '@/lib/components/Divider.svelte'
 
@@ -46,6 +48,7 @@
 			// bg: '$background',
 		}}
 		gap="xl"
+		collapse="md"
 	>
 		<!-- 
 		<Box
@@ -73,9 +76,21 @@
 			/>
 		</Box>
 		-->
-		<VStack alignV="center" align="center" bg="red300">
-			<Box css={{ width: 'calc(var(--WUnit) * 1)' }}>
-				<!-- <SvgHexagon /> -->
+		<VStack alignV="center" align="center">
+			<Box
+				css={{
+					'@sm': {
+						width: 'calc(var(--WUnit) * 2)',
+					},
+					'@md': {
+						width: 'calc(var(--WUnit) * 2)',
+					},
+					'@lg': {
+						width: 'calc(var(--WUnit) * 4)',
+					},
+				}}
+			>
+				<Image url={projRooted} />
 			</Box>
 		</VStack>
 		<VStack gap="md" css={{ zIndex: 3 }}>
