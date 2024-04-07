@@ -11,7 +11,7 @@ export const positions: Position[] = [
 	{
 		title: 'Founder',
 		company: 'Ambition',
-		logo: '/images/ambition.svg',
+		logo: 'ambition',
 		// Jan 2021
 		startDate: new Date('2021-01-01'),
 		// Dec 2023
@@ -27,7 +27,7 @@ export const positions: Position[] = [
 	{
 		title: 'Lead Developer',
 		company: 'Trabian',
-		logo: '/images/trabian.svg',
+		logo: 'trabian',
 		// Nov 2018
 		startDate: new Date('2018-11-01'),
 		// Jan 2021
@@ -42,7 +42,7 @@ export const positions: Position[] = [
 	{
 		title: 'Lead Designer / Fronend Engineer',
 		company: 'Emplify',
-		logo: '/images/emplify.svg',
+		logo: 'emplify',
 		// Jul 2016
 		startDate: new Date('2016-07-01'),
 		// Oct 2018
@@ -57,7 +57,7 @@ export const positions: Position[] = [
 	{
 		title: 'UI Developer / Designer',
 		company: 'Bluebridge',
-		logo: '/images/bluebridge.svg',
+		logo: 'bluebridge',
 		// Oct 2012
 		startDate: new Date('2012-10-01'),
 		// Jul 2016
