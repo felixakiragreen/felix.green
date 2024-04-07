@@ -3,7 +3,7 @@ import Layout from '../layouts/layout.astro'
 import { css } from 'ui/css'
 import Stack from '@/components/stack.astro'
 import PositionRow from '@/components/position_row.astro'
-import FelixGreenHexagon from '@/components/felix_green_hexagon.astro'
+import LogoFelixGreen from '@/components/logo_felix_green.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 import { positions, type Position } from '../data/positions'
 ---
@@ -15,6 +15,9 @@ import { positions, type Position } from '../data/positions'
 			minH: '100vh',
 			display: 'grid',
 			gridTemplateColumns: '300px 1fr',
+			'& svg path': {
+				transition: 'all 0.3s ease',
+			},
 		})}
 	>
 		<Stack
@@ -23,14 +26,9 @@ import { positions, type Position } from '../data/positions'
 			px="12"
 			pb="12"
 			{...{
-				svg: {
-					transition: 'all 0.3s ease',
-				},
-				'--is-hovered': 'false',
 				'--svg-fill-opacity': 0,
 				'--svg-stroke-opacity': 1,
 				_hover: {
-					'--is-hovered': 'true',
 					'--svg-fill-opacity': 1,
 					'--svg-stroke-opacity': 0,
 				},
@@ -44,7 +42,7 @@ import { positions, type Position } from '../data/positions'
 					// bg: 'red.500',
 				})}
 			>
-				<FelixGreenHexagon />
+				<LogoFelixGreen />
 			</div>
 			<Stack gap="2">
 				<p>Felix Green</p>
