@@ -89,6 +89,22 @@ const theme: Theme = {
 			},
 		},
 	},
+	semanticTokens: {
+		colors: {
+			text: {
+				value: {
+					base: '{colors.grey.900}',
+					_dark: '{colors.grey.100}',
+				},
+			},
+			bg: {
+				value: {
+					base: '{colors.grey.100}',
+					_dark: '{colors.grey.900}',
+				},
+			},
+		},
+	},
 }
 
 export default theme
