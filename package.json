@@ -1,26 +1,27 @@
 {
-	"name": "felix.green",
-	"type": "module",
-	"version": "3.0.0",
-	"scripts": {
-		"prepare": "panda codegen",
-		"dev": "astro dev",
-		"start": "astro dev",
-		"build": "astro check && astro build",
-		"preview": "astro preview",
-		"astro": "astro"
-	},
-	"dependencies": {
-		"@astrojs/mdx": "^2.2.4",
-		"@astrojs/rss": "^4.0.5",
-		"@astrojs/sitemap": "^3.1.2",
-		"astro": "^4.5.16",
-		"@astrojs/check": "^0.5.10",
-		"typescript": "^5.4.4"
-	},
-	"devDependencies": {
-		"@pandacss/dev": "^0.37.2",
-		"prettier": "^3.2.5",
-		"prettier-plugin-astro": "^0.13.0"
-	}
+  "name": "felix.green",
+  "type": "module",
+  "version": "3.0.0",
+  "scripts": {
+    "prepare": "panda codegen",
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/check": "^0.5.10",
+    "@astrojs/mdx": "^2.2.4",
+    "@astrojs/rss": "^4.0.5",
+    "@astrojs/sitemap": "^3.1.2",
+    "@fontsource/inter": "^5.0.17",
+    "astro": "^4.5.16",
+    "typescript": "^5.4.4"
+  },
+  "devDependencies": {
+    "@pandacss/dev": "^0.37.2",
+    "prettier": "^3.2.5",
+    "prettier-plugin-astro": "^0.13.0"
+  }
 }
