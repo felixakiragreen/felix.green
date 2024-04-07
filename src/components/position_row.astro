@@ -4,6 +4,11 @@ import Stack from '@/components/stack.astro'
 import type { Position } from '@/data/positions'
 import type { Code, Debug } from 'astro:components'
 
+import LogoAmbition from './logo_ambition.astro'
+import LogoTrabian from './logo_trabian.astro'
+import LogoEmplify from './logo_emplify.astro'
+import LogoBluebridge from './logo_bluebridge.astro'
+
 const position: Position = Astro.props.position
 
 // title: 'Founder',
@@ -20,33 +25,37 @@ const position: Position = Astro.props.position
 // const { position }: { position?: Position } = Astro.props
 ---
 
-<!-- <div
+<div
 	class={css({
-		display: 'inline-grid',
-		// gridTemplateRows: 'repeat(4, 1fr)',
-		// gridTemplateColumns: 'minmax(max-content, 1fr) 1fr',
-		gridTemplateColumns: 'max-content 1fr',
+		display: 'grid',
+		gridColumn: '1 / span 3',
+		gridTemplateColumns: 'subgrid',
+		'--svg-fill-opacity': 0,
+		'--svg-stroke-opacity': 1,
+		_hover: {
+			'--svg-fill-opacity': 1,
+			'--svg-stroke-opacity': 0,
+		},
 	})}
-> -->
-<Stack bg="grey.800" justifyContent="center" alignItems="end">
-	<div
-		class={css({
-			// bg: 'grey.500',
-		})}
-	>
+>
+	<Stack bg="grey.800" justifyContent="center" alignItems="end" gridColumn="1">
+		<div class={css({ w: 10, p: 0 })}>
+			{position.logo === 'ambition' && <LogoAmbition />}
+			{position.logo === 'trabian' && <LogoTrabian />}
+			{position.logo === 'emplify' && <LogoEmplify />}
+			{position.logo === 'bluebridge' && <LogoBluebridge />}
+		</div>
 		<p>{position.company}</p>
-		<p>{position.logo}</p>
-	</div>
-</Stack>
-<Stack gap="0" bg="grey.800">
-	{
-		position.impactPoints.map((point: String) => (
-			//
-			<p>{point}</p>
-		))
-	}
-	<p>as {position.title}</p>
-	<!-- <p>from {position.startDate} to {position.endDate}</p> -->
-</Stack>
-<!-- <Stack>projects</Stack> -->
-<!-- </div> -->
+	</Stack>
+	<Stack gap="0" bg="grey.800" gridColumn="2">
+		{
+			position.impactPoints.map((point: String) => (
+				//
+				<p>{point}</p>
+			))
+		}
+		<p>as {position.title}</p>
+		<!-- <p>from {position.startDate} to {position.endDate}</p> -->
+	</Stack>
+	<!-- <Stack>projects</Stack> -->
+</div>
