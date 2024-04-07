@@ -1,0 +1,52 @@
+---
+import { css } from 'ui/css'
+import Stack from '@/components/stack.astro'
+import type { Position } from '@/data/positions'
+import type { Code, Debug } from 'astro:components'
+
+const position: Position = Astro.props.position
+
+// title: 'Founder',
+// company: 'Ambition',
+// logo: '/images/ambition.png',
+// startDate: new Date('2021-01-01'),
+// endDate: new Date('2023-12-31'),
+// impactPoints: [
+// 	'Founded a company',
+// 	'Led a team of 5 developers',
+// 	'Launched a product',
+// ],
+
+// const { position }: { position?: Position } = Astro.props
+---
+
+<!-- <div
+	class={css({
+		display: 'inline-grid',
+		// gridTemplateRows: 'repeat(4, 1fr)',
+		// gridTemplateColumns: 'minmax(max-content, 1fr) 1fr',
+		gridTemplateColumns: 'max-content 1fr',
+	})}
+> -->
+<Stack bg="grey.800" justifyContent="center" alignItems="end">
+	<div
+		class={css({
+			// bg: 'grey.500',
+		})}
+	>
+		<p>{position.company}</p>
+		<p>{position.logo}</p>
+	</div>
+</Stack>
+<Stack gap="0" bg="grey.800">
+	{
+		position.impactPoints.map((point: String) => (
+			//
+			<p>{point}</p>
+		))
+	}
+	<p>as {position.title}</p>
+	<!-- <p>from {position.startDate} to {position.endDate}</p> -->
+</Stack>
+<!-- <Stack>projects</Stack> -->
+<!-- </div> -->
