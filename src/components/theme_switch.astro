@@ -1,0 +1,36 @@
+<slot />
+
+<style>
+	:global(.dark) {
+		color-scheme: dark;
+	}
+</style>
+
+<script>
+	type ColorScheme = 'light' | 'dark'
+	const MEDIA = '(prefers-color-scheme: dark)'
+	const windowMedia = window.matchMedia(MEDIA)
+	const systemTheme = getSystemTheme()
+
+	// Set initial theme
+	updateTheme(systemTheme)
+	// Listen for changes
+	windowMedia.addEventListener('change', (event: MediaQueryListEvent) => {
+		const theme = getSystemTheme(event)
+		updateTheme(theme)
+	})
+
+	function getSystemTheme(
+		event?: MediaQueryList | MediaQueryListEvent,
+	): ColorScheme {
+		if (!event) {
+			event = windowMedia
+		}
+		return event.matches ? 'dark' : 'light'
+	}
+	function updateTheme(value: ColorScheme) {
+		document.documentElement.classList.remove('light', 'dark')
+		document.documentElement.classList.add(value)
+		document.documentElement.setAttribute('data-theme', value)
+	}
+</script>
