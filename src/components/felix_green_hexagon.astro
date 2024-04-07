@@ -9,22 +9,28 @@ const { isFilledIn } = Astro.props
 	xmlns="http://www.w3.org/2000/svg"
 	xml:space="preserve"
 	fill-rule="evenodd"
-	stroke-linejoin="square"
+	stroke-linejoin="miter"
 	stroke-miterlimit="2"
 	clip-rule="evenodd"
 	viewBox="0 0 80 94"
 >
 	<g>
 		<path
-			fill="var(--felixgreen-icon-hexagon-fill, --colors-felix)"
+			fill="var(--colors-felix)"
 			stroke="none"
 			d="m40 .812 40 23.094v46.188L40 93.188 0 70.094V23.906L40 .812Zm0 21.046 21.773 12.571v25.142L40 72.142 18.227 59.571V34.429L40 21.858Z"
-		></path>
+			opacity="var(--svg-fill-opacity)"></path>
 		<path
 			vector-effect="non-scaling-stroke"
 			fill="none"
-			stroke="var(--felixgreen-icon-hexagon-stroke, --colors-grey-500)"
+			stroke="var(--colors-grey-500)"
 			d="m40 1.389 39.5 22.806v45.61L40 92.611.5 69.805v-45.61L40 1.389Zm0 19.919 22.25 12.846v25.692L40 72.692 17.75 59.846V34.154L40 21.308Z"
-		></path>
+			opacity="var(--svg-stroke-opacity)"></path>
 	</g>
 </svg>
+
+<style>
+	path {
+		transition: opacity 0.3s ease;
+	}
+</style>
