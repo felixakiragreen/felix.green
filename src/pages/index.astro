@@ -2,8 +2,10 @@
 import Layout from '../layouts/layout.astro'
 import { css } from 'ui/css'
 import Stack from '@/components/stack.astro'
+import PositionRow from '@/components/position_row.astro'
 import FelixGreenHexagon from '@/components/felix_green_hexagon.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
+import { positions, type Position } from '../data/positions'
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
@@ -21,13 +23,16 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 			px="12"
 			pb="12"
 			{...{
+				svg: {
+					transition: 'all 0.3s ease',
+				},
 				'--is-hovered': 'false',
-				'--felixgreen-icon-hexagon-fill': 'colors.clear',
-				'--felixgreen-icon-hexagon-stroke': 'colors.muted',
+				'--svg-fill-opacity': 0,
+				'--svg-stroke-opacity': 1,
 				_hover: {
 					'--is-hovered': 'true',
-					'--felixgreen-icon-hexagon-fill': 'colors.felix',
-					'--felixgreen-icon-hexagon-stroke': 'colors.clear',
+					'--svg-fill-opacity': 1,
+					'--svg-stroke-opacity': 0,
 				},
 			}}
 		>
@@ -55,7 +60,8 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 				<p>gh</p>
 				<p>x</p>
 				<p>li</p>
-				<p>email</p>
+				<p>@</p>
+				<p>cv</p>
 			</Stack>
 		</Stack>
 
@@ -63,12 +69,21 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 			class={css({
 				display: 'grid',
 				gridTemplateRows: 'repeat(4, 1fr)',
+				gridTemplateColumns: 'max-content 1fr',
+				columnGap: '12',
 			})}
 		>
-			<p>ambition</p>
-			<p>trabian</p>
+			<!-- {myFavoritePokemon.map((data) => <li>{data.name}</li>)} -->
+			{
+				positions.map((position: Position) => (
+					//
+					<PositionRow {position} />
+				))
+			}
+			<!-- <p>ambition</p> -->
+			<!-- <p>trabian</p>
 			<p>emplify</p>
-			<p>bluebridge</p>
+			<p>bluebridge</p> -->
 		</div>
 	</div>
 </Layout>
