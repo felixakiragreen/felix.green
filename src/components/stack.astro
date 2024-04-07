@@ -1,0 +1,10 @@
+---
+import { stack } from 'ui/patterns'
+import type { StackStyles } from 'ui/patterns'
+
+const props: StackStyles = Astro.props
+---
+
+<div class={stack(props)}>
+	<slot />
+</div>
