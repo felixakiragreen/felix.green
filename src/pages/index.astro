@@ -8,14 +8,37 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<div
-		class={css({
-			bg: 'bg',
-			minH: '100vh',
-		})}
+		class:list={[
+			'group',
+			css({
+				bg: 'bg',
+				minH: '100vh',
+			}),
+		]}
 	>
 		<Stack gap="3" p="4">
-			<div class={css({ w: '80', h: '80' })}>
-				<FelixGreenHexagon />
+			<div
+				class={css({
+					'--is-hovered': 'false',
+					'--felixgreen-icon-hexagon-fill': 'colors.clear',
+					'--felixgreen-icon-hexagon-stroke': 'colors.muted',
+					_hover: {
+						'--is-hovered': 'true',
+						'--felixgreen-icon-hexagon-fill': 'colors.felix',
+						'--felixgreen-icon-hexagon-stroke': 'colors.clear',
+					},
+				})}
+			>
+				<div
+					class={css({
+						w: '20',
+						// '&[data-state=closed]': { color: 'red.300' },
+						// _groupHover: { bg: 'red.500' },
+						// bg: 'red.500',
+					})}
+				>
+					<FelixGreenHexagon />
+				</div>
 			</div>
 			<div>Felix Green</div>
 			<p class={css({ color: 'text.muted' })}>Design Engineer</p>
