@@ -8,41 +8,67 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<div
-		class:list={[
-			'group',
-			css({
-				bg: 'bg',
-				minH: '100vh',
-			}),
-		]}
+		class={css({
+			bg: 'bg',
+			minH: '100vh',
+			display: 'grid',
+			gridTemplateColumns: '300px 1fr',
+		})}
 	>
-		<Stack gap="3" p="4">
+		<Stack
+			gap="12"
+			pt="36"
+			px="12"
+			pb="12"
+			{...{
+				'--is-hovered': 'false',
+				'--felixgreen-icon-hexagon-fill': 'colors.clear',
+				'--felixgreen-icon-hexagon-stroke': 'colors.muted',
+				_hover: {
+					'--is-hovered': 'true',
+					'--felixgreen-icon-hexagon-fill': 'colors.felix',
+					'--felixgreen-icon-hexagon-stroke': 'colors.clear',
+				},
+			}}
+		>
 			<div
 				class={css({
-					'--is-hovered': 'false',
-					'--felixgreen-icon-hexagon-fill': 'colors.clear',
-					'--felixgreen-icon-hexagon-stroke': 'colors.muted',
-					_hover: {
-						'--is-hovered': 'true',
-						'--felixgreen-icon-hexagon-fill': 'colors.felix',
-						'--felixgreen-icon-hexagon-stroke': 'colors.clear',
-					},
+					w: '20',
+					// '&[data-state=closed]': { color: 'red.300' },
+					// _groupHover: { bg: 'red.500' },
+					// bg: 'red.500',
 				})}
 			>
-				<div
-					class={css({
-						w: '20',
-						// '&[data-state=closed]': { color: 'red.300' },
-						// _groupHover: { bg: 'red.500' },
-						// bg: 'red.500',
-					})}
-				>
-					<FelixGreenHexagon />
-				</div>
+				<FelixGreenHexagon />
 			</div>
-			<div>Felix Green</div>
-			<p class={css({ color: 'text.muted' })}>Design Engineer</p>
-			<p>Build faster websites with less client-side JavaScript.</p>
+			<Stack gap="2">
+				<p>Felix Green</p>
+				<p class={css({ color: 'text.muted' })}>Design Engineer</p>
+			</Stack>
+			<div
+				class={css({
+					flex: 1,
+				})}
+			>
+			</div>
+			<Stack direction="row" gap="2">
+				<p>gh</p>
+				<p>x</p>
+				<p>li</p>
+				<p>email</p>
+			</Stack>
 		</Stack>
+
+		<div
+			class={css({
+				display: 'grid',
+				gridTemplateRows: 'repeat(4, 1fr)',
+			})}
+		>
+			<p>ambition</p>
+			<p>trabian</p>
+			<p>emplify</p>
+			<p>bluebridge</p>
+		</div>
 	</div>
 </Layout>
