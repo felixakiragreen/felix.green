@@ -88,13 +88,23 @@ const theme: Theme = {
 				900: { value: 'oklch(18.73% 0.0913 284.543)' },
 			},
 		},
+		fonts: {
+			main: {
+				value: '"Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif, "Apple Color Emoji"',
+			},
+		},
 	},
 	semanticTokens: {
 		colors: {
 			text: {
-				value: {
-					base: '{colors.grey.900}',
-					_dark: '{colors.grey.100}',
+				DEFAULT: {
+					value: {
+						base: '{colors.grey.900}',
+						_dark: '{colors.grey.100}',
+					},
+				},
+				muted: {
+					value: '{colors.grey.500}',
 				},
 			},
 			bg: {
