@@ -1,20 +1,25 @@
 ---
 import Layout from '../layouts/layout.astro'
-import { css } from '../../styled-system/css'
+import { css } from 'ui/css'
+import Stack from '@/components/stack.astro'
+import FelixGreenHexagon from '@/components/felix_green_hexagon.astro'
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
 ---
 
-<Layout title="Felix Green">
+<Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
 	<div
 		class={css({
-			fontSize: '24px',
-			color: 'text',
-			fontWeight: 'bold',
 			bg: 'bg',
+			minH: '100vh',
 		})}
 	>
-		Test2
+		<Stack gap="3" p="4">
+			<div class={css({ w: '80', h: '80' })}>
+				<FelixGreenHexagon />
+			</div>
+			<div>Felix Green</div>
+			<p class={css({ color: 'text.muted' })}>Design Engineer</p>
+			<p>Build faster websites with less client-side JavaScript.</p>
+		</Stack>
 	</div>
-	<h1>Welcome to Astro</h1>
-	<p>Build faster websites with less client-side JavaScript.</p>
 </Layout>
