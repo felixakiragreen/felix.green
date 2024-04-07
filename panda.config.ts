@@ -14,6 +14,15 @@ export default defineConfig({
 	// Files to exclude
 	exclude: [],
 
+	conditions: {
+		extend: {
+			dark: '.dark &, [data-theme="dark"] &',
+			light: '.light &',
+			supportsBackdrop:
+				'@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px)))',
+		},
+	},
+
 	// Useful for theme customization
 	theme: {
 		extend: {
