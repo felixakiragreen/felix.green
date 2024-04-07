@@ -96,6 +96,9 @@ const theme: Theme = {
 	},
 	semanticTokens: {
 		colors: {
+			muted: {
+				value: '{colors.grey.500}',
+			},
 			text: {
 				DEFAULT: {
 					value: {
