@@ -58,7 +58,8 @@ import { positions, type Position } from '../data/positions'
 			class={css({
 				display: 'grid',
 				gridTemplateRows: 'repeat(4, 1fr)',
-				gridTemplateColumns: 'max-content 1fr',
+				gridTemplateColumns: 'max-content max-content auto',
+				overflowX: 'hidden',
 				columnGap: '12',
 			})}
 		>
