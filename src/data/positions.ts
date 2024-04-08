@@ -2,6 +2,7 @@ export type Position = {
 	title: string
 	company: string
 	logo: string
+	url?: string
 	startDate: Date
 	endDate: Date
 	impactPoints: string[]
@@ -12,15 +13,17 @@ export const positions: Position[] = [
 		title: 'Founder',
 		company: 'Ambition',
 		logo: 'ambition',
+		url: 'https://ambition.wtf',
 		// Jan 2021
 		startDate: new Date('2021-01-01'),
 		// Dec 2023
 		endDate: new Date('2023-12-31'),
 		impactPoints: [
-			'generated X revenue',
-			'used by X people',
+			'generated $325K revenue',
+			'used by 3250 people',
 			'launched X projects',
-			'build X apps, X websites, X projects',
+			'built 4 iOS apps, 3 macOS apps',
+			'deployed 7 websites, 9 contracts',
 		],
 		// projects: []
 	},
@@ -28,30 +31,33 @@ export const positions: Position[] = [
 		title: 'Lead Developer',
 		company: 'Trabian',
 		logo: 'trabian',
+		url: 'https://trabian.com',
 		// Nov 2018
 		startDate: new Date('2018-11-01'),
 		// Jan 2021
 		endDate: new Date('2020-01-01'),
 		impactPoints: [
-			'built X products',
-			'lead team of X people',
-			'launched X projects',
-			'build X apps, X websites, X projects',
+			'led team of 2-5 people',
+			'worked with 6 clients',
+			'built 3 apps, 6 websites, 2 APIs',
+			'replaced 3 legacy stacks',
+			'built trabianUI design system',
 		],
 	},
 	{
-		title: 'Lead Designer / Fronend Engineer',
+		title: 'Lead Designer / Frontend Engineer',
 		company: 'Emplify',
 		logo: 'emplify',
+		url: 'https://emplify.com',
 		// Jul 2016
 		startDate: new Date('2016-07-01'),
 		// Oct 2018
 		endDate: new Date('2018-10-01'),
 		impactPoints: [
-			'built X products',
-			'lead team of X people',
-			'launched X projects',
-			'build X apps, X websites, X projects',
+			'acquired for $50M by 15Five',
+			'led design of new product',
+			'built analytics dashboard',
+			'2016 Core Value Legend winner',
 		],
 	},
 	{
@@ -63,10 +69,10 @@ export const positions: Position[] = [
 		// Jul 2016
 		endDate: new Date('2016-07-01'),
 		impactPoints: [
-			'built X products',
-			'lead team of X people',
-			'launched X projects',
-			'build X apps, X websites, X projects',
+			'acquired for $8M',
+			'designed brand identity',
+			'designed templates used by 200+ apps',
+			'designed & built product CMS',
 		],
 	},
 ]
