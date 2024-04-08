@@ -13,9 +13,9 @@ export const positions: Position[] = [
 		company: 'Ambition',
 		logo: 'ambition',
 		// Jan 2021
-		startDate: new Date('2021-01-01'),
+		startDate: new Date('2021-01-01T00:00:00Z'),
 		// Dec 2023
-		endDate: new Date('2023-12-31'),
+		endDate: new Date('2023-12-31T00:00:00Z'),
 		impactPoints: [
 			'generated X revenue',
 			'used by X people',
