@@ -1,0 +1,26 @@
+---
+import { css } from 'ui/css'
+import Stack from '@/components/stack.astro'
+
+import { socials, type Social } from '@/data/socials'
+---
+
+<Stack direction="row" gap="2">
+	{
+		socials.map((social: Social) => (
+			<a
+				href={social.url}
+				target="_blank"
+				class={css({
+					color: 'muted',
+					_hover: {
+						textDecoration: 'underline',
+						color: 'text',
+					},
+				})}
+			>
+				<p>{social.icon}</p>
+			</a>
+		))
+	}
+</Stack>
