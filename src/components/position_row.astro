@@ -66,14 +66,14 @@ const position: Position = Astro.props.position
 			</Stack>
 		</div>
 	</Stack>
-	<Stack justifyContent="center" gap="0" bg="grey.800" gridColumn="2">
+	<Stack justifyContent="center" gap="0" gridColumn="2">
 		{
 			position.impactPoints.map((point: String) => (
 				//
 				<p>{point}</p>
 			))
 		}
-		<p>as {position.title}</p>
+		<p><span class={css({ color: 'muted' })}>as {position.title}</span></p>
 		<!-- <p>from {position.startDate} to {position.endDate}</p> -->
 	</Stack>
 	<!-- <Stack>projects</Stack> -->
