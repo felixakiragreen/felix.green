@@ -1,6 +1,8 @@
 ---
 import Layout from '../layouts/layout.astro'
 import { css } from 'ui/css'
+import Socials from '@/components/socials.astro'
+import Spacer from '@/components/spacer.astro'
 import Stack from '@/components/stack.astro'
 import PositionRow from '@/components/position_row.astro'
 import LogoFelixGreen from '@/components/logo_felix_green.astro'
@@ -48,19 +50,8 @@ import { positions, type Position } from '../data/positions'
 				<p>Felix Green</p>
 				<p class={css({ color: 'text.muted' })}>Design Engineer</p>
 			</Stack>
-			<div
-				class={css({
-					flex: 1,
-				})}
-			>
-			</div>
-			<Stack direction="row" gap="2">
-				<p>gh</p>
-				<p>x</p>
-				<p>li</p>
-				<p>@</p>
-				<p>cv</p>
-			</Stack>
+			<Spacer />
+			<Socials />
 		</Stack>
 
 		<div
