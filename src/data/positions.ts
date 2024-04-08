@@ -1,3 +1,5 @@
+import { ambitionProjects, type Project } from './projects'
+
 export type Position = {
 	title: string
 	company: string
@@ -6,6 +8,7 @@ export type Position = {
 	startDate: Date
 	endDate: Date
 	impactPoints: string[]
+	projects?: Project[]
 }
 
 export const positions: Position[] = [
@@ -21,11 +24,11 @@ export const positions: Position[] = [
 		impactPoints: [
 			'generated $325K revenue',
 			'used by 3250 people',
-			'launched X projects',
 			'built 4 iOS apps, 3 macOS apps',
+			// 1 chrome extension
 			'deployed 7 websites, 9 contracts',
 		],
-		// projects: []
+		projects: ambitionProjects,
 	},
 	{
 		title: 'Lead Developer',
