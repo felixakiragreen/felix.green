@@ -9,6 +9,7 @@ import LogoAmbition from './logo_ambition.astro'
 import LogoTrabian from './logo_trabian.astro'
 import LogoEmplify from './logo_emplify.astro'
 import LogoBluebridge from './logo_bluebridge.astro'
+import type { Image } from 'astro:assets'
 
 const position: Position = Astro.props.position
 
@@ -45,7 +46,7 @@ const position: Position = Astro.props.position
 		},
 	})}
 >
-	<Stack justifyContent="center" alignItems="end" gridColumn="1">
+	<Stack justifyContent="center" alignItems="end" gridColumn="1 / span 1">
 		<div class={css({ w: 10, p: 0 })}>
 			{position.logo === 'ambition' && <LogoAmbition />}
 			{position.logo === 'trabian' && <LogoTrabian />}
@@ -66,7 +67,7 @@ const position: Position = Astro.props.position
 			</Stack>
 		</div>
 	</Stack>
-	<Stack justifyContent="center" gap="0" gridColumn="2">
+	<Stack justifyContent="center" gap="0" gridColumn="2 / span 1">
 		{
 			position.impactPoints.map((point: String) => (
 				//
@@ -76,5 +77,15 @@ const position: Position = Astro.props.position
 		<p><span class={css({ color: 'muted' })}>as {position.title}</span></p>
 		<!-- <p>from {position.startDate} to {position.endDate}</p> -->
 	</Stack>
-	<!-- <Stack>projects</Stack> -->
+	<Stack gridColumn="3 / span 1" overflowX="scroll">
+		<Stack direction="row">
+			{
+				Array.from({ length: 10 }, (_, i) => (
+					<div class={css({ bg: 'red.500', p: 16, m: 2, rounded: 'lg' })}>
+						<p>project</p>
+					</div>
+				))
+			}
+		</Stack>
+	</Stack>
 </div>
