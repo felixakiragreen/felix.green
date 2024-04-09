@@ -3,11 +3,12 @@ import type { HTMLAttributes } from 'astro/types'
 import { stack } from 'ui/patterns'
 import type { StackStyles } from 'ui/patterns'
 
-const { style, ...props } = Astro.props as {
+const { style, className, ...props } = Astro.props as {
 	style?: HTMLAttributes<'div'>['style']
+	className?: HTMLAttributes<'div'>['class']
 } & StackStyles
 ---
 
-<div class={stack(props)} {style}>
+<div class:list={[className, stack(props)]} {style}>
 	<slot />
 </div>
