@@ -78,22 +78,35 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 	<Stack
 		gridColumn="3 / span 1"
 		position="relative"
-		overflowX="scroll"
 		px="8"
+		overflowX="scroll"
+		className="sideways-scroll"
 		style={{
 			maskImage,
 			WebkitMaskImage: maskImage,
 		}}
 	>
-		<Stack direction="row">
+		<div
+			class={css({
+				display: 'flex',
+				flexDirection: 'row',
+			})}
+		>
 			{
 				Array.from({ length: 10 }, (_, i) => (
-					<div class={css({ bg: 'red.500', p: 16, m: 2, rounded: 'lg' })}>
+					<div
+						class={css({
+							bg: 'red.800',
+							p: 16,
+							m: 2,
+							rounded: '3xl',
+						})}
+					>
 						<p>project</p>
 					</div>
 				))
 			}
-		</Stack>
+		</div>
 		<div
 			class={css({
 				position: 'fixed',
@@ -108,3 +121,48 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 		</div>
 	</Stack>
 </div>
+
+<script>
+	// Add horizontal scrolling
+
+	let lastScrollLeft: number | null = null
+
+	function transformScroll(event: Event) {
+		const e = event as WheelEvent
+
+		if (!e.currentTarget) return
+		const currentTarget = e.currentTarget as HTMLElement
+
+		// Store the initial scroll position before attempting to scroll
+		const initialScrollLeft = currentTarget.scrollLeft
+
+		// Attempt to scroll
+		currentTarget.scrollLeft += e.deltaY
+
+		// After scrolling, check if the scrollLeft value has changed
+		if (currentTarget.scrollLeft === lastScrollLeft) {
+			// If the scrollLeft value hasn't changed, we might be at the end or start, depending on scroll direction
+			if (e.deltaY > 0) {
+				// Scrolling forward, check if at the end
+				if (initialScrollLeft === currentTarget.scrollLeft) {
+					// console.log('Reached the end of horizontal scroll')
+				}
+			} else {
+				// Scrolling backward, check if at the start
+				if (currentTarget.scrollLeft === 0) {
+					// console.log('Reached the start of horizontal scroll')
+				}
+			}
+		} else {
+			// console.log('Scrolling')
+			e.preventDefault()
+		}
+
+		// Store the last scrollLeft value for comparison in the next event
+		lastScrollLeft = currentTarget.scrollLeft
+	}
+
+	document.querySelectorAll('.sideways-scroll').forEach((div: Element) => {
+		div.addEventListener('wheel', transformScroll, { passive: false })
+	})
+</script>
