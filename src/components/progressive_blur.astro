@@ -1,0 +1,62 @@
+---
+import { css } from 'ui/css'
+
+const defaultProps = {
+	blur: 100,
+	blurDirection: 'bottom',
+}
+const props = Astro.props
+
+const { blur, blurDirection } = { ...defaultProps, ...props }
+
+const blurLayers = 10
+const scaledBlur = (blur / 100) * 1000
+const blurDivs = []
+
+for (let index = 0; index < blurLayers; index++) {
+	const blurFactor = Math.pow(index / (blurLayers - 1), 2)
+	const blurValue = (blurFactor * scaledBlur) / 30
+	const gradientStart = (100 / blurLayers) * index
+	const gradientEnd = gradientStart + (100 / blurLayers) * 2
+
+	let backdropFilter = `blur(${blurValue}px)`
+	let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradientStart}%, rgba(0, 0, 0, 1) ${gradientEnd}%)`
+
+	blurDivs.push({
+		blurValue,
+		gradientStart,
+		gradientEnd: Math.min(gradientEnd, 100),
+		zIndex: index + 1,
+		style: {
+			backdropFilter,
+			WebkitBackdropFilter: backdropFilter,
+			maskImage,
+			WebkitMaskImage: maskImage,
+		},
+	})
+}
+---
+
+<div
+	class={css({
+		position: 'relative',
+		width: '100%',
+		height: '100%',
+		overflow: 'visible',
+	})}
+>
+	{
+		blurDivs.map((blurDiv) => (
+			<div
+				class={css({
+					position: 'absolute',
+					inset: 0,
+					height: '100%',
+					width: '100%',
+					zIndex: blurDiv.zIndex,
+				})}
+				style={blurDiv.style}
+			/>
+		))
+	}
+</div>
