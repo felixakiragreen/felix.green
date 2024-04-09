@@ -8,6 +8,7 @@
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
+    "buildview": "astro check && astro build && astro preview",
     "astro": "astro"
   },
   "dependencies": {
