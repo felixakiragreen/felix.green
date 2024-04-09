@@ -7,6 +7,7 @@ import Socials from '@/components/socials.astro'
 import Spacer from '@/components/spacer.astro'
 import Stack from '@/components/stack.astro'
 import PositionRow from '@/components/position_row.astro'
+import ProgressiveBlur from '@/components/progressive_blur.astro'
 import LogoFelixGreen from '@/components/logo_felix_green.astro'
 
 import { SITE_TITLE, SITE_DESCRIPTION } from '@/data/constants'
@@ -63,20 +64,28 @@ import { positions, type Position } from '@/data/positions'
 				gridTemplateRows: 'repeat(4, 1fr)',
 				gridTemplateColumns: 'max-content max-content auto',
 				overflowX: 'hidden',
-				columnGap: '12',
+				py: 12,
 			})}
 		>
-			<!-- {myFavoritePokemon.map((data) => <li>{data.name}</li>)} -->
 			{
 				positions.map((position: Position) => (
 					//
 					<PositionRow {position} />
 				))
 			}
-			<!-- <p>ambition</p> -->
-			<!-- <p>trabian</p>
-			<p>emplify</p>
-			<p>bluebridge</p> -->
+		</div>
+
+		<div
+			class={css({
+				position: 'fixed',
+				top: 0,
+				right: 0,
+				bottom: 0,
+				width: 8,
+				pointerEvents: 'none',
+			})}
+		>
+			<ProgressiveBlur blur={32} blurDirection="right" />
 		</div>
 	</div>
 </Layout>
