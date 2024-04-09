@@ -1,13 +1,16 @@
 ---
-import Layout from '../layouts/layout.astro'
 import { css } from 'ui/css'
+
+import Layout from '@/layouts/layout.astro'
+
 import Socials from '@/components/socials.astro'
 import Spacer from '@/components/spacer.astro'
 import Stack from '@/components/stack.astro'
 import PositionRow from '@/components/position_row.astro'
 import LogoFelixGreen from '@/components/logo_felix_green.astro'
-import { SITE_TITLE, SITE_DESCRIPTION } from '../consts'
-import { positions, type Position } from '../data/positions'
+
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/data/constants'
+import { positions, type Position } from '@/data/positions'
 ---
 
 <Layout title={SITE_TITLE} description={SITE_DESCRIPTION}>
