@@ -26,6 +26,7 @@ dist
 
 # local Netlify folder
 .netlify
-## Panda
+
+# Panda
 styled-system
 styled-system-studio
