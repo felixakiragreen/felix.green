@@ -1,30 +1,23 @@
 ---
 import { css } from 'ui/css'
+import { token } from 'ui/tokens'
+
 import Stack from '@/components/stack.astro'
 import type { Position } from '@/data/positions'
-import type { Code, Debug } from 'astro:components'
-import DateFormatted from './date_formatted.astro'
 
+import ProgressiveBlur from './progressive_blur.astro'
+import DateFormatted from './date_formatted.astro'
 import LogoAmbition from './logo_ambition.astro'
 import LogoTrabian from './logo_trabian.astro'
 import LogoEmplify from './logo_emplify.astro'
 import LogoBluebridge from './logo_bluebridge.astro'
-import type { Image } from 'astro:assets'
 
 const position: Position = Astro.props.position
 
-// title: 'Founder',
-// company: 'Ambition',
-// logo: '/images/ambition.png',
-// startDate: new Date('2021-01-01'),
-// endDate: new Date('2023-12-31'),
-// impactPoints: [
-// 	'Founded a company',
-// 	'Led a team of 5 developers',
-// 	'Launched a product',
-// ],
-
-// const { position }: { position?: Position } = Astro.props
+let blurDirection = 'right'
+let gradientStart = '0px'
+let gradientEnd = token('sizes.4')
+let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradientStart}, rgba(0, 0, 0, 1) ${gradientEnd})`
 ---
 
 <div
@@ -46,7 +39,12 @@ const position: Position = Astro.props.position
 		},
 	})}
 >
-	<Stack justifyContent="center" alignItems="end" gridColumn="1 / span 1">
+	<Stack
+		justifyContent="center"
+		alignItems="end"
+		gridColumn="1 / span 1"
+		pr="8"
+	>
 		<div class={css({ w: 10, p: 0 })}>
 			{position.logo === 'ambition' && <LogoAmbition />}
 			{position.logo === 'trabian' && <LogoTrabian />}
@@ -77,7 +75,16 @@ const position: Position = Astro.props.position
 		<p><span class={css({ color: 'muted' })}>as {position.title}</span></p>
 		<!-- <p>from {position.startDate} to {position.endDate}</p> -->
 	</Stack>
-	<Stack gridColumn="3 / span 1" overflowX="scroll">
+	<Stack
+		gridColumn="3 / span 1"
+		position="relative"
+		overflowX="scroll"
+		px="8"
+		style={{
+			maskImage,
+			WebkitMaskImage: maskImage,
+		}}
+	>
 		<Stack direction="row">
 			{
 				Array.from({ length: 10 }, (_, i) => (
@@ -87,5 +94,17 @@ const position: Position = Astro.props.position
 				))
 			}
 		</Stack>
+		<div
+			class={css({
+				position: 'fixed',
+				top: 0,
+				bottom: 0,
+				width: 12,
+				marginLeft: -8,
+				pointerEvents: 'none',
+			})}
+		>
+			<ProgressiveBlur blur={20} blurDirection="left" />
+		</div>
 	</Stack>
 </div>
