@@ -24,6 +24,9 @@ import { positions, type Position } from '@/data/positions'
 			'& svg path': {
 				transition: 'all 0.3s ease',
 			},
+			'& svg g': {
+				transition: 'all 0.3s ease',
+			},
 		})}
 	>
 		<Stack
@@ -63,6 +66,8 @@ import { positions, type Position } from '@/data/positions'
 				display: 'grid',
 				gridTemplateRows: 'repeat(4, 1fr)',
 				gridTemplateColumns: 'max-content max-content auto',
+				gridRowGap: 4,
+				my: 4,
 				overflowX: 'hidden',
 			})}
 		>
