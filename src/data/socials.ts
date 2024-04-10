@@ -27,7 +27,7 @@ export const socials: Social[] = [
 	},
 	{
 		name: 'CV',
-		url: 'https://felix.green/cv.pdf',
+		url: 'https://felix.green/felix_green_cv_2024.pdf',
 		icon: 'cv',
 	},
 ]
