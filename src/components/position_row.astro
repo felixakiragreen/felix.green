@@ -5,6 +5,7 @@ import { token } from 'ui/tokens'
 import Stack from '@/components/stack.astro'
 import type { Position } from '@/data/positions'
 
+import ProjectItem from './project_item.astro'
 import ProgressiveBlur from './progressive_blur.astro'
 import DateFormatted from './date_formatted.astro'
 import LogoAmbition from './logo_ambition.astro'
@@ -16,7 +17,6 @@ import SvgProjectMobileRooted from '@/assets/project_mobile_rooted.astro'
 import SvgProjectArtTheWorm from '@/assets/project_art_the_worm.astro'
 import SvgProjectBrowserVivaFirst from '@/assets/project_browser_vivafirst.astro'
 import SvgProjectDesktopVisaViz from '@/assets/project_desktop_visaviz.astro'
-import type { Code } from 'astro:components'
 
 const position: Position = Astro.props.position
 
@@ -32,12 +32,14 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 		gridColumn: '1 / span 3',
 		gridTemplateColumns: 'subgrid',
 		'--svg-fill-opacity': 0,
+		'--svg-hover-opacity': 0,
 		'--svg-stroke-opacity': 1,
 		'& #show-date': {
 			display: 'none',
 		},
 		_hover: {
 			'--svg-fill-opacity': 1,
+			'--svg-hover-opacity': 1,
 			'--svg-stroke-opacity': 0,
 			'& #show-date': {
 				display: 'flex',
@@ -81,12 +83,18 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 		<p><span class={css({ color: 'muted' })}>as {position.title}</span></p>
 		<!-- <p>from {position.startDate} to {position.endDate}</p> -->
 	</Stack>
-	<Stack
-		gridColumn="3 / span 1"
-		position="relative"
-		px="8"
-		overflowX="scroll"
-		className="sideways-scroll"
+	<div
+		class:list={[
+			'sideways-scroll',
+			css({
+				gridColumn: '3 / span 1',
+				position: 'relative',
+				px: 8,
+				overflowX: 'scroll',
+				overflowY: 'hidden',
+				display: 'grid',
+			}),
+		]}
 		style={{
 			maskImage,
 			WebkitMaskImage: maskImage,
@@ -100,7 +108,7 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 				gap: 4,
 			})}
 		>
-			<Stack
+			<!-- <Stack
 				{...{
 					aspectRatio: 'square',
 					h: '100%',
@@ -126,10 +134,18 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 							opacity: 1,
 							shadow: 'md',
 						},
+						'& > #show-svg': {
+							// filter: 'blur(4px)',
+							// backdropFilter: 'blur(4px)',
+							// transform: 'scale(1.1)',
+							// filter: 'auto',
+							// blur: 'sm',
+						},
 					},
 				}}
 			>
 				<div
+					id="show-svg"
 					class={css({
 						h: '100%',
 						aspectRatio: 'square',
@@ -146,12 +162,12 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 							bottom: 0,
 							left: 0,
 							right: 0,
-							height: 20,
+							height: 40,
 							// marginLeft: -8,
 							pointerEvents: 'none',
 						})}
 					>
-						<ProgressiveBlur blur={50} blurDirection="bottom" />
+						<ProgressiveBlur blur={20} blurDirection="bottom" />
 					</div>
 					<span
 						class={css({
@@ -166,49 +182,10 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 						})}>The Worm</span
 					>
 				</div>
-			</Stack>
-			<div
-				class={css({
-					h: '100%',
-					aspectRatio: 'square',
-					p: 2,
-					// bg: 'red.800',
-				})}
-			>
-				<SvgProjectArtTheWorm />
-			</div>
-			<div
-				class={css({
-					h: '100%',
-					aspectRatio: 'square',
-					p: 2,
-					// bg: 'red.800',
-				})}
-			>
-				<SvgProjectBrowserVivaFirst />
-			</div>
-			<div
-				class={css({
-					h: '100%',
-					aspectRatio: 'square',
-					p: 2,
-					// bg: 'red.800',
-				})}
-			>
-				<SvgProjectDesktopVisaViz />
-			</div>
+			</Stack> -->
 			{
-				Array.from({ length: 10 }, (_, i) => (
-					<div
-						class={css({
-							bg: 'red.800',
-							p: 16,
-							m: 2,
-							rounded: '3xl',
-						})}
-					>
-						<p>project</p>
-					</div>
+				position.projects?.map((project) => (
+					<ProjectItem project={project} />
 				))
 			}
 		</div>
@@ -224,7 +201,7 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 		>
 			<ProgressiveBlur blur={20} blurDirection="left" />
 		</div>
-	</Stack>
+	</div>
 </div>
 
 <script>
