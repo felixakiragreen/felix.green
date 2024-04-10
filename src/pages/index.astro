@@ -20,7 +20,11 @@ import { positions, type Position } from '@/data/positions'
 			bg: 'bg',
 			minH: '100vh',
 			display: 'grid',
-			gridTemplateColumns: '300px 1fr',
+			gap: 0,
+			md: {
+				gridTemplateRows: '1fr',
+				gridTemplateColumns: '320px 1fr',
+			},
 			'& svg path': {
 				transition: 'all 0.3s ease',
 			},
@@ -29,28 +33,36 @@ import { positions, type Position } from '@/data/positions'
 			},
 		})}
 	>
-		<Stack
-			gap="12"
-			pt="36"
-			px="12"
-			pb="12"
-			{...{
+		<div
+			class={css({
+				display: 'flex',
+				flexDirection: 'column',
+				pt: 36,
+				px: 12,
+				pb: 12,
 				'--svg-fill-opacity': 0,
 				'--svg-stroke-opacity': 1,
 				_hover: {
 					'--svg-fill-opacity': 1,
 					'--svg-stroke-opacity': 0,
 				},
-			}}
+				h: '100vh',
+				textAlign: 'center',
+				alignItems: 'center',
+				justifyContent: 'center',
+				gap: 12,
+				md: {
+					position: 'sticky',
+					top: 0,
+					left: 0,
+					textAlign: 'inherit',
+					minH: 'inherit',
+					alignItems: 'inherit',
+					justifyContent: 'inherit',
+				},
+			})}
 		>
-			<div
-				class={css({
-					w: '20',
-					// '&[data-state=closed]': { color: 'red.300' },
-					// _groupHover: { bg: 'red.500' },
-					// bg: 'red.500',
-				})}
-			>
+			<div class={css({ w: '20' })}>
 				<LogoFelixGreen />
 			</div>
 			<Stack gap="2">
@@ -59,16 +71,22 @@ import { positions, type Position } from '@/data/positions'
 			</Stack>
 			<Spacer />
 			<Socials />
-		</Stack>
+		</div>
 
 		<div
 			class={css({
 				display: 'grid',
-				gridTemplateRows: 'repeat(4, 1fr)',
-				gridTemplateColumns: 'max-content max-content auto',
+				gridTemplateRows: 'repeat(12, auto)',
+				md: {
+					my: 12,
+					gridTemplateRows: 'repeat(8, auto)',
+					gridTemplateColumns: 'max-content auto',
+				},
+				lg: {
+					gridTemplateRows: 'repeat(4, auto)',
+					gridTemplateColumns: 'max-content max-content 1fr',
+				},
 				gridRowGap: 4,
-				my: 4,
-				overflowX: 'hidden',
 			})}
 		>
 			{
