@@ -9,12 +9,6 @@ import type { Project } from '@/data/projects'
 
 const project: Project = Astro.props.project
 
-const images = {
-	'./assets/avatar-1.jpg': () => import('./assets/avatar-1.jpg'),
-	'./assets/avatar-2.png': () => import('./assets/avatar-2.png'),
-	'./assets/avatar-3.jpeg': () => import('./assets/avatar-3.jpeg'),
-}
-
 type ProjectFacetImages = {
 	[key: string]: () => Promise<AstroInstance>
 }
