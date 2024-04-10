@@ -17,7 +17,7 @@ const position: Position = Astro.props.position
 
 let blurDirection = 'right'
 let gradientStart = '0px'
-let gradientEnd = token('sizes.4')
+let gradientEnd = token('sizes.8')
 let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradientStart}, rgba(0, 0, 0, 1) ${gradientEnd})`
 ---
 
@@ -191,11 +191,13 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 				position: 'absolute',
 				top: 0,
 				bottom: 0,
-				width: 12,
+				width: 16,
+				ml: -4,
 				pointerEvents: 'none',
+				// bg: 'blue.500',
 			})}
 		>
-			<ProgressiveBlur blur={20} blurDirection="left" />
+			<ProgressiveBlur blur={32} blurDirection="left" />
 		</div>
 	</div>
 
