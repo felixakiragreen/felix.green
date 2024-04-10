@@ -13,11 +13,6 @@ import LogoTrabian from './logo_trabian.astro'
 import LogoEmplify from './logo_emplify.astro'
 import LogoBluebridge from './logo_bluebridge.astro'
 
-import SvgProjectMobileRooted from '@/assets/project_mobile_rooted.astro'
-import SvgProjectArtTheWorm from '@/assets/project_art_the_worm.astro'
-import SvgProjectBrowserVivaFirst from '@/assets/project_browser_vivafirst.astro'
-import SvgProjectDesktopVisaViz from '@/assets/project_desktop_visaviz.astro'
-
 const position: Position = Astro.props.position
 
 let blurDirection = 'right'
@@ -29,8 +24,30 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 <div
 	class={css({
 		display: 'grid',
-		gridColumn: '1 / span 3',
-		gridTemplateColumns: 'subgrid',
+		gridRow: 'span 2',
+		gridColumn: 'span 2',
+		alignItems: 'center',
+		// alignContent: 'center',
+		// justifyContent: 'center',
+		// textAlign: 'center',
+		// gridTemplateRows: '1fr 1fr',
+		// justifyItems: 'center', // center things inside
+		gap: 4,
+		sm: {
+			textAlign: 'inherit',
+			gridTemplateColumns: 'auto auto',
+		},
+		md: {
+			gap: 0,
+			// gridRow: 'span 2',
+			gridTemplateColumns: 'subgrid',
+		},
+		lg: {
+			// justifyItems: 'end',
+			gridRow: 'span 1',
+			gridColumn: '1 / span 3',
+			gridTemplateColumns: 'subgrid',
+		},
 		'--svg-fill-opacity': 0,
 		'--svg-hover-opacity': 0,
 		'--svg-stroke-opacity': 1,
@@ -47,20 +64,36 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 		},
 	})}
 >
-	<Stack
-		justifyContent="center"
-		alignItems="end"
-		gridColumn="1 / span 1"
-		pr="8"
+	<div
+		class={css({
+			display: 'grid',
+			alignItems: 'center', // vertical center
+			gap: 4,
+			gridTemplateColumns: 'auto auto',
+			gridColumn: '1 / span 1',
+			sm: {
+				gridColumn: '1 / span 1',
+				gap: 2,
+				justifyItems: 'end', // horizontal right
+				gridTemplateColumns: 'auto',
+			},
+			md: {
+				mr: 4,
+			},
+			lg: {
+				gridColumn: '1 / span 1',
+			},
+			// bg: 'green.500/50',
+		})}
 	>
-		<div class={css({ w: 10, p: 0 })}>
+		<div class={css({ w: 10, p: 0, justifySelf: 'end' })}>
 			{position.logo === 'ambition' && <LogoAmbition />}
 			{position.logo === 'trabian' && <LogoTrabian />}
 			{position.logo === 'emplify' && <LogoEmplify />}
 			{position.logo === 'bluebridge' && <LogoBluebridge />}
 		</div>
-		<p>{position.company}</p>
-		<div id="show-date">
+		<p class={css({})}>{position.company}</p>
+		<!-- <div id="show-date">
 			<Stack direction="column" gap="0" alignItems="end" color="muted">
 				<DateFormatted
 					date={position.endDate}
@@ -71,9 +104,24 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 					format={{ day: undefined }}
 				/>
 			</Stack>
-		</div>
-	</Stack>
-	<Stack justifyContent="center" gap="0" gridColumn="2 / span 1">
+		</div> -->
+	</div>
+	<div
+		class={css({
+			// bg: 'yellow.500/25',
+			textAlign: 'center',
+			gap: 0,
+			gridColumn: '1 / span 1',
+			sm: {
+				textAlign: 'start',
+				gridColumn: '2 / -1',
+			},
+			lg: {
+				justifySelf: 'start',
+				gridColumn: '2 / span 1',
+			},
+		})}
+	>
 		{
 			position.impactPoints.map((point: String) => (
 				//
@@ -81,18 +129,22 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 			))
 		}
 		<p><span class={css({ color: 'muted' })}>as {position.title}</span></p>
-		<!-- <p>from {position.startDate} to {position.endDate}</p> -->
-	</Stack>
+	</div>
+
 	<div
 		class:list={[
-			'sideways-scroll',
 			css({
-				gridColumn: '3 / span 1',
+				// bg: 'red.500/25',
 				position: 'relative',
-				px: 8,
-				overflowX: 'scroll',
-				overflowY: 'hidden',
 				display: 'grid',
+				gridColumn: '1 / -1',
+				mt: 4,
+				mb: 12,
+				md: {},
+				lg: {
+					my: 4,
+					gridColumn: '3 / -1',
+				},
 			}),
 		]}
 		style={{
@@ -101,150 +153,99 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 		}}
 	>
 		<div
-			class={css({
-				display: 'flex',
-				flexDirection: 'row',
-				position: 'relative',
-				gap: 4,
-			})}
+			class:list={[
+				'sideways-scroll',
+				css({
+					pl: 8,
+					overflowX: 'scroll',
+					overflowY: 'hidden',
+				}),
+			]}
 		>
-			<!-- <Stack
-				{...{
-					aspectRatio: 'square',
-					h: '100%',
-					// bg: 'red.800',
-					textAlign: 'center',
-					alignItems: 'center',
-					position: 'relative',
-					'& > #show-name': {
-						// display: 'none',
-						opacity: 0,
-						position: 'absolute',
-						bottom: 0,
-						left: 0,
-						right: 0,
-						// bg: 'bg/50',
-						zIndex: 100,
-						py: 2,
-					},
-					_hover: {
-						// bg: 'red.600',
-						'& > #show-name': {
-							// display: 'flex',
-							opacity: 1,
-							shadow: 'md',
-						},
-						'& > #show-svg': {
-							// filter: 'blur(4px)',
-							// backdropFilter: 'blur(4px)',
-							// transform: 'scale(1.1)',
-							// filter: 'auto',
-							// blur: 'sm',
-						},
-					},
-				}}
+			<div
+				class={css({
+					display: 'flex',
+					flexDirection: 'row',
+					gap: 4,
+					w: 32,
+					h: 36,
+				})}
 			>
+				{
+					position.projects?.map((project) => (
+						<ProjectItem project={project} />
+					))
+				}
 				<div
-					id="show-svg"
 					class={css({
-						h: '100%',
+						w: 8,
+						h: 8,
 						aspectRatio: 'square',
-						p: 2,
 					})}
 				>
-					<SvgProjectMobileRooted />
 				</div>
-
-				<div id="show-name">
-					<div
-						class={css({
-							position: 'absolute',
-							bottom: 0,
-							left: 0,
-							right: 0,
-							height: 40,
-							// marginLeft: -8,
-							pointerEvents: 'none',
-						})}
-					>
-						<ProgressiveBlur blur={20} blurDirection="bottom" />
-					</div>
-					<span
-						class={css({
-							position: 'absolute',
-							bottom: -4,
-							left: 0,
-							right: 0,
-							height: 12,
-							// marginLeft: -8,
-							// pointerEvents: 'none',
-							zIndex: 200,
-						})}>The Worm</span
-					>
-				</div>
-			</Stack> -->
-			{
-				position.projects?.map((project) => (
-					<ProjectItem project={project} />
-				))
-			}
+			</div>
 		</div>
 		<div
 			class={css({
-				position: 'fixed',
+				position: 'absolute',
 				top: 0,
 				bottom: 0,
 				width: 12,
-				marginLeft: -8,
 				pointerEvents: 'none',
 			})}
 		>
 			<ProgressiveBlur blur={20} blurDirection="left" />
 		</div>
 	</div>
-</div>
 
-<script>
-	// Add horizontal scrolling
+	<script>
+		// Add horizontal scrolling
 
-	let lastScrollLeft: number | null = null
+		let lastScrollLeft: number | null = null
 
-	function transformScroll(event: Event) {
-		const e = event as WheelEvent
+		function transformScroll(event: Event) {
+			const e = event as WheelEvent
 
-		if (!e.currentTarget) return
-		const currentTarget = e.currentTarget as HTMLElement
+			if (!e.currentTarget) return
+			const currentTarget = e.currentTarget as HTMLElement
 
-		// Store the initial scroll position before attempting to scroll
-		const initialScrollLeft = currentTarget.scrollLeft
+			// Store the initial scroll position before attempting to scroll
+			const initialScrollLeft = currentTarget.scrollLeft
 
-		// Attempt to scroll
-		currentTarget.scrollLeft += e.deltaY
+			// Attempt to scroll
+			currentTarget.scrollLeft += e.deltaY
 
-		// After scrolling, check if the scrollLeft value has changed
-		if (currentTarget.scrollLeft === lastScrollLeft) {
-			// If the scrollLeft value hasn't changed, we might be at the end or start, depending on scroll direction
-			if (e.deltaY > 0) {
-				// Scrolling forward, check if at the end
-				if (initialScrollLeft === currentTarget.scrollLeft) {
-					// console.log('Reached the end of horizontal scroll')
+			// After scrolling, check if the scrollLeft value has changed
+			if (currentTarget.scrollLeft == lastScrollLeft) {
+				// If the scrollLeft value hasn't changed, we might be at the end or start, depending on scroll direction
+				if (e.deltaY > 0) {
+					// Scrolling forward, check if at the end
+					if (initialScrollLeft == currentTarget.scrollLeft) {
+						console.log('Reached the end of horizontal scroll')
+					}
+				} else {
+					// Scrolling backward, check if at the start
+					if (currentTarget.scrollLeft == 0) {
+						console.log('Reached the start of horizontal scroll')
+					}
 				}
 			} else {
-				// Scrolling backward, check if at the start
-				if (currentTarget.scrollLeft === 0) {
-					// console.log('Reached the start of horizontal scroll')
-				}
+				console.log(
+					'Scrolling',
+					initialScrollLeft,
+					lastScrollLeft,
+					currentTarget.scrollLeft,
+				)
+				e.preventDefault()
 			}
-		} else {
-			// console.log('Scrolling')
-			e.preventDefault()
+
+			// Store the last scrollLeft value for comparison in the next event
+			lastScrollLeft = currentTarget.scrollLeft
 		}
 
-		// Store the last scrollLeft value for comparison in the next event
-		lastScrollLeft = currentTarget.scrollLeft
-	}
-
-	document.querySelectorAll('.sideways-scroll').forEach((div: Element) => {
-		div.addEventListener('wheel', transformScroll, { passive: false })
-	})
-</script>
+		document.querySelectorAll('.sideways-scroll').forEach((div: Element) => {
+			div.addEventListener('wheel', transformScroll, { passive: false })
+		})
+	</script>
+</div>
