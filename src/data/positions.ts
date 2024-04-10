@@ -47,7 +47,7 @@ export const positions: Position[] = [
 		endDate: new Date('2020-01-01'),
 		impactPoints: [
 			'led team of 2-5 people',
-			'worked with 6 clients',
+			'worked with 6 FinTech clients',
 			'built 3 apps, 6 websites, 2 APIs',
 			'replaced 3 legacy stacks',
 			'built trabianUI design system',
