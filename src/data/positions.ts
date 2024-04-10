@@ -1,4 +1,10 @@
-import { ambitionProjects, type Project } from './projects'
+import {
+	type Project,
+	ambitionProjects,
+	trabianProjects,
+	emplifyProjects,
+	bluebridgeProjects,
+} from './projects'
 
 export type Position = {
 	title: string
@@ -46,6 +52,7 @@ export const positions: Position[] = [
 			'replaced 3 legacy stacks',
 			'built trabianUI design system',
 		],
+		projects: trabianProjects,
 	},
 	{
 		title: 'Lead Designer / Frontend Engineer',
@@ -62,6 +69,7 @@ export const positions: Position[] = [
 			'built analytics dashboard',
 			'2016 Core Value Legend winner',
 		],
+		projects: emplifyProjects,
 	},
 	{
 		title: 'UI Developer / Designer',
@@ -77,5 +85,6 @@ export const positions: Position[] = [
 			'designed templates used by 200+ apps',
 			'designed & built product CMS',
 		],
+		projects: bluebridgeProjects,
 	},
 ]
