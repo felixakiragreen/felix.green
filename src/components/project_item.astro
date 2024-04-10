@@ -16,14 +16,14 @@ const projectFacetImages: ProjectFacetImages = project.facets.reduce(
 	(acc, facet) => {
 		let title = `project_${facet.type}_${facet.image}`
 
-		acc[title] = () => import(`/src/assets/project/${title}.astro`)
+		acc[title] = () => import(`../assets/project/${title}.astro`)
 
 		return acc
 	},
 	{} as ProjectFacetImages,
 )
 
-console.log('projectFacetImages', projectFacetImages)
+// console.log('projectFacetImages', projectFacetImages)
 ---
 
 <>
