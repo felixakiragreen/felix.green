@@ -1,0 +1,52 @@
+---
+import { css } from 'ui/css'
+
+import type { AstroInstance } from 'astro'
+
+import Stack from '@/components/stack.astro'
+
+import type { Project } from '@/data/projects'
+
+const project: Project = Astro.props.project
+
+const images = {
+	'./assets/avatar-1.jpg': () => import('./assets/avatar-1.jpg'),
+	'./assets/avatar-2.png': () => import('./assets/avatar-2.png'),
+	'./assets/avatar-3.jpeg': () => import('./assets/avatar-3.jpeg'),
+}
+
+type ProjectFacetImages = {
+	[key: string]: () => Promise<AstroInstance>
+}
+const projectFacetImages: ProjectFacetImages = project.facets.reduce(
+	(acc, facet) => {
+		let title = `project_${facet.type}_${facet.image}`
+
+		acc[title] = () => import(`/src/assets/project/${title}.astro`)
+
+		return acc
+	},
+	{} as ProjectFacetImages,
+)
+
+console.log('projectFacetImages', projectFacetImages)
+---
+
+<>
+	{
+		Object.entries(projectFacetImages).map(async ([key, value]) => {
+			const DynamicComponent = (await value()).default
+
+			return (
+				<div
+					class={css({
+						h: '100%',
+						aspectRatio: 'square',
+					})}
+				>
+					<DynamicComponent />
+				</div>
+			)
+		})
+	}
+</>
