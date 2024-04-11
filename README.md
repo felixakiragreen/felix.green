@@ -1,4 +1,4 @@
-# felix.green
+# [felix.green](https://felix.green)
 
 my personal website (v3)
 
