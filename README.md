@@ -1,5 +1,9 @@
-# WIP
+# felix.green
 
-felix.green
+my personal website (v3)
 
-personal website
+## run
+
+`bun dev`
+
+## [TODO](TODO)
