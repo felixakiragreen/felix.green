@@ -19,6 +19,8 @@ let blurDirection = 'right'
 let gradientStart = '0px'
 let gradientEnd = token('sizes.8')
 let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradientStart}, rgba(0, 0, 0, 1) ${gradientEnd})`
+
+// https://stackoverflow.com/questions/64564266/check-if-a-piece-of-the-element-is-in-viewport
 ---
 
 <div
@@ -200,54 +202,54 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 			<ProgressiveBlur blur={32} blurDirection="left" />
 		</div>
 	</div>
+</div>
 
-	<script>
-		// Add horizontal scrolling
+<script>
+	// Add horizontal scrolling
 
-		let lastScrollLeft: number | null = null
+	let lastScrollLeft: number | null = null
 
-		function transformScroll(event: Event) {
-			const e = event as WheelEvent
+	function transformScroll(event: Event) {
+		const e = event as WheelEvent
 
-			if (!e.currentTarget) return
-			const currentTarget = e.currentTarget as HTMLElement
+		if (!e.currentTarget) return
+		const currentTarget = e.currentTarget as HTMLElement
 
-			// Store the initial scroll position before attempting to scroll
-			const initialScrollLeft = currentTarget.scrollLeft
+		// Store the initial scroll position before attempting to scroll
+		const initialScrollLeft = currentTarget.scrollLeft
 
-			// Attempt to scroll
-			currentTarget.scrollLeft += e.deltaY
+		// Attempt to scroll
+		currentTarget.scrollLeft += e.deltaY
 
-			// After scrolling, check if the scrollLeft value has changed
-			if (currentTarget.scrollLeft == lastScrollLeft) {
-				// If the scrollLeft value hasn't changed, we might be at the end or start, depending on scroll direction
-				if (e.deltaY > 0) {
-					// Scrolling forward, check if at the end
-					if (initialScrollLeft == currentTarget.scrollLeft) {
-						console.log('Reached the end of horizontal scroll')
-					}
-				} else {
-					// Scrolling backward, check if at the start
-					if (currentTarget.scrollLeft == 0) {
-						console.log('Reached the start of horizontal scroll')
-					}
+		// After scrolling, check if the scrollLeft value has changed
+		if (currentTarget.scrollLeft == lastScrollLeft) {
+			// If the scrollLeft value hasn't changed, we might be at the end or start, depending on scroll direction
+			if (e.deltaY > 0) {
+				// Scrolling forward, check if at the end
+				if (initialScrollLeft == currentTarget.scrollLeft) {
+					console.log('Reached the end of horizontal scroll')
 				}
 			} else {
-				console.log(
-					'Scrolling',
-					initialScrollLeft,
-					lastScrollLeft,
-					currentTarget.scrollLeft,
-				)
-				e.preventDefault()
+				// Scrolling backward, check if at the start
+				if (currentTarget.scrollLeft == 0) {
+					console.log('Reached the start of horizontal scroll')
+				}
 			}
-
-			// Store the last scrollLeft value for comparison in the next event
-			lastScrollLeft = currentTarget.scrollLeft
+		} else {
+			console.log(
+				'Scrolling',
+				initialScrollLeft,
+				lastScrollLeft,
+				currentTarget.scrollLeft,
+			)
+			e.preventDefault()
 		}
 
-		document.querySelectorAll('.sideways-scroll').forEach((div: Element) => {
-			div.addEventListener('wheel', transformScroll, { passive: false })
-		})
-	</script>
-</div>
+		// Store the last scrollLeft value for comparison in the next event
+		lastScrollLeft = currentTarget.scrollLeft
+	}
+
+	document.querySelectorAll('.sideways-scroll').forEach((div: Element) => {
+		div.addEventListener('wheel', transformScroll, { passive: false })
+	})
+</script>
