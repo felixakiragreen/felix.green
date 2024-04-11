@@ -1,0 +1,63 @@
+---
+import { css } from 'ui/css'
+---
+
+<div
+	class={css({
+		position: 'fixed',
+		top: 4,
+		left: 4,
+		px: 4,
+		py: 1,
+		fontFamily: 'mono',
+		background: 'bg.card',
+		borderRadius: 'full',
+		textTransform: 'uppercase',
+		fontWeight: 'bold',
+		border: '1px solid {colors.faint}',
+	})}
+>
+	<span>
+		<span id="size-display"></span>
+		<span
+			class={css({
+				color: 'muted',
+				fontWeight: 'normal',
+			})}
+		>
+			|
+		</span>
+		<span
+			class={css({
+				_after: {
+					content: '"xs"',
+					sm: {
+						content: '"sm"',
+					},
+					md: {
+						content: '"md"',
+					},
+					lg: {
+						content: '"lg"',
+					},
+					xl: {
+						content: '"xl"',
+					},
+				},
+			})}
+		>
+		</span>
+	</span>
+</div>
+
+<script>
+	function updateWindowSize() {
+		const sizeDisplay = document.getElementById('size-display')
+		if (!sizeDisplay) return
+
+		sizeDisplay.textContent = `${window.innerWidth} × ${window.innerHeight}`
+	}
+
+	window.onresize = updateWindowSize
+	window.onload = updateWindowSize
+</script>
