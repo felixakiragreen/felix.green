@@ -1,0 +1,23 @@
+<svg
+	xmlns="http://www.w3.org/2000/svg"
+	xml:space="preserve"
+	fill-rule="evenodd"
+	stroke-linejoin="round"
+	stroke-miterlimit="2"
+	clip-rule="evenodd"
+	viewBox="0 0 267 267"
+>
+	<style>
+		path {
+			fill: #000;
+		}
+		@media (prefers-color-scheme: dark) {
+			path {
+				fill: #fff;
+			}
+		}
+	</style>
+	<path
+		d="m133.333 0 115.47 66.667V200l-115.47 66.667L17.863 200V66.667L133.333 0Zm0 60.756 62.855 36.288v72.578l-62.855 36.289-62.854-36.289V97.044l62.854-36.288Z"
+	/>
+</svg>
