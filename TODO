@@ -1,0 +1,23 @@
+Website V3:
+- [ ] IntersectionObserver on mobile, to highlight sections
+- [ ] Add links to relevant projects
+- [ ] Add Project page with deep dive:
+	Project Overview:	
+		- [ ] What it is
+		- [ ] How it works
+		- [ ] Why it's cool
+		- [ ] What I used
+		- [ ] What I did
+		- [ ] Where to find
+	By the numbers:
+		- [ ] First commit
+		- [ ] Last commit
+		- [ ] Total commits
+		- [ ] Most commits in a day
+		- [ ] Total lines of code?
+		- [ ] Percentage of each programming language
+- [ ] About me section
+- [ ] By the numbers section
+- [ ] Github timeline visualization
+	
+	
