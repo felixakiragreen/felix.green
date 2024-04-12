@@ -1,5 +1,5 @@
 Small things:
-	[ ] Figure out why the favicon mask isn't working
+	[-] Figure out why the favicon mask isn't working
 	[x] use svh instead of vh for better mobile support
 	[x] dev debug responsive indicator
 	favicon:
