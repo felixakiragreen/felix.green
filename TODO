@@ -1,7 +1,10 @@
 Small things:
 	[ ] Figure out why the favicon mask isn't working
 	[x] use svh instead of vh for better mobile support
-	[ ] devdebug responosive indicator
+	[x] dev debug responsive indicator
+	favicon:
+		/apple-touch-icon-precomposed.png 0ms
+		/apple-touch-icon.png
 
 Medium things:
 	[ ] IntersectionObserver on mobile, to highlight sections
