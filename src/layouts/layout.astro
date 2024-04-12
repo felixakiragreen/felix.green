@@ -1,6 +1,8 @@
 ---
-import BaseHead from '../components/base_head.astro'
-import ThemeSwitch from '../components/theme_switch.astro'
+import { css } from 'ui/css'
+
+import BaseHead from '@/components/base_head.astro'
+import ThemeSwitch from '@/components/theme_switch.astro'
 import DevDebugResponsivity from '@/components/dev_debug_responsivity.astro'
 
 const { title, description } = Astro.props
@@ -13,7 +15,7 @@ const isDev = import.meta.env.DEV
 		<BaseHead {title} {description} />
 	</head>
 
-	<body>
+	<body class={css({ fontFamily: 'main' })}>
 		<ThemeSwitch />
 		<slot />
 		{isDev && <DevDebugResponsivity />}
