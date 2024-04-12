@@ -92,12 +92,27 @@ const theme: Theme = {
 			main: {
 				value: '"Inter", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif, "Apple Color Emoji"',
 			},
+			mono: {
+				value: '"Fira Code", ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+			},
 		},
 	},
 	semanticTokens: {
 		colors: {
 			muted: {
 				value: '{colors.grey.500}',
+			},
+			faded: {
+				value: {
+					base: '{colors.grey.700}',
+					_dark: '{colors.grey.300}',
+				},
+			},
+			faint: {
+				value: {
+					base: '{colors.grey.300}',
+					_dark: '{colors.grey.700}',
+				},
 			},
 			text: {
 				DEFAULT: {
@@ -106,14 +121,19 @@ const theme: Theme = {
 						_dark: '{colors.grey.100}',
 					},
 				},
-				muted: {
-					value: '{colors.grey.500}',
-				},
 			},
 			bg: {
-				value: {
-					base: '{colors.grey.100}',
-					_dark: '{colors.grey.900}',
+				DEFAULT: {
+					value: {
+						base: '{colors.grey.100}',
+						_dark: '{colors.grey.900}',
+					},
+				},
+				card: {
+					value: {
+						base: '{colors.grey.200}',
+						_dark: '{colors.grey.800}',
+					},
 				},
 			},
 		},
