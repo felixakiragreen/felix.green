@@ -3,20 +3,24 @@ import { css } from 'ui/css'
 
 import type { AstroInstance } from 'astro'
 
-import Stack from '@/components/stack.astro'
-
-import type { Project } from '@/data/projects'
+import type { Project, ProjectFacet } from '@/data/projects'
 
 const project: Project = Astro.props.project
 
 type ProjectFacetImages = {
-	[key: string]: () => Promise<AstroInstance>
+	[key: string]: {
+		facet: ProjectFacet
+		image: () => Promise<AstroInstance>
+	}
 }
 const projectFacetImages: ProjectFacetImages = project.facets.reduce(
 	(acc, facet) => {
 		let title = `project_${facet.type}_${facet.image}`
 
-		acc[title] = () => import(`../assets/project/${title}.astro`)
+		acc[title] = {
+			facet,
+			image: () => import(`../assets/project/${title}.astro`),
+		}
 
 		return acc
 	},
@@ -28,20 +32,41 @@ const projectFacetImages: ProjectFacetImages = project.facets.reduce(
 
 <>
 	{
-		Object.entries(projectFacetImages).map(async ([key, value]) => {
-			const DynamicComponent = (await value()).default
+		Object.entries(projectFacetImages).map(
+			async ([key, { facet, image }]) => {
+				const DynamicComponent = (await image()).default
 
-			return (
-				<div
-					class={css({
-						w: 32,
-						h: 32,
-						aspectRatio: 'square',
-					})}
-				>
-					<DynamicComponent />
-				</div>
-			)
-		})
+				const url = Array.isArray(facet.url) ? facet.url[0] : facet.url
+
+				if (url) {
+					return (
+						<a
+							href={url}
+							target="_blank"
+							rel="noopener noreferrer"
+							class={css({
+								w: 32,
+								h: 32,
+								aspectRatio: 'square',
+							})}
+						>
+							<DynamicComponent />
+						</a>
+					)
+				} else {
+					return (
+						<div
+							class={css({
+								w: 32,
+								h: 32,
+								aspectRatio: 'square',
+							})}
+						>
+							<DynamicComponent />
+						</div>
+					)
+				}
+			},
+		)
 	}
 </>
