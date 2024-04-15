@@ -47,6 +47,15 @@ import { css } from 'ui/css'
 			})}
 		>
 		</span>
+		<span
+			class={css({
+				color: 'muted',
+				fontWeight: 'normal',
+			})}
+		>
+			|
+		</span>
+		<span id="touch-display"></span>
 	</span>
 </div>
 
@@ -57,7 +66,20 @@ import { css } from 'ui/css'
 
 		sizeDisplay.textContent = `${window.innerWidth} × ${window.innerHeight}`
 	}
-
 	window.onresize = updateWindowSize
 	window.onload = updateWindowSize
+
+	const touchDisplay = document.getElementById('touch-display')
+	const hoverSupport = window.matchMedia('(hover: hover)').matches
+	const pointerFine = window.matchMedia('(pointer: fine)').matches
+
+	if (touchDisplay) {
+		if (hoverSupport && pointerFine) {
+			console.log('Device likely has a mouse')
+			touchDisplay.textContent = 'mouse'
+		} else {
+			console.log('Device likely uses touch or coarse pointing methods')
+			touchDisplay.textContent = 'touch'
+		}
+	}
 </script>
