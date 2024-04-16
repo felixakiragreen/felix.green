@@ -10,6 +10,9 @@ Medium things:
 	[ ] IntersectionObserver on mobile, to highlight sections
 	[x] Add links to relevant projects
 	[ ] Project tooltips with links to deep dive
+		[ ] Add a nanostore that holds the current hovered/expanded project
+			As well as it's global position
+		[ ] Add a tooltip component that takes the project and position
 
 Big things:
 	[ ] Add Project page with deep dive:
