@@ -74,20 +74,23 @@ import { positions, type Position } from '@/data/positions'
 		</div>
 
 		<div
-			class={css({
-				display: 'grid',
-				gridTemplateRows: 'repeat(12, auto)',
-				md: {
-					my: 12,
-					gridTemplateRows: 'repeat(8, auto)',
-					gridTemplateColumns: 'max-content auto',
-				},
-				lg: {
-					gridTemplateRows: 'repeat(4, auto)',
-					gridTemplateColumns: 'max-content max-content 1fr',
-				},
-				gridRowGap: 4,
-			})}
+			class:list={[
+				'scroll-area',
+				css({
+					display: 'grid',
+					gridTemplateRows: 'repeat(12, auto)',
+					md: {
+						my: 12,
+						gridTemplateRows: 'repeat(8, auto)',
+						gridTemplateColumns: 'max-content auto',
+					},
+					lg: {
+						gridTemplateRows: 'repeat(4, auto)',
+						gridTemplateColumns: 'max-content max-content 1fr',
+					},
+					gridRowGap: 4,
+				}),
+			]}
 		>
 			{
 				positions.map((position: Position) => (
