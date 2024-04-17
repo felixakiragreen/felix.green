@@ -19,52 +19,53 @@ let blurDirection = 'right'
 let gradientStart = '0px'
 let gradientEnd = token('sizes.8')
 let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradientStart}, rgba(0, 0, 0, 1) ${gradientEnd})`
-
-// https://stackoverflow.com/questions/64564266/check-if-a-piece-of-the-element-is-in-viewport
 ---
 
 <div
-	class={css({
-		display: 'grid',
-		gridRow: 'span 2',
-		gridColumn: 'span 2',
-		alignItems: 'center',
-		// alignContent: 'center',
-		// justifyContent: 'center',
-		// textAlign: 'center',
-		// gridTemplateRows: '1fr 1fr',
-		// justifyItems: 'center', // center things inside
-		gap: 4,
-		sm: {
-			textAlign: 'inherit',
-			gridTemplateColumns: 'auto auto',
-		},
-		md: {
-			gap: 0,
-			// gridRow: 'span 2',
-			gridTemplateColumns: 'subgrid',
-		},
-		lg: {
-			// justifyItems: 'end',
-			gridRow: 'span 1',
-			gridColumn: '1 / span 3',
-			gridTemplateColumns: 'subgrid',
-		},
-		'--svg-fill-opacity': 0,
-		'--svg-hover-opacity': 0,
-		'--svg-stroke-opacity': 1,
-		'& #show-date': {
-			display: 'none',
-		},
-		_hover: {
-			'--svg-fill-opacity': 1,
-			'--svg-hover-opacity': 1,
-			'--svg-stroke-opacity': 0,
-			'& #show-date': {
-				display: 'flex',
+	class:list={[
+		'project-row',
+		css({
+			display: 'grid',
+			gridRow: 'span 2',
+			gridColumn: 'span 2',
+			alignItems: 'center',
+			// alignContent: 'center',
+			// justifyContent: 'center',
+			// textAlign: 'center',
+			// gridTemplateRows: '1fr 1fr',
+			// justifyItems: 'center', // center things inside
+			gap: 4,
+			sm: {
+				textAlign: 'inherit',
+				gridTemplateColumns: 'auto auto',
 			},
-		},
-	})}
+			md: {
+				gap: 0,
+				// gridRow: 'span 2',
+				gridTemplateColumns: 'subgrid',
+			},
+			lg: {
+				// justifyItems: 'end',
+				gridRow: 'span 1',
+				gridColumn: '1 / span 3',
+				gridTemplateColumns: 'subgrid',
+			},
+			'--svg-fill-opacity': 0,
+			'--svg-hover-opacity': 0,
+			'--svg-stroke-opacity': 1,
+			// '& #show-date': {
+			// 	display: 'none',
+			// },
+			_hover: {
+				'--svg-fill-opacity': 1,
+				'--svg-hover-opacity': 1,
+				'--svg-stroke-opacity': 0,
+				// '& #show-date': {
+				// 	display: 'flex',
+				// },
+			},
+		}),
+	]}
 >
 	<div
 		class={css({
@@ -204,6 +205,15 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 	</div>
 </div>
 
+<style>
+	.is-visible {
+		--svg-fill-opacity: 1;
+		--svg-hover-opacity: 1;
+		--svg-stroke-opacity: 0;
+		background-color: chartreuse;
+	}
+</style>
+
 <script>
 	// Add horizontal scrolling
 
@@ -252,4 +262,52 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 	document.querySelectorAll('.sideways-scroll').forEach((div: Element) => {
 		div.addEventListener('wheel', transformScroll, { passive: false })
 	})
+
+	let options = {
+		// root: document.querySelector('.scroll-area'),
+		rootMargin: '10px',
+		threshold: 1.0,
+	}
+	import { css } from 'ui/css'
+	let visibleClass = css({
+		'--svg-fill-opacity': 1,
+		'--svg-hover-opacity': 1,
+		'--svg-stroke-opacity': 0,
+		bg: 'chartreuse',
+	}).split(' ')
+	function observerCallback(
+		entries: IntersectionObserverEntry[],
+		observer: IntersectionObserver,
+	) {
+		entries.forEach((entry: IntersectionObserverEntry) => {
+			if (entry.isIntersecting) {
+				console.log('Element is fully visible in screen', visibleClass)
+				// add class to entry
+
+				// entry.target.classList.add(...visibleClass)
+				entry.target.classList.add('is-visible')
+			} else {
+				console.log('Element is not fully visible in screen')
+				// remove class from entry
+				// entry.target.classList.remove(...visibleClass)
+				entry.target.classList.remove('is-visible')
+			}
+		})
+	}
+
+	let observer = new IntersectionObserver(observerCallback, options)
+	document.querySelectorAll('.project-row').forEach((div: Element) => {
+		observer.observe(div)
+	})
+
+	const hoverSupport = window.matchMedia('(hover: hover)').matches
+	const pointerFine = window.matchMedia('(pointer: fine)').matches
+
+	if (hoverSupport && pointerFine) {
+		console.log('Device likely has a mouse')
+		// Apply mouse-specific styles or behaviors
+	} else {
+		console.log('Device likely uses touch or coarse pointing methods')
+		// Apply touch-specific styles or behaviors
+	}
 </script>
