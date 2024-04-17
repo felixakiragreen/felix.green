@@ -34,33 +34,36 @@ import { positions, type Position } from '@/data/positions'
 		})}
 	>
 		<div
-			class={css({
-				display: 'flex',
-				flexDirection: 'column',
-				pt: 36,
-				px: 12,
-				pb: 12,
-				'--svg-fill-opacity': 0,
-				'--svg-stroke-opacity': 1,
-				_hover: {
-					'--svg-fill-opacity': 1,
-					'--svg-stroke-opacity': 0,
-				},
-				h: '100svh',
-				textAlign: 'center',
-				alignItems: 'center',
-				justifyContent: 'center',
-				gap: 12,
-				md: {
-					position: 'sticky',
-					top: 0,
-					left: 0,
-					textAlign: 'inherit',
-					minH: 'inherit',
-					alignItems: 'inherit',
-					justifyContent: 'inherit',
-				},
-			})}
+			class:list={[
+				'svg-hoverable',
+				css({
+					display: 'flex',
+					flexDirection: 'column',
+					pt: 36,
+					px: 12,
+					pb: 12,
+					'--svg-fill-opacity': 0,
+					'--svg-stroke-opacity': 1,
+					_hover: {
+						'--svg-fill-opacity': 1,
+						'--svg-stroke-opacity': 0,
+					},
+					h: '100svh',
+					textAlign: 'center',
+					alignItems: 'center',
+					justifyContent: 'center',
+					gap: 12,
+					md: {
+						position: 'sticky',
+						top: 0,
+						left: 0,
+						textAlign: 'inherit',
+						minH: 'inherit',
+						alignItems: 'inherit',
+						justifyContent: 'inherit',
+					},
+				}),
+			]}
 		>
 			<div class={css({ w: '20' })}>
 				<LogoFelixGreen />
@@ -114,3 +117,45 @@ import { positions, type Position } from '@/data/positions'
 		</div>
 	</div>
 </Layout>
+
+<style>
+	.is-visible {
+		--svg-fill-opacity: 1;
+		--svg-hover-opacity: 1;
+		--svg-stroke-opacity: 0;
+	}
+</style>
+
+<script>
+	const hoverSupport = window.matchMedia('(hover: hover)').matches
+	const pointerFine = window.matchMedia('(pointer: fine)').matches
+	const isTouch = !hoverSupport || !pointerFine
+
+	function observerCallback(
+		entries: IntersectionObserverEntry[],
+		observer: IntersectionObserver,
+	) {
+		entries.forEach((entry: IntersectionObserverEntry) => {
+			if (entry.isIntersecting) {
+				console.log('Element is fully visible in screen')
+				// add class to entry
+
+				entry.target.classList.add('is-visible')
+			} else {
+				console.log('Element is not fully visible in screen')
+				// remove class from entry
+				entry.target.classList.remove('is-visible')
+			}
+		})
+	}
+
+	if (isTouch) {
+		let observer = new IntersectionObserver(observerCallback, {
+			threshold: 0.9,
+		})
+
+		document.querySelectorAll('.svg-hoverable').forEach((div: Element) => {
+			observer.observe(div)
+		})
+	}
+</script>
