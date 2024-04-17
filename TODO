@@ -7,7 +7,7 @@ Small things:
 		/apple-touch-icon.png
 
 Medium things:
-	[ ] IntersectionObserver on mobile, to highlight sections
+	[x] IntersectionObserver on mobile, to highlight sections
 	[x] Add links to relevant projects
 	[ ] Project tooltips with links to deep dive
 		[ ] Add a nanostore that holds the current hovered/expanded project
