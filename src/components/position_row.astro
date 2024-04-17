@@ -23,7 +23,7 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 
 <div
 	class:list={[
-		'project-row',
+		'svg-hoverable',
 		css({
 			display: 'grid',
 			gridRow: 'span 2',
@@ -205,15 +205,6 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 	</div>
 </div>
 
-<style>
-	.is-visible {
-		--svg-fill-opacity: 1;
-		--svg-hover-opacity: 1;
-		--svg-stroke-opacity: 0;
-		background-color: chartreuse;
-	}
-</style>
-
 <script>
 	// Add horizontal scrolling
 
@@ -262,52 +253,46 @@ let maskImage = `linear-gradient(to ${blurDirection}, rgba(0, 0, 0, 0) ${gradien
 	document.querySelectorAll('.sideways-scroll').forEach((div: Element) => {
 		div.addEventListener('wheel', transformScroll, { passive: false })
 	})
+</script>
 
-	let options = {
-		// root: document.querySelector('.scroll-area'),
-		rootMargin: '10px',
-		threshold: 1.0,
+<style>
+	.is-visible {
+		--svg-fill-opacity: 1;
+		--svg-hover-opacity: 1;
+		--svg-stroke-opacity: 0;
 	}
-	import { css } from 'ui/css'
-	let visibleClass = css({
-		'--svg-fill-opacity': 1,
-		'--svg-hover-opacity': 1,
-		'--svg-stroke-opacity': 0,
-		bg: 'chartreuse',
-	}).split(' ')
+</style>
+
+<script>
+	const hoverSupport = window.matchMedia('(hover: hover)').matches
+	const pointerFine = window.matchMedia('(pointer: fine)').matches
+	const isTouch = !hoverSupport || !pointerFine
+
 	function observerCallback(
 		entries: IntersectionObserverEntry[],
 		observer: IntersectionObserver,
 	) {
 		entries.forEach((entry: IntersectionObserverEntry) => {
 			if (entry.isIntersecting) {
-				console.log('Element is fully visible in screen', visibleClass)
+				console.log('Element is fully visible in screen')
 				// add class to entry
 
-				// entry.target.classList.add(...visibleClass)
 				entry.target.classList.add('is-visible')
 			} else {
 				console.log('Element is not fully visible in screen')
 				// remove class from entry
-				// entry.target.classList.remove(...visibleClass)
 				entry.target.classList.remove('is-visible')
 			}
 		})
 	}
 
-	let observer = new IntersectionObserver(observerCallback, options)
-	document.querySelectorAll('.project-row').forEach((div: Element) => {
-		observer.observe(div)
-	})
+	if (isTouch) {
+		let observer = new IntersectionObserver(observerCallback, {
+			threshold: 0.7,
+		})
 
-	const hoverSupport = window.matchMedia('(hover: hover)').matches
-	const pointerFine = window.matchMedia('(pointer: fine)').matches
-
-	if (hoverSupport && pointerFine) {
-		console.log('Device likely has a mouse')
-		// Apply mouse-specific styles or behaviors
-	} else {
-		console.log('Device likely uses touch or coarse pointing methods')
-		// Apply touch-specific styles or behaviors
+		document.querySelectorAll('.svg-hoverable').forEach((div: Element) => {
+			observer.observe(div)
+		})
 	}
 </script>
