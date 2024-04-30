@@ -1,3 +1,5 @@
+[ ] Convert to SvelteKit + Svelte 5 
+
 Small things:
 	[-] Figure out why the favicon mask isn't working
 	[x] use svh instead of vh for better mobile support
