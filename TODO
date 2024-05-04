@@ -1,4 +1,6 @@
-[ ] Convert to SvelteKit + Svelte 5 
+[ ] Convert to SvelteKit + Svelte 5
+[ ] Add /now 
+	https://sive.rs/now2
 
 Small things:
 	[-] Figure out why the favicon mask isn't working
