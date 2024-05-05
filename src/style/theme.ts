@@ -7,7 +7,7 @@ const theme: Theme = {
 			black: { value: 'oklch(0% 0 0)' },
 			white: { value: 'oklch(100% 0 0)' },
 			clear: { value: 'oklch(0% 0 0 / 0%)' },
-			semi: { value: 'oklch(0% 0 0 / 50.2%)' },
+			semi: { value: 'oklch(0% 0 0 / 50%)' },
 			grey: {
 				100: { value: 'oklch(96.85% 0.0079 106.547)' },
 				200: { value: 'oklch(93.76% 0.012 106.628)' },
